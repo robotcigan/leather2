@@ -1,0 +1,152 @@
+@import 'helpers/variables.styl'
+@import 'helpers/mixins.styl'
+@import 'base/base.styl'
+@import 'base/typography.styl'
+@import 'base/tables.styl'
+
+
+.grid--container
+  max-width 98%
+
+.separator
+  border none
+  border-bottom 1px solid #eaeaea
+
+.logo
+  color #fff
+  display inline-block
+  font-weight 600
+  letter-spacing 1px
+  margin-right 5rem
+  text-decoration none
+  text-transform uppercase
+
+.main-header
+  &__top
+    background-color $main
+    color #fff
+    .top
+      &__adress
+        display inline-block
+        margin-right 5rem
+        .fa
+          margin-right 1rem
+      &__phone
+        display inline-block
+        margin-right 5rem
+        .fa
+          margin-right 1rem
+      &__callback
+        border-left 1px solid #363636
+        border-right 1px solid #363636
+        color $primary
+        display inline-block
+        padding 2rem
+        transition all .2s
+        i
+          margin-right 1rem
+        &:hover
+          color $main
+          background-color $primary
+  .row
+    height 6.5rem
+
+.navbar
+  border-bottom $border
+  padding 2rem 0
+  a
+    color $main
+    display inline-block
+    margin-right 3rem
+    text-decoration none
+    &:hover
+      color $primary
+
+.btn
+  background-color $primary
+  border-radius 4px
+  color $main
+  cursor pointer
+  display inline-block
+  font-weight 500
+  padding 1rem 2.5rem
+  transition background-color .4s
+  &:hover
+    background-color $primary - 15%
+  &--solid
+    background-color transparent
+    border 1px solid #727688
+    color #fff
+    padding .8rem 2.5rem
+    &:hover
+      border-color #727688
+      background-color #727688
+
+.btn-group
+  display block
+  margin-bottom 1rem
+  width 100%
+  .btn
+    margin-right 1rem
+
+.hero
+  height 100%
+  overflow hidden
+  &--main
+    height calc(100% - 13rem)
+  &__bg
+    display block
+    background-repeat no-repeat
+    background-size cover !important
+    circle(100%)
+    position absolute
+    z-index -1
+  .grid--container
+    height 100%
+  &__container.container
+    align-content flex-end
+    display flex
+    flex-flow row wrap
+    flex 0 1 100%
+    height 100%
+    padding-bottom 5rem
+    width 70rem
+    .container
+      &__title
+        color #fff
+        font-size 5rem
+        font-weight 700
+        line-height 1
+        margin-bottom .5rem
+      &__subtitle
+        color #fff
+        display block
+        font-size 1.6rem
+        margin-bottom 2rem
+        width 100%
+      &__btn
+        display inline-block
+
+.header
+  font-size 3.6rem
+  margin-top 4rem
+  text-align center
+
+.map
+  iframe
+    height 80vh
+    width 100%
+
+
+.main-footer
+  background-color $secondary
+  color #fff
+  p
+    display inline-block
+    margin-right 4rem
+  &__icons
+    a
+      color #fff
+      font-size 2rem
+      margin-right 2rem
+

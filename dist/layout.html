@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Автокожа</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="styles/css/vendor.css">
+    <link rel="stylesheet" href="styles/css/main.css">
+  </head>
+  <body>
+    <main>
+    </main>
+    <footer class="main-footer">
+      <div class="grid grid--container">
+        <div class="row row--sm-center">
+          <div class="col col--sm-4 main-footer__icons">
+            <p>Мы в социальных сетях</p><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-vk"></i></a><a href=""><i class="fa fa-instagram"></i></a>
+          </div>
+          <div class="col col--sm-4 main-footer__icons">
+            <p>Напишите нам</p><a href=""><i class="fa fa-skype"></i></a><a href=""><i class="fa fa-comment"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          verticalCentered: false,
+          fitToSectionDelay: 5000
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+extends layout.pug
+
+block content
+  #fullpage
+    .section
+      header.main-header
+        .main-header__top.top
+          .grid.grid--container
+            .row.row--sm-center
+              .col.col--sm-12
+                a(href="/pages.html").logo Автокожа
+                .top__adress
+                  i.fa.fa-map
+                  span г. Краснодар, ул. Ставропольская, 67
+                .top__phone
+                  i.fa.fa-phone
+                  span +7 (861) 239-74-17;  +7 (918) 455-58-61
+                .top__callback
+                  i.fa.fa-phone
+                  span Перезвонить мне
+      .grid.grid--container
+        nav.navbar
+          .grid.grid--container
+            .row
+              .col.col--sm-8
+                a(href="").navbar__link Конфигуратор
+                a(href="").navbar__link Прайс-лист
+                a(href="").navbar__link Доставка и оплата
+                a(href="").navbar__link Статьи
+                a(href="").navbar__link Отзывы
+                a(href="").navbar__link Контакты
+      .hero.hero--main
+        .hero__bg(style='background-image: url("img/bg-1.jpg")')
+        .grid.grid--container
+          .hero__container.container
+            .container__title Лучшие материалы для
+              br
+              | салона автомобиля
+            .container__subtitle Импорт Alcantara и Швайцер
+            .btn.container__btn
+              i
+              span Открыть конфигуратор
+    .section
+      .hero
+        .hero__bg(style='background-image: url("img/main-slider/1.jpg")')
+        .grid.grid--container
+          .hero__container.container
+            .container__title ALCANTARA
+            .container__subtitle Люксовые внешние качества материала
+            .btn-group
+              .btn.btn--solid Колор-карта
+              .btn.btn--solid Об Alcantara
+              .btn.btn--solid Статьи
+              .btn.btn--solid Документация
+            .btn.container__btn
+              i
+              span Купить
+      
+    .section
+      .grid.grid--container
+        h1.header А также
+    .section
+      .grid.grid--container
+        h1.header Отзывы
+
+    .section
+      .grid.grid--container
+        h1.header Как нас найти?
+        .map
+          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d73696.91684104543!2d39.033987979024516!3d45.0446057407869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1494337268503" frameborder="0" style="border:0" allowfullscreen)
+
+
+
