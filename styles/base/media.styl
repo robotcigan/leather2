@@ -1,0 +1,99 @@
+@media(max-width 1600px)
+  .navbar
+    display flex
+    justify-content space-between
+    .navbar__section
+      &--icons
+        margin-left 0
+
+@media(max-width 1340px)
+  .main-header
+    &__container
+      justify-content space-between
+    &__top
+      .top
+        &__callback
+          .icon
+            margin-right 0
+          span
+            display none
+  .navbar
+    .navbar__section
+      &--icons
+        margin-right 2rem
+
+@media(max-width 1200px)
+  .grid--container
+    padding 0 4%
+  .main-header
+    &__container
+      justify-content space-between
+    &__top
+      .top
+        &__adress,
+        &__phone
+          span
+            &:nth-of-type(2)
+              display block
+              line-height 1
+              margin-left 2.7rem
+  .navbar
+    &__link
+      display none
+      &--home
+        display initial
+  .mobile-menu-toggle
+    display inline-block
+
+@media(max-width 1000px)
+  .grid--container
+    padding 0 3%
+  .modal
+    width 80%
+  .main-footer
+    p
+      display none
+
+@media(max-width 767px)
+  .main-header
+    &__top
+      .top
+        &__adress,
+        &__phone
+          display none
+
+
+@media(max-width 720px)
+  .main-footer__top
+    .main-footer__nav
+      display none
+  .copyright
+    order 3
+  .sitemap-link
+    text-align left
+
+@media(max-width 500px)
+  .row
+    margin 0 -1rem
+    margin-bottom 1rem
+  .main-header
+    &__top
+      .top
+        &__adress,
+        &__phone
+          display none
+  .modal
+    padding 4rem 2rem
+    width 96%
+    &__title
+      font-size 2.4rem
+    .btn
+      text-align center
+      width 100%
+  .mfp-close,
+  .mfp-close:active
+    top 1rem
+    right 1rem
+  .webformula
+    margin-top 1rem
+    text-align left

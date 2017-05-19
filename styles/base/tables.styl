@@ -11,8 +11,64 @@
     border-bottom 1px solid $light-gray
   th,
   td
+    min-height 30px
+    vertical-align top
     padding 1rem 2rem
-    &:first-child
-      width 15%
     &:nth-child(2)
-      width 45%
+      width 20%
+    &:nth-child(5)
+      width 20%
+
+@media (max-width: 600px)
+  .table
+    // caption
+    //   font-size 1.3em
+    thead
+      border none
+      clip rect(0 0 0 0)
+      height 1px
+      margin -1px
+      overflow hidden
+      padding 0
+      position absolute
+      width 1px
+    tr
+      border 1px solid $gray
+      display block
+      margin-bottom 2.5rem
+      &:not(:last-child)
+        border-bottom 1px solid $gray
+    td
+      display block
+      padding 0
+      border-bottom 1px solid $light-gray
+      clearfix()
+      &:before
+        // border-right 1px solid $light-gray
+        background-color $blue
+        // border-bottom 1px solid $light-gray
+        content attr(data-label)
+        display block
+        float left
+        font-weight bold
+        // margin-right 1rem
+        min-height 29px
+        min-width 40%
+        // padding-left .5rem
+        padding .5rem
+        width 40%
+      &:last-child
+        border-bottom 0
+    th,
+    td
+      &:first-child
+        width initial
+      &:nth-child(2)
+        width initial
+      &:nth-child(5)
+        width initial
+    span
+      // border-left 1px solid $light-gray
+      // display inline-block
+      padding-left 1rem
+      // width 65%

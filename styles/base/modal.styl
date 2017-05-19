@@ -1,0 +1,25 @@
+.modal
+  animation bigFadeUp .3s forwards ease
+  background #fff
+  box-shadow 0 1rem 2rem rgba($main, .1)
+  display none
+  margin 0 auto
+  padding ((50 / 920) * 100)%
+  position relative
+  width 92rem
+  &__title
+    font-size 3.2rem
+    font-weight 700
+    letter-spacing 1px
+  &__subtitle
+    margin-bottom 2rem
+
+.mfp-ready .modal
+  display block
+
+.mfp-close,
+.mfp-close:active
+  font-size 4rem
+  opacity 1
+  top ((50 / 920) * 100)%
+  right ((50 / 920) * 100)%

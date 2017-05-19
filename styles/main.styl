@@ -1,86 +1,157 @@
 @import 'helpers/variables.styl'
 @import 'helpers/mixins.styl'
 @import 'base/base.styl'
+@import 'helpers/helpers.styl'
+@import 'base/icons.styl'
 @import 'base/typography.styl'
 @import 'base/tables.styl'
+@import 'base/modal.styl'
+@import 'base/form.styl'
+
+@import 'pages/index.styl'
+@import 'pages/price.styl'
 
 
 .grid--container
-  max-width 98%
+  padding 0 ((140 / 1900) * 100)%
+  max-width 100%
 
-.separator
+
+.hr
   border none
   border-bottom 1px solid #eaeaea
 
 .logo
+  background url('../../img/logo.png') no-repeat
+  background-size contain
   color #fff
   display inline-block
   font-weight 600
   letter-spacing 1px
-  margin-right 5rem
+  // margin-right 5rem
+  size(2rem, 17rem)
   text-decoration none
   text-transform uppercase
 
+
 .main-header
+  position relative
+  &__container
+    align-items center
+    display flex
   &__top
-    background-color $main
+    background-color #000
     color #fff
     .top
       &__adress
         display inline-block
-        margin-right 5rem
-        .fa
+        margin-right (70 / 1625 * 100)%
+        .icon
           margin-right 1rem
       &__phone
         display inline-block
-        margin-right 5rem
-        .fa
+        margin-right (70 / 1625 * 100)%
+        .icon
           margin-right 1rem
       &__callback
         border-left 1px solid #363636
         border-right 1px solid #363636
         color $primary
+        cursor pointer
         display inline-block
         padding 2rem
         transition all .2s
-        i
+        text-decoration none
+        .icon
           margin-right 1rem
         &:hover
           color $main
           background-color $primary
-  .row
-    height 6.5rem
+  // .row
+  //   height 6.5rem
+  .logo
+    margin-right (95 / 1625 * 100)%
+
+.second-header
+  position relative
+  &--index
+    .navbar
+      border-bottom none
 
 .navbar
   border-bottom $border
   padding 2rem 0
-  a
+  &__link
     color $main
     display inline-block
-    margin-right 3rem
     text-decoration none
+    &:not(:last-child)
+      margin-right 3.5rem
     &:hover
       color $primary
+    &--home
+      margin-left 2rem
+      margin-right 0 !important
+  .sprite--separator
+    vertical-align bottom
+  &__section
+    display inline-block
+    &--icons
+      margin-left (490 / 1625 * 100)%
 
-.btn
-  background-color $primary
-  border-radius 4px
-  color $main
+.mobile-menu
+  background-color #fff
+  // border-bottom 4px solid $primary
+  display none
+  left 0
+  height calc(100vh - 8rem)
+  padding 1rem 3rem
+  position absolute
+  top 6rem
+  width 100%
+  z-index 50
+  &__link
+    color $main
+    display block
+    font-size 1.8rem
+    margin-bottom 2.4rem
+    text-decoration none
+    
+
+.mobile-menu-toggle
   cursor pointer
-  display inline-block
-  font-weight 500
-  padding 1rem 2.5rem
-  transition background-color .4s
-  &:hover
-    background-color $primary - 15%
-  &--solid
-    background-color transparent
-    border 1px solid #727688
-    color #fff
-    padding .8rem 2.5rem
-    &:hover
-      border-color #727688
-      background-color #727688
+  display none
+  position relative
+  size(12px, 15px)
+  &:before
+    content ''
+    left -.8rem
+    position absolute
+    top -.9rem
+    circle(3rem)
+  span
+    background-color $main
+    display block
+    height 1px
+    position absolute
+    top 0
+    transition transform .3s
+    width 15px
+    &:nth-child(2)
+      top 5px
+    &:nth-child(3)
+      top 10px
+  &--active
+    span
+      &:nth-child(1)
+        transform rotate(45deg)
+        top 5px
+      &:nth-child(2)
+        opacity 0
+      &:nth-child(3)
+        transform rotate(-45deg)
+        top 5px
+
 
 .btn-group
   display block
@@ -89,48 +160,31 @@
   .btn
     margin-right 1rem
 
-.hero
-  height 100%
-  overflow hidden
-  &--main
-    height calc(100% - 13rem)
-  &__bg
-    display block
-    background-repeat no-repeat
-    background-size cover !important
-    circle(100%)
-    position absolute
-    z-index -1
-  .grid--container
-    height 100%
-  &__container.container
-    align-content flex-end
-    display flex
-    flex-flow row wrap
-    flex 0 1 100%
-    height 100%
-    padding-bottom 5rem
-    width 70rem
-    .container
-      &__title
-        color #fff
-        font-size 5rem
-        font-weight 700
-        line-height 1
-        margin-bottom .5rem
-      &__subtitle
-        color #fff
-        display block
-        font-size 1.6rem
-        margin-bottom 2rem
-        width 100%
-      &__btn
-        display inline-block
+
 
 .header
+  background #fff
+  display inline-block
   font-size 3.6rem
-  margin-top 4rem
+  margin-top 6rem
+  position relative
   text-align center
+  z-index 5
+  &--with-subheader
+    line-height 1
+    margin-bottom 4rem
+  // &:before
+  //   background-color $light-gray
+  //   content ''
+  //   height 1px
+  //   left -100%
+  //   position absolute
+  //   top 55%
+  //   width 100vw - ((280 / 1900) * 100)%
+  //   z-index 0
+
+.subheader
+  margin-top 0
 
 .map
   iframe
@@ -139,14 +193,55 @@
 
 
 .main-footer
-  background-color $secondary
-  color #fff
+  margin-top 10rem
+  &__top
+    padding 3rem 0
+  &__middle
+    background-color $secondary
+    color #fff
+    padding 4rem 0
+  &__bottom
+    padding 2rem 0
   p
     display inline-block
-    margin-right 4rem
+    margin 0
+    margin-right 3.5rem
+  a
+    color $main
+    text-decoration none
+    &:hover
+      color $primary
   &__icons
     a
       color #fff
+      display inline-block
       font-size 2rem
-      margin-right 2rem
+      vertical-align middle
+      text-decoration none
+      &:not(:last-child)
+        margin-right 2.2rem
+      &:hover
+        color $primary
+  &__nav.nav
+    .nav
+      &__link
+        color $main
+        margin-right (50 / 1625 * 100)%
+        text-decoration none
+        &:hover
+          color $primary
 
+.sitemap-link
+  text-align right
+
+.webformula
+  text-align right
+  .icon
+    margin-right 1rem
+  a
+    color #fff
+    text-decoration underline
+    &:hover
+      color $primary
+
+@import 'base/media.styl'

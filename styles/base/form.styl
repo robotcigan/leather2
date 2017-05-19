@@ -1,0 +1,50 @@
+.btn
+  background-color $primary
+  border-radius 4px
+  color $main
+  cursor pointer
+  display inline-block
+  font-weight 700
+  padding 1rem 2.5rem
+  transition background-color .4s
+  &:hover
+    background-color $primary - 5%
+  &--solid
+    background-color transparent
+    border 1px solid #727688
+    color #fff
+    padding .8rem 2.5rem
+    &:hover
+      border-color #727688
+      background-color #727688
+  .icon
+    margin-right 1rem
+    vertical-align middle
+  .icon + span
+    vertical-align middle
+
+.form-control
+  margin-bottom 3rem
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  select,
+  textarea
+    background #fff
+    border 1px solid $gray
+    border-radius $radius
+    font-family $font
+    font-size 1.6rem
+    height 46px
+    padding-left 1rem
+    transition border-color .2s
+    width 100%
+    -webkit-appearance none
+    &:hover
+      border-color $light-gray - 10%
+    &:focus
+      border-color $primary
+    &.invalid
+      border-color $red

@@ -13,176 +13,346 @@
     <main>
       <header class="main-header">
         <div class="main-header__top top">
-          <div class="grid grid--container">
-            <div class="row row--sm-center">
-              <div class="col col--sm-12"><a class="logo" href="/pages.html">Автокожа</a>
-                <div class="top__adress"><i class="fa fa-map"></i><span>г. Краснодар, ул. Ставропольская, 67</span></div>
-                <div class="top__phone"><i class="fa fa-phone"></i><span>+7 (861) 239-74-17;  +7 (918) 455-58-61</span></div>
-                <div class="top__callback"><i class="fa fa-phone"></i><span>Перезвонить мне</span></div>
-              </div>
-            </div>
+          <div class="grid grid--container main-header__container"><a class="logo" href="/pages.html"></a>
+            <div class="top__adress"><i class="icon icon-map"></i><span>г. Краснодар,</span><span>ул. Ставропольская, 67</span></div>
+            <div class="top__phone"><i class="icon icon-phone-hang-up"></i><span>+7 (861) 239-74-17;</span><span>+7 (918) 455-58-61</span></div><a class="top__callback open-modal" href="#callback"><i class="icon icon-phone"></i><span>Перезвонить мне</span></a>
           </div>
         </div>
       </header>
-      <div class="grid grid--container">
+      <div class="grid grid--container second-header">
         <nav class="navbar">
-          <div class="grid grid--container">
-            <div class="row">
-              <div class="col col--sm-8"><a class="navbar__link" href="">Конфигуратор</a><a class="navbar__link" href="">Прайс-лист</a><a class="navbar__link" href="">Доставка и оплата</a><a class="navbar__link" href="">Статьи</a><a class="navbar__link" href="">Отзывы</a><a class="navbar__link" href="">Контакты</a></div>
-            </div>
+          <div class="navbar__section navbar__section--links"><a class="navbar__link navbar__link--home" href=""><i class="icon icon-home3"></i></a><i class="sprite sprite--separator"></i>
+            <div class="mobile-menu-toggle"><span></span><span></span><span></span></div><a class="navbar__link" href="">Конфигуратор</a><a class="navbar__link" href="">Прайс-лист</a><a class="navbar__link" href="">Доставка и оплата</a><a class="navbar__link" href="">Статьи</a><a class="navbar__link" href="">Отзывы</a><a class="navbar__link" href="">Контакты</a>
           </div>
+          <div class="navbar__section navbar__section--icons"><i class="icon icon-search"></i><i class="sprite sprite--separator"></i><i class="icon icon-user"></i><i class="sprite sprite--separator"></i><i class="icon icon-cart"></i></div>
         </nav>
+        <div class="mobile-menu"><a class="mobile-menu__link" href="">Конфигуратор</a><a class="mobile-menu__link" href="">Прайс-лист</a><a class="mobile-menu__link" href="">Доставка и оплата</a><a class="mobile-menu__link" href="">Статьи</a><a class="mobile-menu__link" href="">Отзывы</a><a class="mobile-menu__link" href="">Контакты</a></div>
       </div>
       <div class="grid grid--container">
         <h1 class="h1">Прайс лист</h1>
-        <hr class="separator">
+        <hr class="hr">
         <p>Заказ можно сделать через e-mail (avtokoja.ru@mail.ru) либо по телефону +7 (861) 239-7417 или +7 (918) 4555-861. Мы доставляем товар любой грузовой компанией на ваш выбор (обычно это ПЭК, Деловые Линии и СДЭК), почтой России, или прямым авиарейсом в ваш город (быстрее и существенно дешевле DHL, в любой город, где есть аэропорт).</p>
-        <h2 class="h2">Искусственные автомобильные замши (заменители алькантары)</h2>
+        <h2 class="h2">Автомобильная кожа</h2>
         <div class="responsive-table">
           <table class="table">
             <thead>
-              <th>Бренд</th>
-              <th></th>
-              <th>Стоимость</th>
-              <th>Оптовая цена</th>
+              <th>Наименование</th>
+              <th>Базовая цена</th>
+              <th>Полшкуры (+10%) - опция</th>
+              <th>Отрез (за 0.01м2) - опция</th>
+              <th>Примерный размер шкуры ( справочно)</th>
             </thead>
             <tbody>
               <tr>
-                <td>Копия Алькантары</td>
-                <td>Копия автомобильной Алькантары (без брендовой подписи) на основе</td>
-                <td>1 500 р. за пог. м</td>
-                <td>1 500 р. за пог. м</td>
+                <td><span>Боксмарк</span></td>
+                <td><span>4200</span></td>
+                <td><span>4620</span></td>
+                <td><span>8400</span></td>
+                <td><span>4,2м²</span></td>
               </tr>
               <tr>
-                <td>Эс-тайп</td>
-                <td>Эс-тайп корейский гладкий (распродажа)</td>
-                <td>1 500 р. за пог. м</td>
-                <td>1 500 р. за пог. м</td>
+                <td><span>Боксмарк перфорация</span></td>
+                <td><span>4300</span></td>
+                <td><span>4300</span></td>
+                <td><span>8600</span></td>
+                <td><span>2,2м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Эсторил наппа</span></td>
+                <td><span>4000</span></td>
+                <td><span>4400</span></td>
+                <td><span>8000</span></td>
+                <td><span>4,3м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Эсторил наппа перфорация</span></td>
+                <td><span>4100</span></td>
+                <td><span>4100</span></td>
+                <td><span>8200</span></td>
+                <td><span>2,1м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Аполло</span></td>
+                <td><span>3400</span></td>
+                <td><span>3740</span></td>
+                <td><span>6800</span></td>
+                <td><span>3,8м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Аполло перфорация</span></td>
+                <td><span>3500</span></td>
+                <td><span>3500</span></td>
+                <td><span>7000</span></td>
+                <td><span>2,1м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Виста глатт</span></td>
+                <td><span>2700</span></td>
+                <td><span>2970</span></td>
+                <td><span>5400</span></td>
+                <td><span>3,5м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Виста глатт перфорация</span></td>
+                <td><span>2750</span></td>
+                <td><span>2750</span></td>
+                <td><span>5500</span></td>
+                <td><span>1,3м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Эсторил</span></td>
+                <td><span>2500</span></td>
+                <td><span>2750</span></td>
+                <td><span>5000</span></td>
+                <td><span>4,3м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Эсторил перфорация</span></td>
+                <td><span>2600</span></td>
+                <td><span>2600</span></td>
+                <td><span>5200</span></td>
+                <td><span>2,2м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Экстрим</span></td>
+                <td><span>2500</span></td>
+                <td><span>2750</span></td>
+                <td><span>5000</span></td>
+                <td><span>3,6м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Экстрим перфорация</span></td>
+                <td><span>2600</span></td>
+                <td><span>2600</span></td>
+                <td><span>5200</span></td>
+                <td><span>2,0м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Монза</span></td>
+                <td><span>3200</span></td>
+                <td><span>3520</span></td>
+                <td><span>6400</span></td>
+                <td><span>4,7м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Монза перфорация</span></td>
+                <td><span>3400</span></td>
+                <td><span>3400</span></td>
+                <td><span>6800</span></td>
+                <td><span>2,6м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Дакота</span></td>
+                <td><span>3200</span></td>
+                <td><span>3520</span></td>
+                <td><span>6400</span></td>
+                <td><span>4,1м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Дакота перфорация</span></td>
+                <td><span>3400</span></td>
+                <td><span>3400</span></td>
+                <td><span>6800</span></td>
+                <td><span>2,0м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Виста</span></td>
+                <td><span>2300</span></td>
+                <td><span>2530</span></td>
+                <td><span>4600</span></td>
+                <td><span>3,5м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Виста перфорация</span></td>
+                <td><span>2400</span></td>
+                <td><span>2400</span></td>
+                <td><span>4800</span></td>
+                <td><span>1,5м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Виста цветная</span></td>
+                <td><span>2450</span></td>
+                <td><span>2695</span></td>
+                <td><span>4900</span></td>
+                <td><span>3,9м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Виста цветная перфорация</span></td>
+                <td><span>2550</span></td>
+                <td><span>2550</span></td>
+                <td><span>5100</span></td>
+                <td><span>1,8м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Верона</span></td>
+                <td><span>1500</span></td>
+                <td><span>1650</span></td>
+                <td><span>3000</span></td>
+                <td><span>3,5м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Родстар</span></td>
+                <td><span>2500</span></td>
+                <td><span>2750</span></td>
+                <td><span>5000</span></td>
+                <td><span>4,2м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Родстар перфорация</span></td>
+                <td><span>2600</span></td>
+                <td><span>2600</span></td>
+                <td><span>5200</span></td>
+                <td><span>2,1м²</span></td>
+              </tr>
+              <tr>
+                <td><span>Декоративная перфорация</span></td>
+                <td><span>4200</span></td>
+                <td><span>4200</span></td>
+                <td><span>8400</span></td>
+                <td><span>1,4м²</span></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <h2 class="h2">Экокожа</h2>
+        <h2 class="h2">Мебельная кожа</h2>
         <div class="responsive-table">
           <table class="table">
             <thead>
-              <th>Бренд</th>
-              <th></th>
-              <th>Стоимость</th>
-              <th>Оптовая цена</th>
+              <th>Наименование</th>
+              <th>Базовая цена</th>
+              <th>Примерный размер шкуры ( справочно)</th>
             </thead>
             <tbody>
               <tr>
-                <td>ATN</td>
-                <td>0500, 1376, 1385, 1411</td>
-                <td>1 500 р. за пог. м</td>
-                <td>1 500 р. за пог. м</td>
+                <td><span>Мадрас</span></td>
+                <td><span>2000</span></td>
+                <td><span>3,9м²</span></td>
               </tr>
               <tr>
-                <td>MAX</td>
-                <td>Экокожа ATN рулон (35 погонных метров)</td>
-                <td>1 500 р. за пог. м</td>
-                <td>1 500 р. за пог. м</td>
-              </tr>
-              <tr>
-                <td>Флекси</td>
-                <td>0500, 1017, 1219, 1237, 2116, 2362, 2584, 2837, 3086, 3444</td>
-                <td>2 000 р. за шт.</td>
-                <td>2 000 р. за шт.</td>
-              </tr>
-              <tr>
-                <td>Родстар</td>
-                <td>Текстурный перфорированный </td>
-                <td>8 600 р. за шт.</td>
-                <td>8 600 р. за шт.</td>
-              </tr>
-              <tr>
-                <td>Родстар</td>
-                <td>ПВС, Наппа блэк, Спиди, Биэластик, Аполло, 0500, 1237, 1251</td>
-                <td>1 500 р. за шт.</td>
-                <td>2 000 р. за шт.</td>
+                <td><span>Техас</span></td>
+                <td><span>2200</span></td>
+                <td><span>4,2м²</span></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <h2 class="h2">Нитки (автомобильные)</h2>
+        <h2 class="h2">Кожзамы и полиуретановая кожа</h2>
         <div class="responsive-table">
           <table class="table">
             <thead>
-              <th>Бренд</th>
-              <th></th>
-              <th>Стоимость</th>
-              <th>Оптовая цена</th>
+              <th>Наименование</th>
+              <th>Базовая цена</th>
+              <th>Рулон (опция)</th>
+              <th>Примерный размер рулона (справочно)</th>
             </thead>
             <tbody>
               <tr>
-                <td>Полиарт 15/1000</td>
-                <td>Толстые полиэстеровые нитки в бобинах по 1000 метров</td>
-                <td>1 500 р. за пог. м</td>
-                <td>1 500 р. за пог. м</td>
+                <td><span>Швайцер</span></td>
+                <td><span>1500</span></td>
+                <td><span>1300</span></td>
+                <td><span>25</span></td>
               </tr>
               <tr>
-                <td>Полиарт 20/1500</td>
-                <td>Стандартные полиэстеровые нитки в бобинах по 1500 метров</td>
-                <td>1 500 р. за пог. м</td>
-                <td>1 500 р. за пог. м</td>
+                <td><span>Швайцер наппа</span></td>
+                <td><span>1550</span></td>
+                <td><span>1350</span></td>
+                <td><span>30</span></td>
               </tr>
               <tr>
-                <td>Полиарт 40/3000</td>
-                <td>Тонкие полиэстеровые нитки в бобинах по 3000 метров</td>
-                <td>2 000 р. за шт.</td>
-                <td>2 000 р. за шт.</td>
+                <td><span>ATN</span></td>
+                <td><span>750</span></td>
+                <td><span>675</span></td>
+                <td><span>35</span></td>
               </tr>
               <tr>
-                <td>Полиарт (упаковка)</td>
-                <td>10 бобин любой толщины</td>
-                <td>8 600 р. за шт.</td>
-                <td>8 600 р. за шт.</td>
+                <td><span>MAH</span></td>
+                <td><span>1100</span></td>
+                <td><span>990</span></td>
+                <td><span>35</span></td>
               </tr>
               <tr>
-                <td>Ситипоинт 10/800</td>
-                <td>Толстые нитки (любой цвет) в бобинах по 800 метров</td>
-                <td>1 500 р. за шт.</td>
-                <td>2 000 р. за шт.</td>
+                <td><span>MAH Bielastich</span></td>
+                <td><span>1300</span></td>
+                <td><span>1170</span></td>
+                <td><span>35</span></td>
               </tr>
               <tr>
-                <td>Полиарт 15/1000</td>
-                <td>Толстые полиэстеровые нитки в бобинах по 1000 метров</td>
-                <td>1 500 р. за пог. м</td>
-                <td>1 500 р. за пог. м</td>
+                <td><span>Монза (Германия)</span></td>
+                <td><span>1300</span></td>
+                <td><span>1170</span></td>
+                <td><span>40</span></td>
               </tr>
               <tr>
-                <td>Полиарт 20/1500</td>
-                <td>Стандартные полиэстеровые нитки в бобинах по 1500 метров</td>
-                <td>1 500 р. за пог. м</td>
-                <td>1 500 р. за пог. м</td>
+                <td><span>Монза (Польша)</span></td>
+                <td><span>1100</span></td>
+                <td><span>990</span></td>
+                <td><span>40</span></td>
+              </tr>
+              <tr>
+                <td><span>Флекси</span></td>
+                <td><span>700</span></td>
+                <td><span>580</span></td>
+                <td><span>40</span></td>
+              </tr>
+              <tr>
+                <td><span>Родстар</span></td>
+                <td><span>650</span></td>
+                <td><span>585</span></td>
+                <td><span>20</span></td>
               </tr>
             </tbody>
           </table>
+        </div>
+        <div class="small-offset"><i class="sprite sprite--info"></i><span>Все перечисленные товары имеются в наличие и готовы к продаже.</span></div>
+        <div class="price-info"><i class="sprite sprite--excel"></i><span>Прайс-лист (EXLS; 0.7 мб)</span></div>
+        <div class="price-info"><i class="sprite sprite--pdf"></i><span>Прайс-лист (PDF; 1.2 мб)</span></div>
+        <div class="modal" id="callback">
+          <div class="modal__title">Обратный звонок</div>
+          <div class="modal__subtitle">Здравствуйте! Хотите, мы перезвоним Вам бесплатно и все обсудим&hellip;</div>
+          <form class="form">
+            <div class="form-control">
+              <input class="phone-mask" type="tel">
+            </div>
+            <div class="btn btn--primary"><i class="icon icon-user"></i><span>Хорошо, жду звонка</span></div>
+          </form>
         </div>
       </div>
     </main>
     <footer class="main-footer">
-      <div class="grid grid--container">
-        <div class="row row--sm-center">
-          <div class="col col--sm-4 main-footer__icons">
-            <p>Мы в социальных сетях</p><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-vk"></i></a><a href=""><i class="fa fa-instagram"></i></a>
+      <div class="main-footer__top">
+        <div class="grid grid--container">
+          <div class="main-footer__nav nav"><a class="nav__link" href="">Конфигуратор</a><a class="nav__link" href="">Прайс-лист</a><a class="nav__link" href="">Доставка и оплата</a><a class="nav__link" href="">Статьи</a><a class="nav__link" href="">Отзывы</a><a class="nav__link" href="">Контакты</a></div>
+        </div>
+      </div>
+      <div class="main-footer__middle">
+        <div class="grid grid--container">
+          <div class="row row--sm-center">
+            <div class="col col--xl-4 col--lg-5 col--md-3 col--sm-3 col--xs-6 main-footer__icons">
+              <p>Мы в социальных сетях</p><a href=""><i class="icon icon-facebook"></i></a><a href=""><i class="icon icon-vk"></i></a><a href=""><i class="icon icon-instagram"></i></a>
+            </div>
+            <div class="col col--xl-4 col--lg-3 col--md-3 col--sm-2 col--xs-6 main-footer__icons">
+              <p>Напишите нам</p><a href=""><i class="icon icon-skype"></i></a><a href=""><i class="icon icon-bubble"></i></a>
+            </div>
+            <div class="col col--xl-4 col--lg-4 col--md-6 col--sm-7 col--xs-12 text-right">
+              <div class="webformula"><i class="icon icon-hammer"></i><span>Создание сайта — </span><a href="">Webformula</a></div>
+            </div>
           </div>
-          <div class="col col--sm-4 main-footer__icons">
-            <p>Напишите нам</p><a href=""><i class="fa fa-skype"></i></a><a href=""><i class="fa fa-comment"></i></a>
+        </div>
+      </div>
+      <div class="main-footer__bottom">
+        <div class="grid grid--container">
+          <div class="row">
+            <div class="col col--sm-3 copyright">&copy; 2017 Avtokoja.ru</div>
+            <div class="col col--sm-5 conditions"><a href="">Условия использования сайта</a></div>
+            <div class="col col--sm-4 sitemap-link"><a href="">Карта сайта</a></div>
           </div>
         </div>
       </div>
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.fullpage.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('#fullpage').fullpage({
-          verticalCentered: false,
-          fitToSectionDelay: 5000
-        });
-      });
-    </script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

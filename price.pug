@@ -4,134 +4,463 @@ block content
 
   header.main-header
     .main-header__top.top
-      .grid.grid--container
-        .row.row--sm-center
-          .col.col--sm-12
-            a(href="/pages.html").logo Автокожа
-            .top__adress
-              i.fa.fa-map
-              span г. Краснодар, ул. Ставропольская, 67
-            .top__phone
-              i.fa.fa-phone
-              span +7 (861) 239-74-17;  +7 (918) 455-58-61
-            .top__callback
-              i.fa.fa-phone
-              span Перезвонить мне
-  .grid.grid--container
+      .grid.grid--container.main-header__container
+        a(href="/pages.html").logo
+        .top__adress
+          i.icon.icon-map
+          span г. Краснодар,
+          span ул. Ставропольская, 67
+        .top__phone
+          i.icon.icon-phone-hang-up
+          span +7 (861) 239-74-17;
+          span +7 (918) 455-58-61
+        a(href="#callback").top__callback.open-modal
+          i.icon.icon-phone
+          span Перезвонить мне
+  .grid.grid--container.second-header
     nav.navbar
-      .grid.grid--container
-        .row
-          .col.col--sm-8
-            a(href="").navbar__link Конфигуратор
-            a(href="").navbar__link Прайс-лист
-            a(href="").navbar__link Доставка и оплата
-            a(href="").navbar__link Статьи
-            a(href="").navbar__link Отзывы
-            a(href="").navbar__link Контакты
+      .navbar__section.navbar__section--links
+        a(href="").navbar__link.navbar__link--home
+          i.icon.icon-home3
+        i.sprite.sprite--separator
+        .mobile-menu-toggle
+          span
+          span
+          span
+        a(href="").navbar__link Конфигуратор
+        a(href="").navbar__link Прайс-лист
+        a(href="").navbar__link Доставка и оплата
+        a(href="").navbar__link Статьи
+        a(href="").navbar__link Отзывы
+        a(href="").navbar__link Контакты
+      .navbar__section.navbar__section--icons
+        i.icon.icon-search
+        i.sprite.sprite--separator
+        i.icon.icon-user
+        i.sprite.sprite--separator
+        i.icon.icon-cart
+    .mobile-menu
+      a(href="").mobile-menu__link Конфигуратор
+      a(href="").mobile-menu__link Прайс-лист
+      a(href="").mobile-menu__link Доставка и оплата
+      a(href="").mobile-menu__link Статьи
+      a(href="").mobile-menu__link Отзывы
+      a(href="").mobile-menu__link Контакты
 
 
   .grid.grid--container
     h1.h1 Прайс лист
-    hr.separator
+    hr.hr
     p Заказ можно сделать через e-mail (avtokoja.ru@mail.ru) либо по телефону +7 (861) 239-7417 или +7 (918) 4555-861. Мы доставляем товар любой грузовой компанией на ваш выбор (обычно это ПЭК, Деловые Линии и СДЭК), почтой России, или прямым авиарейсом в ваш город (быстрее и существенно дешевле DHL, в любой город, где есть аэропорт).
-    h2.h2 Искусственные автомобильные замши (заменители алькантары)
+    h2.h2 Автомобильная кожа
     .responsive-table
       table.table
         thead
-          th Бренд
-          th
-          th Стоимость
-          th Оптовая цена
+          th Наименование
+          th Базовая цена
+          th Полшкуры (+10%) - опция
+          th Отрез (за 0.01м2) - опция
+          th Примерный размер шкуры ( справочно)
         tbody
           tr
-            td Копия Алькантары
-            td Копия автомобильной Алькантары (без брендовой подписи) на основе
-            td 1 500 р. за пог. м
-            td 1 500 р. за пог. м
+            td
+              span Боксмарк
+            td
+              span 4200
+            td
+              span 4620
+            td
+              span 8400
+            td
+              span 4,2м²
           tr
-            td Эс-тайп
-            td Эс-тайп корейский гладкий (распродажа)
-            td 1 500 р. за пог. м
-            td 1 500 р. за пог. м
+            td
+              span Боксмарк перфорация
+            td
+              span 4300
+            td
+              span 4300
+            td
+              span 8600
+            td
+              span 2,2м²
+          tr
+            td
+              span Эсторил наппа
+            td
+              span 4000
+            td
+              span 4400
+            td
+              span 8000
+            td
+              span 4,3м²
+          tr
+            td
+              span Эсторил наппа перфорация
+            td
+              span 4100
+            td
+              span 4100
+            td
+              span 8200
+            td
+              span 2,1м²
+          tr
+            td
+              span Аполло
+            td
+              span 3400
+            td
+              span 3740
+            td
+              span 6800
+            td
+              span 3,8м²
+          tr
+            td
+              span Аполло перфорация
+            td
+              span 3500
+            td
+              span 3500
+            td
+              span 7000
+            td
+              span 2,1м²
+          tr
+            td
+              span Виста глатт
+            td
+              span 2700
+            td
+              span 2970
+            td
+              span 5400
+            td
+              span 3,5м²
+          tr
+            td
+              span Виста глатт перфорация
+            td
+              span 2750
+            td
+              span 2750
+            td
+              span 5500
+            td
+              span 1,3м²
+          tr
+            td
+              span Эсторил
+            td
+              span 2500
+            td
+              span 2750
+            td
+              span 5000
+            td
+              span 4,3м²
+          tr
+            td
+              span Эсторил перфорация
+            td
+              span 2600
+            td
+              span 2600
+            td
+              span 5200
+            td
+              span 2,2м²
+          tr
+            td
+              span Экстрим
+            td
+              span 2500
+            td
+              span 2750
+            td
+              span 5000
+            td
+              span 3,6м²
+          tr
+            td
+              span Экстрим перфорация
+            td
+              span 2600
+            td
+              span 2600
+            td
+              span 5200
+            td
+              span 2,0м²
+          tr
+            td
+              span Монза
+            td
+              span 3200
+            td
+              span 3520
+            td
+              span 6400
+            td
+              span 4,7м²
+          tr
+            td
+              span Монза перфорация
+            td
+              span 3400
+            td
+              span 3400
+            td
+              span 6800
+            td
+              span 2,6м²
+          tr
+            td
+              span Дакота
+            td
+              span 3200
+            td
+              span 3520
+            td
+              span 6400
+            td
+              span 4,1м²
+          tr
+            td
+              span Дакота перфорация
+            td
+              span 3400
+            td
+              span 3400
+            td
+              span 6800
+            td
+              span 2,0м²
+          tr
+            td
+              span Виста
+            td
+              span 2300
+            td
+              span 2530
+            td
+              span 4600
+            td
+              span 3,5м²
+          tr
+            td
+              span Виста перфорация
+            td
+              span 2400
+            td
+              span 2400
+            td
+              span 4800
+            td
+              span 1,5м²
+          tr
+            td
+              span Виста цветная
+            td
+              span 2450
+            td
+              span 2695
+            td
+              span 4900
+            td
+              span 3,9м²
+          tr
+            td
+              span Виста цветная перфорация
+            td
+              span 2550
+            td
+              span 2550
+            td
+              span 5100
+            td
+              span 1,8м²
+          tr
+            td
+              span Верона
+            td
+              span 1500
+            td
+              span 1650
+            td
+              span 3000
+            td
+              span 3,5м²
+          tr
+            td
+              span Родстар
+            td
+              span 2500
+            td
+              span 2750
+            td
+              span 5000
+            td
+              span 4,2м²
+          tr
+            td
+              span Родстар перфорация
+            td
+              span 2600
+            td
+              span 2600
+            td
+              span 5200
+            td
+              span 2,1м²
+          tr
+            td
+              span Декоративная перфорация
+            td
+              span 4200
+            td
+              span 4200
+            td
+              span 8400
+            td
+              span 1,4м²
 
-    h2.h2 Экокожа
+
+    h2.h2 Мебельная кожа
     .responsive-table
       table.table
         thead
-          th Бренд
-          th
-          th Стоимость
-          th Оптовая цена
+          th Наименование
+          th Базовая цена
+          th Примерный размер шкуры ( справочно)
         tbody
           tr
-            td ATN
-            td 0500, 1376, 1385, 1411
-            td 1 500 р. за пог. м
-            td 1 500 р. за пог. м
+            td
+              span Мадрас
+            td
+              span 2000
+            td
+              span 3,9м²
           tr
-            td MAX
-            td Экокожа ATN рулон (35 погонных метров)
-            td 1 500 р. за пог. м
-            td 1 500 р. за пог. м
-          tr
-            td Флекси
-            td 0500, 1017, 1219, 1237, 2116, 2362, 2584, 2837, 3086, 3444
-            td 2 000 р. за шт.
-            td 2 000 р. за шт.
-          tr
-            td Родстар
-            td Текстурный перфорированный 
-            td 8 600 р. за шт.
-            td 8 600 р. за шт.
-          tr
-            td Родстар
-            td ПВС, Наппа блэк, Спиди, Биэластик, Аполло, 0500, 1237, 1251
-            td 1 500 р. за шт.
-            td 2 000 р. за шт.
+            td
+              span Техас
+            td
+              span 2200
+            td
+              span 4,2м²
 
 
-    h2.h2 Нитки (автомобильные)
+    h2.h2 Кожзамы и полиуретановая кожа
     .responsive-table
       table.table
         thead
-          th Бренд
-          th
-          th Стоимость
-          th Оптовая цена
+          th Наименование
+          th Базовая цена
+          th Рулон (опция)
+          th Примерный размер рулона (справочно)
         tbody
           tr
-            td Полиарт 15/1000
-            td Толстые полиэстеровые нитки в бобинах по 1000 метров
-            td 1 500 р. за пог. м
-            td 1 500 р. за пог. м
+            td
+              span Швайцер
+            td
+              span 1500
+            td
+              span 1300
+            td
+              span 25
           tr
-            td Полиарт 20/1500
-            td Стандартные полиэстеровые нитки в бобинах по 1500 метров
-            td 1 500 р. за пог. м
-            td 1 500 р. за пог. м
+            td
+              span Швайцер наппа
+            td
+              span 1550
+            td
+              span 1350
+            td
+              span 30
           tr
-            td Полиарт 40/3000
-            td Тонкие полиэстеровые нитки в бобинах по 3000 метров
-            td 2 000 р. за шт.
-            td 2 000 р. за шт.
+            td
+              span ATN
+            td
+              span 750
+            td
+              span 675
+            td
+              span 35
           tr
-            td Полиарт (упаковка)
-            td 10 бобин любой толщины
-            td 8 600 р. за шт.
-            td 8 600 р. за шт.
+            td
+              span MAH
+            td
+              span 1100
+            td
+              span 990
+            td
+              span 35
           tr
-            td Ситипоинт 10/800
-            td Толстые нитки (любой цвет) в бобинах по 800 метров
-            td 1 500 р. за шт.
-            td 2 000 р. за шт.
+            td
+              span MAH Bielastich
+            td
+              span 1300
+            td
+              span 1170
+            td
+              span 35
           tr
-            td Полиарт 15/1000
-            td Толстые полиэстеровые нитки в бобинах по 1000 метров
-            td 1 500 р. за пог. м
-            td 1 500 р. за пог. м
+            td
+              span Монза (Германия)
+            td
+              span 1300
+            td
+              span 1170
+            td
+              span 40
           tr
-            td Полиарт 20/1500
-            td Стандартные полиэстеровые нитки в бобинах по 1500 метров
-            td 1 500 р. за пог. м
-            td 1 500 р. за пог. м
+            td
+              span Монза (Польша)
+            td
+              span 1100
+            td
+              span 990
+            td
+              span 40
+          tr
+            td
+              span Флекси
+            td
+              span 700
+            td
+              span 580
+            td
+              span 40
+          tr
+            td
+              span Родстар
+            td
+              span 650
+            td
+              span 585
+            td
+              span 20
 
+
+
+    .small-offset
+      i.sprite.sprite--info
+      span Все перечисленные товары имеются в наличие и готовы к продаже.
+    .price-info
+      i.sprite.sprite--excel
+      span Прайс-лист (EXLS; 0.7 мб)
+    .price-info
+      i.sprite.sprite--pdf
+      span Прайс-лист (PDF; 1.2 мб)
+
+    #callback.modal
+      .modal__title Обратный звонок
+      .modal__subtitle Здравствуйте! Хотите, мы перезвоним Вам бесплатно и все обсудим&hellip;
+      form.form
+        .form-control
+          input(type="tel").phone-mask
+        .btn.btn--primary
+          i.icon.icon-user
+          span Хорошо, жду звонка

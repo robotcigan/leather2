@@ -5,30 +5,51 @@ block content
     .section
       header.main-header
         .main-header__top.top
-          .grid.grid--container
-            .row.row--sm-center
-              .col.col--sm-12
-                a(href="/pages.html").logo Автокожа
-                .top__adress
-                  i.fa.fa-map
-                  span г. Краснодар, ул. Ставропольская, 67
-                .top__phone
-                  i.fa.fa-phone
-                  span +7 (861) 239-74-17;  +7 (918) 455-58-61
-                .top__callback
-                  i.fa.fa-phone
-                  span Перезвонить мне
-      .grid.grid--container
+          .grid.grid--container.main-header__container
+            a(href="/pages.html").logo
+            .top__adress
+              i.icon.icon-map
+              span г. Краснодар,
+              span ул. Ставропольская, 67
+            .top__phone
+              i.icon.icon-phone-hang-up
+              span +7 (861) 239-74-17;
+              span +7 (918) 455-58-61
+            a(href="#callback").top__callback.open-modal
+              i.icon.icon-phone
+              span Перезвонить мне
+      .grid.grid--container.second-header.second-header--index
         nav.navbar
-          .grid.grid--container
-            .row
-              .col.col--sm-8
-                a(href="").navbar__link Конфигуратор
-                a(href="").navbar__link Прайс-лист
-                a(href="").navbar__link Доставка и оплата
-                a(href="").navbar__link Статьи
-                a(href="").navbar__link Отзывы
-                a(href="").navbar__link Контакты
+          .navbar__section.navbar__section--links
+            a(href="").navbar__link.navbar__link--home
+              i.icon.icon-home3
+            i.sprite.sprite--separator
+            .mobile-menu-toggle
+              span
+              span
+              span
+            a(href="").navbar__link Конфигуратор
+            a(href="").navbar__link Прайс-лист
+            a(href="").navbar__link Доставка и оплата
+            a(href="").navbar__link Статьи
+            a(href="").navbar__link Отзывы
+            a(href="").navbar__link Контакты
+          .navbar__section.navbar__section--icons
+            i.icon.icon-search
+            i.sprite.sprite--separator
+            i.icon.icon-user
+            i.sprite.sprite--separator
+            i.icon.icon-cart
+        .mobile-menu
+          a(href="").mobile-menu__link Конфигуратор
+          a(href="").mobile-menu__link Прайс-лист
+          a(href="").mobile-menu__link Доставка и оплата
+          a(href="").mobile-menu__link Статьи
+          a(href="").mobile-menu__link Отзывы
+          a(href="").mobile-menu__link Контакты
+
+
+
       .hero.hero--main
         .hero__bg(style='background-image: url("img/bg-1.jpg")')
         .grid.grid--container
@@ -38,7 +59,7 @@ block content
               | салона автомобиля
             .container__subtitle Импорт Alcantara и Швайцер
             .btn.container__btn
-              i
+              i.icon.icon-equalizer
               span Открыть конфигуратор
     .section
       .hero
@@ -56,16 +77,38 @@ block content
               i
               span Купить
       
-    .section
+    .section.active
       .grid.grid--container
-        h1.header А также
-    .section
-      .grid.grid--container
-        h1.header Отзывы
+        .text-center
+          h1.header А также
+        .photo-samples.gallery
+          -for(var i = 1; i < 5; i++)
+            a(href="img/samples-" + i + ".jpg")
+              img(src="img/samples-" + i + ".jpg", alt="")
+        
+
+
+
 
     .section
       .grid.grid--container
-        h1.header Как нас найти?
+        .text-center
+          h1.header Отзывы
+        .reviews.row
+          -for(var i = 0; i < 4; i++)
+            .col.col--sm-6
+              a(href="").review
+                .review__img(style="background-image: url(img/review.jpg)")
+                .review__title KADZIM CUSTOMS, Краснодар
+                .review__text Спасибо компании &laquo;
+                  strong Автокожа
+                  | &raquo;. Коллектив работает слаженно, четко, профессионально. Пользовалась услугами не единожды.
+
+    .section
+      .grid.grid--container
+        .text-center
+          h1.header.header--with-subheader Как нас найти?
+          p.subheader Наш магазин находится по адресу: Россия,  г. Краснодар ул. Ставропольская, 67
         .map
           iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d73696.91684104543!2d39.033987979024516!3d45.0446057407869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1494337268503" frameborder="0" style="border:0" allowfullscreen)
 
