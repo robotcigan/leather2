@@ -1,0 +1,38 @@
+#fp-nav,
+.fp-slidesNav
+  ul li
+    margin-bottom 1.5rem
+    a
+      span
+        circle(1rem)
+        background #999
+        margin -6px
+      &.active
+        span
+          circle(1rem)
+          margin -6px
+    &:hover
+      a
+        span
+          circle(1rem)
+          margin -6px
+        &.active
+          span
+            circle(1rem)
+            margin -6px
+
+#fp-nav,
+.fp-slidesNav
+  ul li
+    a
+      &.active
+        span
+          background $main
+    &:hover
+      a
+        span
+          background $primary
+
+.fp-slidesNav.bottom
+  bottom initial
+  margin-top 2rem

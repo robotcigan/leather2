@@ -1,0 +1,105 @@
+extends layout.pug
+
+block content
+
+  header.main-header
+    .main-header__top.top
+      .grid.grid--container.main-header__container
+        a(href="/pages.html").logo
+        .top__adress
+          i.icon.icon-map
+          span г. Краснодар,
+          span ул. Ставропольская, 67
+        .top__phone
+          i.icon.icon-phone-hang-up
+          span +7 (861) 239-74-17;
+          span +7 (918) 455-58-61
+        a(href="#callback").top__callback.open-modal
+          i.icon.icon-phone
+          span Перезвонить мне
+  .grid.grid--container.second-header
+    nav.navbar
+      .navbar__section.navbar__section--links
+        a(href="").navbar__link.navbar__link--home
+          i.icon.icon-home3
+        i.sprite.sprite--separator
+        .mobile-menu-toggle
+          span
+          span
+          span
+        a(href="").navbar__link Конфигуратор
+        a(href="").navbar__link Прайс-лист
+        a(href="").navbar__link Доставка и оплата
+        a(href="").navbar__link Статьи
+        a(href="").navbar__link Отзывы
+        a(href="").navbar__link Контакты
+      .navbar__section.navbar__section--icons
+        i.icon.icon-search
+        i.sprite.sprite--separator
+        i.icon.icon-user
+        i.sprite.sprite--separator
+        i.icon.icon-cart
+    .mobile-menu
+      a(href="").mobile-menu__link Конфигуратор
+      a(href="").mobile-menu__link Прайс-лист
+      a(href="").mobile-menu__link Доставка и оплата
+      a(href="").mobile-menu__link Статьи
+      a(href="").mobile-menu__link Отзывы
+      a(href="").mobile-menu__link Контакты
+
+
+  .grid.grid--container
+    h1.h1 Контактная информация
+    hr.hr
+    .map.map--inner
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.223695491337!2d39.0000160152186!3d45.02038427909817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04fdd0906b7e9%3A0x3dab2628ce08587e!2z0YPQuy4g0KHRgtCw0LLRgNC-0L_QvtC70YzRgdC60LDRjywgNjcsINCa0YDQsNGB0L3QvtC00LDRgCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksIDM1MDAwMQ!5e0!3m2!1sru!2sru!4v1495403956371" frameborder="0" style="border:0" allowfullscreen)
+
+    .row
+      .col.col--md-6.mobile-offset
+        h2.inner-header Контактные данные
+        .inner-table
+          .inner-table__row
+            .icon-in-circle
+              i.icon.icon-map
+            span Россия, г. Краснодар ул. Ставропольская, 67
+          .inner-table__row
+            .icon-in-circle
+              i.icon.icon-phone
+            span +7 (861) 239-74-17;  +7 (918) 455-58-61
+          .inner-table__row
+            .icon-in-circle
+              i.icon.icon-envelop
+            span info@avtokoja.ru
+          .inner-table__row
+            .icon-in-circle
+              i.icon.icon-earth
+            span info@avtokoja.ru
+
+      .col.col--md-6.mobile-offset
+        h2.inner-header Контактные данные
+        form.form.form--inner
+          .row
+            .col.col--sm-6
+              .form-control
+                input(type="text" placeholder="Ваше имя")
+            .col.col--sm-6
+            .col.col--sm-6
+              .form-control
+                input(type="email" placeholder="Эл. почта")
+            .col.col--sm-6
+              .form-control
+                input(type="tel" placeholder="Телефон")
+            .col.col--sm-12
+              .form-control
+                textarea
+              label.checkbox
+                input(type="checkbox" id="checkbox-1")
+                label(for="checkbox-1")
+                span Я не робот
+              button.btn.btn--middle
+                i.icon.icon-envelop
+                span Отправить
+
+  include components/footer.pug
+
+  include components/callback.pug

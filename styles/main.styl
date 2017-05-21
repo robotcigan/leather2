@@ -8,7 +8,10 @@
 @import 'base/modal.styl'
 @import 'base/form.styl'
 
+@import 'modifications/modifications.styl'
+
 @import 'pages/index.styl'
+@import 'pages/inner.styl'
 @import 'pages/price.styl'
 
 
@@ -20,6 +23,7 @@
 .hr
   border none
   border-bottom 1px solid #eaeaea
+  margin-bottom 4rem
 
 .logo
   background url('../../img/logo.png') no-repeat
@@ -35,7 +39,12 @@
 
 
 .main-header
+  left 0
+  position fixed
   position relative
+  top 0
+  width 100%
+  z-index 100
   &__container
     align-items center
     display flex
@@ -166,13 +175,14 @@
   background #fff
   display inline-block
   font-size 3.6rem
-  margin-top 6rem
+  // margin-top (20 / 935 * 100)%
+  margin-top 2rem
   position relative
   text-align center
   z-index 5
   &--with-subheader
     line-height 1
-    margin-bottom 4rem
+    margin-bottom (50 / 935 * 100)%
   // &:before
   //   background-color $light-gray
   //   content ''
@@ -187,10 +197,31 @@
   margin-top 0
 
 .map
+  &--inner
+    margin-bottom 10rem
   iframe
     height 80vh
     width 100%
 
+.weird-tables
+  padding 0 ((50 / 1620) * 100)%
+
+.weird-table
+  padding 0 ((70 / 1620) * 100)%
+  &__title
+    font-size 1.8rem
+    font-weight 600
+    margin-bottom ((35 / 935) * 100)%
+    margin-top ((70 / 935) * 100)%
+  &__row
+    color $main
+    display block
+    line-height 2.5
+    text-decoration none
+    &:hover
+      color $primary
+    &:not(:last-child)
+      border-bottom 1px solid $gray
 
 .main-footer
   margin-top 10rem

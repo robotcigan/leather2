@@ -1,24 +1,24 @@
 .hero
+  height calc(100vh - 6rem)
   height 100%
   overflow hidden
-  &--main
-    height calc(100% - 13rem)
   &__bg
     display block
     background-repeat no-repeat
     background-size cover !important
-    circle(100%)
+    height calc(100vh - 6rem)
     position absolute
     z-index -1
+    width 100%
   .grid--container
-    height 100%
+    height calc(100vh - 6rem)
   &__container.container
     align-content flex-end
     display flex
     flex-flow row wrap
     flex 0 1 100%
     height 100%
-    padding-bottom (65 / 935 * 100)%
+    padding-bottom (33 / 780 * 100)%
     width 70rem
     .container
       &__title
@@ -44,6 +44,10 @@
         width 100%
       &__btn
         display inline-block
+  &--main
+    height calc(100vh - 13.5rem)
+    .grid--container
+      height calc(100vh - 13.5rem)
 
 .photo-samples
   clearfix()
@@ -62,7 +66,7 @@
   clearfix()
   cursor pointer
   margin-bottom 2rem
-  padding ((65 / 780) * 100)% ((50 / 780) * 100)%
+  padding ((55 / 935) * 100)% ((65 / 780) * 100)%
   text-decoration none
   &:hover
     background-color $secondary
@@ -84,10 +88,18 @@
     display block
     circle(15rem)
     float left
-    margin-right 4rem
+    margin-right ((40 / 780) * 100)%
   &__title
     font-size 2.4rem
+    line-height 1
     margin-bottom 1rem
     margin-top 1.5rem
   &__text
-    font-size 1.8remj
+    font-size 1.8rem
+
+.reviews
+  .col
+    &:nth-of-type(3),
+    &:nth-of-type(4)
+      .review
+        margin-bottom 0

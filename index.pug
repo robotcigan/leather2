@@ -1,23 +1,23 @@
 extends layout.pug
 
 block content
+  header.main-header
+    .main-header__top.top
+      .grid.grid--container.main-header__container
+        a(href="/pages.html").logo
+        .top__adress
+          i.icon.icon-map
+          span г. Краснодар,
+          span ул. Ставропольская, 67
+        .top__phone
+          i.icon.icon-phone-hang-up
+          span +7 (861) 239-74-17; 
+          span +7 (918) 455-58-61
+        a(href="#callback").top__callback.open-modal
+          i.icon.icon-phone
+          span Перезвонить мне
   #fullpage
     .section
-      header.main-header
-        .main-header__top.top
-          .grid.grid--container.main-header__container
-            a(href="/pages.html").logo
-            .top__adress
-              i.icon.icon-map
-              span г. Краснодар,
-              span ул. Ставропольская, 67
-            .top__phone
-              i.icon.icon-phone-hang-up
-              span +7 (861) 239-74-17;
-              span +7 (918) 455-58-61
-            a(href="#callback").top__callback.open-modal
-              i.icon.icon-phone
-              span Перезвонить мне
       .grid.grid--container.second-header.second-header--index
         nav.navbar
           .navbar__section.navbar__section--links
@@ -76,8 +76,9 @@ block content
             .btn.container__btn
               i
               span Купить
-      
-    .section.active
+
+
+    .section.mobile-offset
       .grid.grid--container
         .text-center
           h1.header А также
@@ -85,32 +86,57 @@ block content
           -for(var i = 1; i < 5; i++)
             a(href="img/samples-" + i + ".jpg")
               img(src="img/samples-" + i + ".jpg", alt="")
-        
+        .row.weird-tables
+          .col.col--sm-4
+            .weird-table
+              .weird-table__title Атомобильная кожа
+              a(href="").weird-table__row Эсторил
+              a(href="").weird-table__row Виста
+              a(href="").weird-table__row Монза и Дакота
+              a(href="").weird-table__row Родстар и Имола
+          .col.col--sm-4
+            .weird-table
+              .weird-table__title Атомобильные кожзамы
+              a(href="").weird-table__row MAX
+              a(href="").weird-table__row ATH
+              a(href="").weird-table__row Монза
+              a(href="").weird-table__row Родстар
+          .col.col--sm-4
+            .weird-table
+              .weird-table__title Атомобильные нитки
+              a(href="").weird-table__row Ситипоинт
+              a(href="").weird-table__row Полиарт
 
 
 
 
-    .section
+    .section.mobile-offset
       .grid.grid--container
         .text-center
           h1.header Отзывы
-        .reviews.row
-          -for(var i = 0; i < 4; i++)
-            .col.col--sm-6
-              a(href="").review
-                .review__img(style="background-image: url(img/review.jpg)")
-                .review__title KADZIM CUSTOMS, Краснодар
-                .review__text Спасибо компании &laquo;
-                  strong Автокожа
-                  | &raquo;. Коллектив работает слаженно, четко, профессионально. Пользовалась услугами не единожды.
+        .reviews
+          -for(var y = 0; y < 3; y++)
+            .slide
+              .row
+                -for(var i = 0; i < 4; i++)
+                  .col.col--sm-6
+                    a(href="").review
+                      .review__img(style="background-image: url(img/review.jpg)")
+                      .review__title KADZIM CUSTOMS, Краснодар
+                      .review__text Спасибо компании &laquo;
+                        strong Автокожа
+                        | &raquo;. Коллектив работает слаженно, четко, профессионально. Пользовалась услугами не единожды.
 
-    .section
+    .section.active
       .grid.grid--container
         .text-center
           h1.header.header--with-subheader Как нас найти?
           p.subheader Наш магазин находится по адресу: Россия,  г. Краснодар ул. Ставропольская, 67
         .map
-          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d73696.91684104543!2d39.033987979024516!3d45.0446057407869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1494337268503" frameborder="0" style="border:0" allowfullscreen)
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.223695491337!2d39.0000160152186!3d45.02038427909817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04fdd0906b7e9%3A0x3dab2628ce08587e!2z0YPQuy4g0KHRgtCw0LLRgNC-0L_QvtC70YzRgdC60LDRjywgNjcsINCa0YDQsNGB0L3QvtC00LDRgCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksIDM1MDAwMQ!5e0!3m2!1sru!2sru!4v1495403956371" frameborder="0" style="border:0" allowfullscreen)
+      
+      include components/footer.pug
 
 
 
+  include components/callback.pug

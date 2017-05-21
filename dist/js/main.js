@@ -2,10 +2,29 @@
 
 $(document).ready(function () {
 
-  // Главная слайдер всея сайта
-  $('#fullpage').fullpage({
-    verticalCentered: false,
-    fitToSectionDelay: 5000
+  var windowWidth = $(window).width();
+  function fullPageInit() {
+    // Главный слайдер всея сайта
+    $('#fullpage').fullpage({
+      verticalCentered: false,
+      scrollOverflow: true,
+      slidesNavigation: true,
+      navigation: true
+    });
+  }
+
+  if (windowWidth > 768) {
+    fullPageInit();
+  }
+
+  $(window).resize(function () {
+    windowWidth = $(window).width();
+    if (windowWidth > 768) {
+      $.fn.fullpage.reBuild();
+      // fullPageInit();
+    } else {
+      $.fn.fullpage.destroy();
+    }
   });
 
   // Таблицы
@@ -27,6 +46,15 @@ $(document).ready(function () {
   // Модалка
   $('.open-modal').magnificPopup({
     type: 'inline'
+  });
+
+  // Галлерея
+  $('.gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery: {
+      enabled: true
+    }
   });
 
   // Телефон маска

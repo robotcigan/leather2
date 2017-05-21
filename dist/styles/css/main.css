@@ -78,12 +78,26 @@ body * {
   height: 28px;
   width: 1px;
 }
-.icons .icon {
+.icon {
   vertical-align: middle;
+}
+.icon-in-circle {
+  display: inline-block;
+  margin-right: 1.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.icon-in-circle .icon {
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  height: 3.7rem;
+  width: 3.7rem;
+  display: table-cell;
 }
 .h1 {
   font-size: 3.2rem;
   font-weight: 500;
+  line-height: 1.2;
 }
 .h2 {
   font-size: 2.4rem;
@@ -205,8 +219,18 @@ body * {
   top: 5.434782608695652%;
   right: 5.434782608695652%;
 }
+.mfp-gallery .mfp-close,
+.mfp-gallery .mfp-close:active {
+  right: -5rem;
+  top: 2.5rem;
+}
+.form--inner {
+  background-color: #f3f7fa;
+  padding: 4.605263157894736%;
+}
 .btn {
   background-color: #ffa800;
+  border: none;
   border-radius: 4px;
   color: #111;
   cursor: pointer;
@@ -216,7 +240,14 @@ body * {
   transition: background-color 0.4s;
 }
 .btn:hover {
-  background-color: #f2a000;
+  background-color: #e69700;
+}
+.btn--middle {
+  font-size: 1.6rem;
+  padding: 1.5rem 3rem;
+}
+.btn--middle .icon {
+  font-size: 1.4rem;
 }
 .btn--solid {
   background-color: transparent;
@@ -283,24 +314,103 @@ body * {
 .form-control textarea.invalid {
   border-color: $red;
 }
+.form-control textarea {
+  min-height: 13.5rem;
+  resize: vertical;
+}
+.checkbox {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10.526315789473683%;
+}
+.checkbox label {
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 1rem;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  vertical-align: middle;
+}
+.checkbox label:after {
+  color: #ffa800;
+  content: "\f00c";
+  display: none;
+  font-family: 'FontAwesome';
+  font-size: 1.4rem;
+  left: 2px;
+  position: absolute;
+  top: -2px;
+}
+.checkbox input {
+  display: none;
+}
+.checkbox input:checked + label:after {
+  display: block;
+}
+.checkbox span {
+  color: #111;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+  margin-bottom: 1.5rem;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  height: 1rem;
+  width: 1rem;
+  background: #999;
+  margin: -6px;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+  height: 1rem;
+  width: 1rem;
+  margin: -6px;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+  height: 1rem;
+  width: 1rem;
+  margin: -6px;
+}
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  height: 1rem;
+  width: 1rem;
+  margin: -6px;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+  background: #111;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+  background: #ffa800;
+}
+.fp-slidesNav.bottom {
+  bottom: initial;
+  margin-top: 2rem;
+}
 .hero {
+  height: calc(100vh - 6rem);
   height: 100%;
   overflow: hidden;
-}
-.hero--main {
-  height: calc(100% - 13rem);
 }
 .hero__bg {
   display: block;
   background-repeat: no-repeat;
   background-size: cover !important;
-  height: 100%;
-  width: 100%;
+  height: calc(100vh - 6rem);
   position: absolute;
   z-index: -1;
+  width: 100%;
 }
 .hero .grid--container {
-  height: 100%;
+  height: calc(100vh - 6rem);
 }
 .hero__container.container {
   align-content: flex-end;
@@ -308,7 +418,7 @@ body * {
   flex-flow: row wrap;
   flex: 0 1 100%;
   height: 100%;
-  padding-bottom: 6.951871657754011%;
+  padding-bottom: 4.230769230769231%;
   width: 70rem;
 }
 .hero__container.container .container__title {
@@ -339,6 +449,12 @@ body * {
 .hero__container.container .container__btn {
   display: inline-block;
 }
+.hero--main {
+  height: calc(100vh - 13.5rem);
+}
+.hero--main .grid--container {
+  height: calc(100vh - 13.5rem);
+}
 .photo-samples:after {
   content: "";
   display: table;
@@ -359,7 +475,7 @@ body * {
   color: #111;
   cursor: pointer;
   margin-bottom: 2rem;
-  padding: 8.333333333333332% 6.41025641025641%;
+  padding: 5.88235294117647% 8.333333333333332%;
   text-decoration: none;
 }
 .review:after {
@@ -390,15 +506,39 @@ body * {
   height: 15rem;
   width: 15rem;
   float: left;
-  margin-right: 4rem;
+  margin-right: 5.128205128205128%;
 }
 .review__title {
   font-size: 2.4rem;
+  line-height: 1;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
 }
 .review__text {
-  font-size: 1.8remj;
+  font-size: 1.8rem;
+}
+.reviews .col:nth-of-type(3) .review,
+.reviews .col:nth-of-type(4) .review {
+  margin-bottom: 0;
+}
+.inner-header {
+  letter-spacing: 1px;
+  margin-bottom: 5rem;
+  padding-left: 4.166666666666666%;
+}
+.inner-table__row {
+  border-bottom: 1px solid #bbb;
+  padding: 2rem 0;
+  padding-left: 4.166666666666666%;
+}
+.inner-table__row:first-child {
+  border-top: 1px solid #bbb;
+}
+.inner-table__row .icon-in-circle {
+  float: left;
+}
+.inner-table__row span {
+  vertical-align: middle;
 }
 .price-info {
   display: inline-block;
@@ -411,6 +551,7 @@ body * {
 .hr {
   border: none;
   border-bottom: 1px solid #eaeaea;
+  margin-bottom: 4rem;
 }
 .logo {
   background: url("../../img/logo.png") no-repeat;
@@ -425,7 +566,12 @@ body * {
   text-transform: uppercase;
 }
 .main-header {
+  left: 0;
+  position: fixed;
   position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 .main-header__container {
   align-items: center;
@@ -574,21 +720,48 @@ body * {
   background: #fff;
   display: inline-block;
   font-size: 3.6rem;
-  margin-top: 6rem;
+  margin-top: 2rem;
   position: relative;
   text-align: center;
   z-index: 5;
 }
 .header--with-subheader {
   line-height: 1;
-  margin-bottom: 4rem;
+  margin-bottom: 5.347593582887701%;
 }
 .subheader {
   margin-top: 0;
 }
+.map--inner {
+  margin-bottom: 10rem;
+}
 .map iframe {
   height: 80vh;
   width: 100%;
+}
+.weird-tables {
+  padding: 0 3.08641975308642%;
+}
+.weird-table {
+  padding: 0 4.320987654320987%;
+}
+.weird-table__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 3.74331550802139%;
+  margin-top: 7.48663101604278%;
+}
+.weird-table__row {
+  color: #111;
+  display: block;
+  line-height: 2.5;
+  text-decoration: none;
+}
+.weird-table__row:hover {
+  color: #ffa800;
+}
+.weird-table__row:not(:last-child) {
+  border-bottom: 1px solid #bbb;
 }
 .main-footer {
   margin-top: 10rem;
@@ -654,6 +827,9 @@ body * {
   color: #ffa800;
 }
 @media (max-width: 1600px) {
+  .main-header__container {
+    justify-content: space-between;
+  }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -661,11 +837,17 @@ body * {
   .navbar .navbar__section--icons {
     margin-left: 0;
   }
+  .review__title {
+    font-size: 1.8rem;
+  }
+  .review__text {
+    font-size: 1.6rem;
+  }
+  .header--with-subheader {
+    margin-bottom: 1.5rem;
+  }
 }
 @media (max-width: 1340px) {
-  .main-header__container {
-    justify-content: space-between;
-  }
   .main-header__top .top__callback .icon {
     margin-right: 0;
   }
@@ -698,6 +880,10 @@ body * {
   .mobile-menu-toggle {
     display: inline-block;
   }
+  .review__img {
+    height: 10rem;
+    width: 10rem;
+  }
 }
 @media (max-width: 1000px) {
   .grid--container {
@@ -711,9 +897,31 @@ body * {
   }
 }
 @media (max-width: 767px) {
+  .section {
+    min-height: 100vh;
+  }
   .main-header__top .top__adress,
   .main-header__top .top__phone {
     display: none;
+  }
+  .hero__bg {
+    background-position: 20%;
+  }
+  .hero__container.container {
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+  .hero__container.container .container__title {
+    font-size: 3.2rem;
+  }
+  .hero__container.container .container__btn {
+    text-align: center;
+    width: 100%;
+  }
+  .btn-group .btn {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
   }
 }
 @media (max-width: 720px) {
@@ -728,6 +936,9 @@ body * {
   }
 }
 @media (max-width: 500px) {
+  .mobile-offset {
+    margin-bottom: 5rem;
+  }
   .row {
     margin: 0 -1rem;
     margin-bottom: 1rem;
@@ -755,6 +966,28 @@ body * {
   .webformula {
     margin-top: 1rem;
     text-align: left;
+  }
+  .inner-header {
+    margin-bottom: 2rem;
+  }
+  .map--inner {
+    margin-bottom: 4rem;
+  }
+  .map--inner iframe {
+    height: 30rem;
+  }
+  .checkbox {
+    margin-bottom: 2rem;
+  }
+  .photo-samples a {
+    display: block;
+    width: 100%;
+  }
+  .review {
+    margin-bottom: 2rem !important;
+  }
+  .review__img {
+    float: none;
   }
 }
 

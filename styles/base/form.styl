@@ -1,5 +1,11 @@
+.form
+  &--inner
+    background-color $blue
+    padding ((35 / 760) * 100)%
+
 .btn
   background-color $primary
+  border none
   border-radius 4px
   color $main
   cursor pointer
@@ -8,7 +14,12 @@
   padding 1rem 2.5rem
   transition background-color .4s
   &:hover
-    background-color $primary - 5%
+    background-color $primary - 10%
+  &--middle
+    font-size 1.6rem
+    padding 1.5rem 3rem
+    .icon
+      font-size 1.4rem
   &--solid
     background-color transparent
     border 1px solid #727688
@@ -48,3 +59,37 @@
       border-color $primary
     &.invalid
       border-color $red
+  textarea
+    min-height 13.5rem
+    resize vertical
+
+
+.checkbox
+  cursor pointer
+  display inline-block
+  margin-right ((80 / 760) * 100)%
+  label
+    background transparent
+    border-radius $radius
+    border 1px solid $gray
+    cursor pointer
+    display inline-block
+    margin-right 1rem
+    position relative
+    circle(2rem)
+    vertical-align middle
+    &:after
+      color $primary
+      content "\f00c"
+      display none
+      font-family 'FontAwesome'
+      font-size 1.4rem
+      left 2px
+      position absolute
+      top -2px
+  input
+    display none
+  input:checked + label:after
+    display block
+  span
+    color $main
