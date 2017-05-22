@@ -35,7 +35,7 @@ gulp.task 'stylus', ->
 
 
 gulp.task 'es6', ->
-  gulp.src 'js/main.js'
+  gulp.src 'js/*.js'
     .pipe babel
       presets: ['es2015']
     .on 'error', swallowError
@@ -78,7 +78,7 @@ gulp.task 'default', ['pug', 'stylus', 'es6'], ->
     notify: false
     open: false
 
-  gulp.watch 'js/main.js', ['es6']
+  gulp.watch 'js/*.js', ['es6']
   # gulp.watch('styles/*.styl', ['stylus'])
   # gulp.watch('dist/styles/css/main.css')
   gulp.watch 'styles/**/*.styl', ['stylus']

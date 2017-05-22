@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .hero.hero--develop
+    .hero__bg(style='background-image: url("img/develop-bg.jpg")')
+    .grid.grid--container
+      .hero__container.container
+        img(src="img/cogs.png", alt="")
+        .container__title Раздел в разработке
+
+  include components/footer.pug
+
+  include components/callback.pug

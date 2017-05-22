@@ -35,4 +35,21 @@
 
 .fp-slidesNav.bottom
   bottom initial
+  margin-top 10rem
+
+.cropper
+  &-line
+    background-color transparent
+  &-view-box
+    outline 1px solid $primary
+    outline-color rgba($primary, .75)
+  &-point
+    background-color $primary
+
+
+@media(max-width 1600px)
+  .fp-slidesNav.bottom
+    margin-top 5rem
+
+@media(max-width 1370)
   margin-top 2rem

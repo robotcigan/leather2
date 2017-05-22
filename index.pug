@@ -1,18 +1,20 @@
 extends layout.pug
 
+
 block content
+  - var indexPage = true
   header.main-header
     .main-header__top.top
       .grid.grid--container.main-header__container
-        a(href="/pages.html").logo
+        a(href="/leather/pages.html").logo
         .top__adress
           i.icon.icon-map
           span г. Краснодар,
-          span ул. Ставропольская, 67
+          span ул. Дзержинского 121/5
         .top__phone
           i.icon.icon-phone-hang-up
-          span +7 (861) 239-74-17; 
-          span +7 (918) 455-58-61
+          span 8 (800) 30-11-920 
+          span 8 (918) 455-58-61
         a(href="#callback").top__callback.open-modal
           i.icon.icon-phone
           span Перезвонить мне
@@ -21,7 +23,7 @@ block content
       .grid.grid--container.second-header.second-header--index
         nav.navbar
           .navbar__section.navbar__section--links
-            a(href="").navbar__link.navbar__link--home
+            a(href="/leather/index.html").navbar__link.navbar__link--home
               i.icon.icon-home3
             i.sprite.sprite--separator
             .mobile-menu-toggle
@@ -29,11 +31,11 @@ block content
               span
               span
             a(href="").navbar__link Конфигуратор
-            a(href="").navbar__link Прайс-лист
+            a(href="/leather/price.html").navbar__link Прайс-лист
             a(href="").navbar__link Доставка и оплата
             a(href="").navbar__link Статьи
             a(href="").navbar__link Отзывы
-            a(href="").navbar__link Контакты
+            a(href="/leather/contacts.html").navbar__link Контакты
           .navbar__section.navbar__section--icons
             i.icon.icon-search
             i.sprite.sprite--separator
@@ -42,11 +44,11 @@ block content
             i.icon.icon-cart
         .mobile-menu
           a(href="").mobile-menu__link Конфигуратор
-          a(href="").mobile-menu__link Прайс-лист
+          a(href="/leather/price.html").mobile-menu__link Прайс-лист
           a(href="").mobile-menu__link Доставка и оплата
           a(href="").mobile-menu__link Статьи
           a(href="").mobile-menu__link Отзывы
-          a(href="").mobile-menu__link Контакты
+          a(href="/leather/contacts.html").mobile-menu__link Контакты
 
 
 
@@ -61,21 +63,44 @@ block content
             .btn.container__btn
               i.icon.icon-equalizer
               span Открыть конфигуратор
-    .section
-      .hero
-        .hero__bg(style='background-image: url("img/main-slider/1.jpg")')
-        .grid.grid--container
-          .hero__container.container
-            .container__title ALCANTARA
-            .container__subtitle Люксовые внешние качества материала
-            .btn-group
-              .btn.btn--solid Колор-карта
-              .btn.btn--solid Об Alcantara
-              .btn.btn--solid Статьи
-              .btn.btn--solid Документация
-            .btn.container__btn
-              i
-              span Купить
+
+
+    .section.horizontal-slides
+      -for(var x = 0; x < 5; x++)
+        .slide
+          .hero
+            .hero__bg(style='background-image: url("img/main-slider/1.jpg")')
+            .grid.grid--container
+              .hero__container.container
+                .container__title ALCANTARA
+                .container__subtitle Люксовые внешние качества материала
+                .btn-group
+                  .btn.btn--solid
+                    i.icon.icon-spinner4
+                    span Колор-карта
+                  a(href="#info").btn.btn--solid.open-modal
+                    i.icon.icon-book
+                    span Об Alcantara
+                  .btn.btn--solid
+                    i.icon.icon-books
+                    span Статьи
+                  .btn.btn--solid
+                    i.icon.icon-folder
+                    span Документация
+                .btn.container__btn
+                  i.icon.icon-cart
+                  span Купить
+
+    
+
+      #info.modal-page
+        .modal-page__title Alcantara
+        hr.hr
+        p Мягкая, бархатистая и приятная на ощупь. Долговечная. Износостойкая (не лоснится, не протирается через год эксплуатации). Устойчива к внешним воздействиям (после пожара мебель, обитая алькантарой, конечно же, потеряет свой товарный вид, но в случае попадания на поверхность искры, она не загорится). Алькантару можно подвергать ремонту без видимых последствий. Отсутствие отходов при раскрое (что значительно влияет на цену готового изделия).
+        p Богатая цветовая гамма. Так, в коллекции узоров фабрики, созданной Джулио Каппелини (Gulio Cappellini), есть изображения сухих трав, потрескавшейся от зноя почвы, и даже складки-имитация рыбьей чешуи[3].
+        p Алькантара более эластична, чем натуральная кожа, что позволяет использовать этот материал для обивки мебели самых замысловатых форм и миниатюрных изделий. Для очистки мебели, обитой этим материалом, подойдут простые чистящие средства для кожаной мебели. Её можно даже стирать в машине.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus rem delectus enim dolorem, error nulla earum maxime aliquid ipsam, recusandae molestiae ducimus iusto, dolore omnis. Saepe temporibus autem, provident dolor!
+
 
 
     .section.mobile-offset
@@ -127,13 +152,13 @@ block content
                         strong Автокожа
                         | &raquo;. Коллектив работает слаженно, четко, профессионально. Пользовалась услугами не единожды.
 
-    .section.active
+    .section
       .grid.grid--container
         .text-center
           h1.header.header--with-subheader Как нас найти?
           p.subheader Наш магазин находится по адресу: Россия,  г. Краснодар ул. Ставропольская, 67
         .map
-          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.223695491337!2d39.0000160152186!3d45.02038427909817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04fdd0906b7e9%3A0x3dab2628ce08587e!2z0YPQuy4g0KHRgtCw0LLRgNC-0L_QvtC70YzRgdC60LDRjywgNjcsINCa0YDQsNGB0L3QvtC00LDRgCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksIDM1MDAwMQ!5e0!3m2!1sru!2sru!4v1495403956371" frameborder="0" style="border:0" allowfullscreen)
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.7601649323938!2d38.96815711522059!3d45.070376079098295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f045edad9a7e49%3A0xf4a7bfc6a30f9619!2z0YPQuy4g0JTQt9C10YDQttC40L3RgdC60L7Qs9C-LCAxMjHQujUsINCa0YDQsNGB0L3QvtC00LDRgCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksIDM1MDA1MQ!5e0!3m2!1sru!2sru!4v1495464301885" frameborder="0" style="border:0" allowfullscreen)
       
       include components/footer.pug
 

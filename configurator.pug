@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .grid.grid--container
+    h1.h1 Конфигуратор заказа материала
+    hr.hr
+    .configurator
+      .configurator__img
+        img(src="img/leather.jpg", alt="")
+      .configurator__container
+        .form-control
+          input(id="configurator-height" type="text" placeholder="Ширина")
+        .form-control
+          input(id="configurator-width" type="text" placeholder="Высота")
+        .configurator-price
+          span Цена: 
+          span#configurator-price
+
+
+  include components/footer.pug
+
+  include components/callback.pug

@@ -14,8 +14,10 @@
   &__subtitle
     margin-bottom 2rem
 
-.mfp-ready .modal
-  display block
+.mfp-ready
+  .modal,
+  .modal-page
+    display block
 
 .mfp-close,
 .mfp-close:active
@@ -29,3 +31,18 @@
   .mfp-close:active
     right -5rem
     top 2.5rem
+
+.modal-page
+  animation bigFadeLeft .3s forwards ease
+  background #fff
+  display none
+  overflow-Y auto
+  size(100vh, 53.5%)
+  padding ((70 / 1020) * 100)%
+  position absolute
+  right -1rem
+  top -50vh
+  &__title
+    font-size 3rem
+    font-weight 700
+    text-transform uppercase

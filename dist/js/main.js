@@ -2,6 +2,9 @@
 
 $(document).ready(function () {
 
+  var slideIndex = 1,
+      sliding = false;
+
   var windowWidth = $(window).width();
   function fullPageInit() {
     // Главный слайдер всея сайта
@@ -9,7 +12,28 @@ $(document).ready(function () {
       verticalCentered: false,
       scrollOverflow: true,
       slidesNavigation: true,
-      navigation: true
+      navigation: true,
+      controlArrows: false,
+      onLeave: function onLeave(index, nextIndex, direction) {
+        if (index == 2 && !sliding) {
+          if (direction == 'down' && slideIndex < 3) {
+            sliding = true;
+            $.fn.fullpage.moveSlideRight();
+            slideIndex++;
+            return false;
+          } else if (direction == 'up' && slideIndex > 1) {
+            sliding = true;
+            $.fn.fullpage.moveSlideLeft();
+            slideIndex--;
+            return false;
+          }
+        } else if (sliding) {
+          return false;
+        }
+      },
+      afterSlideLoad: function afterSlideLoad(anchorLink, index, slideAnchor, slideIndex) {
+        sliding = false;
+      }
     });
   }
 
@@ -45,7 +69,18 @@ $(document).ready(function () {
 
   // Модалка
   $('.open-modal').magnificPopup({
-    type: 'inline'
+    type: 'inline',
+    callbacks: {
+      open: function open() {
+        console.log('open');
+        $.fn.fullpage.setMouseWheelScrolling(false);
+        $.fn.fullpage.setAllowScrolling(false);
+      },
+      close: function close() {
+        $.fn.fullpage.setMouseWheelScrolling(true);
+        $.fn.fullpage.setAllowScrolling(true);
+      }
+    }
   });
 
   // Галлерея

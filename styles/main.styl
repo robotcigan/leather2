@@ -2,6 +2,7 @@
 @import 'helpers/mixins.styl'
 @import 'base/base.styl'
 @import 'helpers/helpers.styl'
+@import 'base/animations.styl'
 @import 'base/icons.styl'
 @import 'base/typography.styl'
 @import 'base/tables.styl'
@@ -13,6 +14,7 @@
 @import 'pages/index.styl'
 @import 'pages/inner.styl'
 @import 'pages/price.styl'
+@import 'pages/configurator.styl'
 
 
 .grid--container
@@ -167,7 +169,9 @@
   margin-bottom 1rem
   width 100%
   .btn
-    margin-right 1rem
+    padding 1rem 2.5rem
+    &:not(:last-child)
+      margin-right 1rem
 
 
 
@@ -176,13 +180,15 @@
   display inline-block
   font-size 3.6rem
   // margin-top (20 / 935 * 100)%
-  margin-top 2rem
+  margin-bottom 5rem
+  margin-top 5rem
   position relative
   text-align center
   z-index 5
   &--with-subheader
     line-height 1
-    margin-bottom (50 / 935 * 100)%
+    margin-bottom 1rem
+    // margin-bottom (50 / 935 * 100)%
   // &:before
   //   background-color $light-gray
   //   content ''
@@ -194,13 +200,14 @@
   //   z-index 0
 
 .subheader
+  margin-bottom 4rem
   margin-top 0
 
 .map
   &--inner
     margin-bottom 10rem
   iframe
-    height 80vh
+    height 70vh
     width 100%
 
 .weird-tables
@@ -261,6 +268,10 @@
         text-decoration none
         &:hover
           color $primary
+  &--index
+    .main-footer
+      &__bottom
+        margin-bottom 6.5rem
 
 .sitemap-link
   text-align right
