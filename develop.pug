@@ -1,5 +1,9 @@
 extends layout.pug
 
+block meta
+  title Раздел в разработке – АВТОКОЖА
+  meta(name="Description" content="Данный раздел находится еще в разработке. «Автокожа» Краснодар. За подробностями обратитесь по номеру: 8 (800) 30-11-920.")
+
 block content
 
   include components/header.pug
@@ -12,5 +16,3 @@ block content
         .container__title Раздел в разработке
 
   include components/footer.pug
-
-  include components/callback.pug

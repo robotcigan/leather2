@@ -1,5 +1,9 @@
 extends layout.pug
 
+block meta
+  title Контакты – Интернет-магазин кожаных изделий для автомобилей – АВТОКОЖА
+  meta(name="Description" content="Контакты магазина «Автокожа» Краснодар. План проезда и номера телефонов. Заказать товар можно по номеру: 8 (800) 30-11-920.")
+
 block content
 
   include components/header.pug
@@ -21,41 +25,39 @@ block content
           .inner-table__row
             .icon-in-circle
               i.icon.icon-phone
-            span 8 (800) 30-11-920;
+            span 8 (800) 30-11-920
           .inner-table__row
             .icon-in-circle
               i.icon.icon-envelop
             span info@avtokozha.com
-          .inner-table__row
-            .icon-in-circle
-              i.icon.icon-earth
-            span info@avtokozha.com
+          //- .inner-table__row
+          //-   .icon-in-circle
+          //-     i.icon.icon-earth
+          //-   span info@avtokozha.com
 
       .col.col--md-6.mobile-offset
         h2.inner-header Контактные данные
-        form.form.form--inner
+        form.form.form--inner(action="mail.php" method="post")
           .row
             .col.col--sm-6
               .form-control
-                input(type="text" placeholder="Ваше имя")
+                input(type="text" placeholder="Ваше имя" name="name")
             .col.col--sm-6
             .col.col--sm-6
               .form-control
-                input(type="email" placeholder="Эл. почта")
+                input(type="email" placeholder="Эл. почта" name="email")
             .col.col--sm-6
               .form-control
-                input(type="tel" placeholder="Телефон")
+                input(type="tel" placeholder="Телефон" name="phone")
             .col.col--sm-12
               .form-control
-                textarea
-              label.checkbox
-                input(type="checkbox" id="checkbox-1")
-                label(for="checkbox-1")
-                span Я не робот
+                textarea(name="mess")
+              //- label.checkbox
+              //-   input(type="checkbox" id="checkbox-1")
+              //-   label(for="checkbox-1")
+              //-   span Я не робот
               button.btn.btn--middle
                 i.icon.icon-envelop
                 span Отправить
 
   include components/footer.pug
-
-  include components/callback.pug

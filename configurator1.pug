@@ -1,0 +1,81 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .grid.grid--container
+    h1.h1 Конфигуратор заказа материала
+    .weird-subtitle Выберите материал
+    .configurator.configurator--first(style="background-image: url(img/configurator-1.jpg);")
+      .configurator__img
+        //- img(src="img/configurator-1.jpg", alt="")
+      .configurator__container.row
+        .col.col--sm
+          .configurator__links
+            .configurator__subtitle
+              i.sprite.sprite--configurator.sprite--configurator-1
+              span Автомобильная кожа
+            a(href="").configurator__link Боксмарк
+            a(href="").configurator__link Хиллманн Наппа
+            a(href="").configurator__link Эсторил
+            a(href="").configurator__link Эсторил Наппа
+            a(href="").configurator__link Виста
+            a(href="").configurator__link Родстар
+            a(href="").configurator__link Экстрим
+            a(href="").configurator__link Монза
+            a(href="").configurator__link Аполо
+        .col.col--sm
+          .configurator__links
+            .configurator__subtitle
+              i.sprite.sprite--configurator.sprite--configurator-2
+              span Искусственная кожа
+            a(href="").configurator__link MAX
+            a(href="").configurator__link MAX Биэластик
+            a(href="").configurator__link Флекси
+            a(href="").configurator__link АТН
+            a(href="").configurator__link Монза
+            a(href="").configurator__link Родстар
+
+        .col.col--sm
+          .configurator__links
+            .configurator__subtitle
+              i.sprite.sprite--configurator.sprite--configurator-3
+              span Алькантара
+            a(href="").configurator__link Алькантара
+
+          .configurator__links
+            .configurator__subtitle
+              i.sprite.sprite--configurator.sprite--configurator-4
+              span Полиуретановая кожа
+            a(href="").configurator__link Швайцер
+            a(href="").configurator__link Швайцер лайт
+
+        .col.col--sm
+          .configurator__links
+            .configurator__subtitle
+              i.sprite.sprite--configurator.sprite--configurator-5
+              span Экзотика
+            a(href="").configurator__link Скаты
+            a(href="").configurator__link Крокодилы
+            a(href="").configurator__link Питоны
+
+        .col.col--sm
+          .configurator__links
+            .configurator__subtitle
+              i.sprite.sprite--configurator.sprite--configurator-6
+              span Нитки
+            a(href="").configurator__link Полиарт
+            a(href="").configurator__link Ситипоинт
+
+          .configurator__links
+            .configurator__subtitle
+              i.sprite.sprite--configurator.sprite--configurator-7
+              span Клей
+            a(href="").configurator__link MAX
+
+
+
+
+
+  include components/footer.pug

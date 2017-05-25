@@ -33,10 +33,11 @@
       &--icons
         margin-right 2rem
 
-
-@media(max-width 1200px)
+@media(max-width 1300px)
   .grid--container
     padding 0 4%
+
+@media(max-width 1200px)
   .main-header
     &__container
       justify-content space-between
@@ -56,9 +57,22 @@
         display initial
   .mobile-menu-toggle
     display inline-block
+  .hero
+    height 45rem
+    .grid--container
+      height 100%
+    &__bg
+      height 45rem
+    &__container.container
+      .container
+        height 100%
+  .slide
+    overflow hidden
   .review
     &__img
       circle(10rem)
+  .mobile-offset
+    margin-bottom 5rem
 
 @media(max-width 1000px)
   .grid--container
@@ -69,6 +83,11 @@
     p
       display none
   .hero
+    &__container.container
+      .container
+        &__title
+          &:before
+            display none
     &--develop
       .hero
         &__container.container
@@ -77,8 +96,8 @@
               font-size 6rem
 
 @media(max-width 767px)
-  .section
-    min-height 100vh
+  // .section
+  //   min-height 100vh
   .main-header
     &__top
       .top
@@ -90,19 +109,11 @@
       background-position 20%
       background-size cover !important
     &__container.container
-      padding-bottom 5rem
+      padding-bottom 2rem
       width 100%
       .container
         &__title
           font-size 3.2rem
-        &__btn
-          text-align center
-          width 100%
-  .btn-group
-    .btn
-      display block
-      margin-bottom 1rem
-      text-align center
   
   .hero
     &--develop
@@ -124,8 +135,6 @@
     text-align left
 
 @media(max-width 500px)
-  .mobile-offset
-    margin-bottom 5rem
   .row
     margin 0 -1rem
     margin-bottom 1rem
@@ -135,6 +144,27 @@
         &__adress,
         &__phone
           display none
+  .hero
+    &__container.container
+      padding-bottom 2rem
+      width 100%
+      .container
+        &__title
+          margin-top 4rem
+        &__btn
+          text-align center
+          width 100%
+    &--develop
+      .hero
+        &__container.container
+          .container
+            &__title
+              font-size 3rem
+  .btn-group
+    .btn
+      display block
+      margin-bottom 1rem
+      text-align center
   .modal
     padding 4rem 2rem
     width 96%
@@ -167,11 +197,6 @@
     margin-bottom 2rem !important
     &__img
       float none
-
-  .hero
-    &--develop
-      .hero
-        &__container.container
-          .container
-            &__title
-              font-size 3rem
+  
+  .btn
+    padding 1rem 2.3rem

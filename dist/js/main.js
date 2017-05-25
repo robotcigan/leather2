@@ -16,7 +16,7 @@ $(document).ready(function () {
       controlArrows: false,
       onLeave: function onLeave(index, nextIndex, direction) {
         if (index == 2 && !sliding) {
-          if (direction == 'down' && slideIndex < 3) {
+          if (direction == 'down' && slideIndex < $('.horizontal-slides .slide').length) {
             sliding = true;
             $.fn.fullpage.moveSlideRight();
             slideIndex++;
@@ -37,13 +37,13 @@ $(document).ready(function () {
     });
   }
 
-  if (windowWidth > 768) {
+  if (windowWidth > 1024) {
     fullPageInit();
   }
 
   $(window).resize(function () {
     windowWidth = $(window).width();
-    if (windowWidth > 768) {
+    if (windowWidth > 1024) {
       $.fn.fullpage.reBuild();
       // fullPageInit();
     } else {
@@ -68,7 +68,7 @@ $(document).ready(function () {
   });
 
   // Модалка
-  $('.open-modal').magnificPopup({
+  $('.open-modal-page').magnificPopup({
     type: 'inline',
     callbacks: {
       open: function open() {
@@ -81,6 +81,10 @@ $(document).ready(function () {
         $.fn.fullpage.setAllowScrolling(true);
       }
     }
+  });
+
+  $('.open-modal').magnificPopup({
+    type: 'inline'
   });
 
   // Галлерея

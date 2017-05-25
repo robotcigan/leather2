@@ -1,5 +1,9 @@
 extends layout.pug
 
+block meta
+  title Прайс-лист – Цена чехлов для автомобиля – АВТОКОЖА
+  meta(name="Description" content="Каталог товаров с ценами. Актокожа – Краснодар. Закажите у нас чехлы для автомобиля высокого качества. Заказ можно сделать через e-mail (avtokoja.ru@mail.ru) либо по телефону +7 (861) 239-7417 или +7 (918) 4555-861.")
+
 block content
 
   include components/header.pug
@@ -8,419 +12,338 @@ block content
   .grid.grid--container
     h1.h1 Прайс лист
     hr.hr
-    p Заказ можно сделать через e-mail (avtokoja.ru@mail.ru) либо по телефону +7 (861) 239-7417 или +7 (918) 4555-861. Мы доставляем товар любой грузовой компанией на ваш выбор (обычно это ПЭК, Деловые Линии и СДЭК), почтой России, или прямым авиарейсом в ваш город (быстрее и существенно дешевле DHL, в любой город, где есть аэропорт).
-    h2.h2 Автомобильная кожа
+    p В настоящий момент интернет-магазин находится в разработке, скоро вы сможете оформлять и оплачивать заказы за самостоятельно, а пока предлагаем вам сделать заказ через электронную почту info@avtokozha.com или по телефон 8-800-30-11-920 (звонок по России) бесплатный. Мы отправляем заказы любой грузовой компанией на ваш выбор, а также почтой, самолетом и автобусом. Рекомендуем воспользоваться услугами компании СДЭК для маленьких посылок (до 40кг) или услугами компании ПЭК для более габаритных.
+    h2.h2 Экокожа (полиуретановая кожа)
     .responsive-table
       table.table
         thead
-          th Наименование
-          th Базовая цена
-          th Полшкуры (+10%) - опция
-          th Отрез (за 0.01м2) - опция
-          th Примерный размер шкуры ( справочно)
+          th Бренд
+          th Модификация
+          th Розничная цена
+          th Размер рулона
         tbody
           tr
-            td
-              span Боксмарк
-            td
-              span 4200
-            td
-              span 4620
-            td
-              span 8400
-            td
-              span 4,2м²
+            td Швайцер
+            td текстурная
+            td 1500₽/пм
+            td 30пм
           tr
-            td
-              span Боксмарк перфорация
-            td
-              span 4300
-            td
-              span 4300
-            td
-              span 8600
-            td
-              span 2,2м²
+            td Швайцер
+            td тестурная перфорация
+            td 1550₽/пм
+            td 30пм
           tr
-            td
-              span Эсторил наппа
-            td
-              span 4000
-            td
-              span 4400
-            td
-              span 8000
-            td
-              span 4,3м²
+            td Швайцер
+            td текстурная перфорация (рулон)
+            td 1300₽/рулон
+            td 30пм
           tr
-            td
-              span Эсторил наппа перфорация
-            td
-              span 4100
-            td
-              span 4100
-            td
-              span 8200
-            td
-              span 2,1м²
+            td Швайцер
+            td наппа
+            td 1600₽/пм
+            td 30пм
           tr
-            td
-              span Аполло
-            td
-              span 3400
-            td
-              span 3740
-            td
-              span 6800
-            td
-              span 3,8м²
+            td Швайцер
+            td наппа перфорация
+            td 1650₽/пм
+            td 30пм
           tr
-            td
-              span Аполло перфорация
-            td
-              span 3500
-            td
-              span 3500
-            td
-              span 7000
-            td
-              span 2,1м²
+            td Швайцер
+            td декоративная перфорация (для рулей)
+            td 1800₽/пм
+            td 30пм
+    h2.h2 Экокожа (кожзам)
+    .responsive-table
+      table.table
+        thead
+          th Бренд
+          th Модификация
+          th Розничная цена
+          th Размер рулона
+        tbody
           tr
-            td
-              span Виста глатт
-            td
-              span 2700
-            td
-              span 2970
-            td
-              span 5400
-            td
-              span 3,5м²
+            td АТН
+            td яхтенный кожзам
+            td 800₽/пм
+            td 35пм
           tr
-            td
-              span Виста глатт перфорация
-            td
-              span 2750
-            td
-              span 2750
-            td
-              span 5500
-            td
-              span 1,3м²
+            td МАХ
+            td автомобильный кожзам
+            td 1100₽/пм
+            td 35пм
           tr
-            td
-              span Эсторил
-            td
-              span 2500
-            td
-              span 2750
-            td
-              span 5000
-            td
-              span 4,3м²
+            td МАХ биэластик
+            td кожзам биэластик для панелей и дверей
+            td 1400₽/пм
+            td 35пм
           tr
-            td
-              span Эсторил перфорация
-            td
-              span 2600
-            td
-              span 2600
-            td
-              span 5200
-            td
-              span 2,2м²
+            td Флекси
+            td автомобильный кожзам
+            td 600₽/пм
+            td 40пм
           tr
-            td
-              span Экстрим
-            td
-              span 2500
-            td
-              span 2750
-            td
-              span 5000
-            td
-              span 3,6м²
+            td Монза
+            td автомобильный кожзам (Германия)
+            td 1400₽/пм
+            td 35пм
           tr
-            td
-              span Экстрим перфорация
-            td
-              span 2600
-            td
-              span 2600
-            td
-              span 5200
-            td
-              span 2,0м²
+            td Монза
+            td автомобильный кожзам (Польша)
+            td 1400₽/пм
+            td 35пм
           tr
-            td
-              span Монза
-            td
-              span 3200
-            td
-              span 3520
-            td
-              span 6400
-            td
-              span 4,7м²
+            td Флекси
+              span.sale (распродажа)
+            td автомобильный кожзам (Турция)
+            td 700₽/пм
+            td 40пм
           tr
-            td
-              span Монза перфорация
-            td
-              span 3400
-            td
-              span 3400
-            td
-              span 6800
-            td
-              span 2,6м²
+            td Родстар
+              span.sale (распродажа)
+            td автомобильный кожзам 
+            td 600₽/пм
+            td 40пм
+    h2.h2 Автомобильная кожа наппа
+    .responsive-table
+      table.table
+        thead
+          th Бренд
+          th Модификация
+          th Розничная цена
+          th Размер рулона
+        tbody
           tr
-            td
-              span Дакота
-            td
-              span 3200
-            td
-              span 3520
-            td
-              span 6400
-            td
-              span 4,1м²
+            td Эсторил
+            td наппа
+            td 4000₽/м2
+            td 4,2м2
           tr
-            td
-              span Дакота перфорация
-            td
-              span 3400
-            td
-              span 3400
-            td
-              span 6800
-            td
-              span 2,0м²
+            td Эсторил
+            td наппа перфорация
+            td 4100₽/м2
+            td 2,1м2
           tr
-            td
-              span Виста
-            td
-              span 2300
-            td
-              span 2530
-            td
-              span 4600
-            td
-              span 3,5м²
+            td Виста глатт
+            td цветная наппа
+            td 2800₽/м2
+            td 3,5м2
           tr
-            td
-              span Виста перфорация
-            td
-              span 2400
-            td
-              span 2400
-            td
-              span 4800
-            td
-              span 1,5м²
+            td Виста глатт
+            td цветная наппа перфорация
+            td 2900₽/м2
+            td 1,7м2
           tr
-            td
-              span Виста цветная
-            td
-              span 2450
-            td
-              span 2695
-            td
-              span 4900
-            td
-              span 3,9м²
+            td Аполло
+            td черная и цветная
+            td 3500₽/м2
+            td 4,1м2
           tr
-            td
-              span Виста цветная перфорация
-            td
-              span 2550
-            td
-              span 2550
-            td
-              span 5100
-            td
-              span 1,8м²
+            td Аполло
+            td черная и цветная перфорация
+            td 3600₽/м2
+            td 2,0м2
           tr
-            td
-              span Верона
-            td
-              span 1500
-            td
-              span 1650
-            td
-              span 3000
-            td
-              span 3,5м²
+            td Аполло
+            td белая
+            td 3800₽/м2
+            td 3,8м2
           tr
-            td
-              span Родстар
-            td
-              span 2500
-            td
-              span 2750
-            td
-              span 5000
-            td
-              span 4,2м²
+            td Аполло
+            td белая перфорация
+            td 3900₽/м2
+            td 1,9м2
+    h2.h2 Автомобильная кожа текстурная
+    .responsive-table
+      table.table
+        thead
+          th Бренд
+          th Модификация
+          th Розничная цена
+          th Размер рулона
+        tbody
           tr
-            td
-              span Родстар перфорация
-            td
-              span 2600
-            td
-              span 2600
-            td
-              span 5200
-            td
-              span 2,1м²
+            td Эсторил
+            td текстурная
+            td 2500₽/м2
+            td 4,5м2
           tr
-            td
-              span Декоративная перфорация
-            td
-              span 4200
-            td
-              span 4200
-            td
-              span 8400
-            td
-              span 1,4м²
+            td Эсторил
+            td текстурная перфорация
+            td 2600₽/м2
+            td 2,3м2
+          tr
+            td Экстрим
+            td текстурная
+            td 2500₽/м2
+            td 3,8м2
+          tr
+            td Экстрим
+            td текстурная перфорация
+            td 2600₽/м2
+            td 2,2м2
+          tr
+            td Монза
+            td текстурная
+            td 3200₽/м2
+            td 5,1м2
+          tr
+            td Монза
+            td текстурная перфорация
+            td 3400₽/м2
+            td 2,3м2
+          tr
+            td Виста
+            td текстурная черная
+            td 2300₽/м2
+            td 3,3м2
+          tr
+            td Виста
+            td текстурная черная перфорация
+            td 2400₽/м2
+            td 1,4м2
+          tr
+            td Виста
+            td текстурная цветная
+            td 2500₽/м2
+            td 3,8м2
+          tr
+            td Виста
+            td текстурная цветная перфорация
+            td 2600₽/м2
+            td 1,9м2
+          tr
+            td Верона
+            td текстурная
+            td 1500₽/м2
+            td 3,9м2
+          tr
+            td Спилок
+            td текстурная
+            td 1500₽/м2
+            td 3,5м2
+          tr
+            td Экзотика
+            td крокодил, страус, питон, скат
+            td 3500₽/м2
+            td 1,8м2
+          tr
+            td Родстар (распродажа)
+            td текстурная
+            td 2500₽/м2
+            td 4,5м2
+          tr
+            td Родстар (распродажа)
+            td текстурная перфорация
+            td 2600₽/м2
+            td 2,3м2
 
+    h2.h2 Алькантара &copy; оригинальная
+    .responsive-table
+      table.table
+        thead
+          th Бренд
+          th Модификация
+          th Розничная цена
+          th Размер рулона
+        tbody
+          tr
+            td Алькантара &copy;
+            td без основы
+            td 4000₽/пм
+            td 40пм
+          tr
+            td Алькантара &copy;
+            td на основе
+            td 5500₽/пм
+            td 40пм
+          tr
+            td Алькантара &copy;
+            td перфорация
+            td 5800₽/пм
+            td 40пм
 
+    h2.h2 Искусственные замши
+    .responsive-table
+      table.table
+        thead
+          th Бренд
+          th Модификация
+          th Розничная цена
+          th Размер рулона
+        tbody
+          tr
+            td Эстайп
+            td копия Алькантары, на основе (Италия)
+            td 3000₽/пм
+            td 30пм
+          tr
+            td Эстайп
+            td автомобильный замш (Корея)
+            td 1500₽/пм
+            td 30пм
     h2.h2 Мебельная кожа
     .responsive-table
       table.table
         thead
-          th Наименование
-          th Базовая цена
-          th Примерный размер шкуры ( справочно)
+          th Бренд
+          th Модификация
+          th Розничная цена
+          th Размер рулона
         tbody
           tr
-            td
-              span Мадрас
-            td
-              span 2000
-            td
-              span 3,9м²
+            td Мадрас
+            td российская мебельная кожа
+            td 2000₽/м2
+            td 3,8м2
           tr
-            td
-              span Техас
-            td
-              span 2200
-            td
-              span 4,2м²
-
-
-    h2.h2 Кожзамы и полиуретановая кожа
+            td Техас
+            td итальянская мебельная кожа
+            td 2300₽/м2
+            td 4,3м2
+    h2.h2 Клей
     .responsive-table
       table.table
         thead
-          th Наименование
-          th Базовая цена
-          th Рулон (опция)
-          th Примерный размер рулона (справочно)
+          th Бренд
+          th Модификация
+          th Розничная цена
+          th Размер рулона
         tbody
           tr
-            td
-              span Швайцер
-            td
-              span 1500
-            td
-              span 1300
-            td
-              span 25
+            td МАХ
+            td 800х213
+            td 1600₽/шт
+            td 615 грамм
+    h2.h2 Нитки
+    .responsive-table
+      table.table
+        thead
+          th Бренд
+          th Модификация
+          th Розничная цена
+          th Размер рулона
+        tbody
           tr
-            td
-              span Швайцер наппа
-            td
-              span 1550
-            td
-              span 1350
-            td
-              span 30
+            td Полиарт
+            td 15/1000, 20/15000, 40/3000
+            td 400₽/шт
+            td 10 бобин
           tr
-            td
-              span ATN
-            td
-              span 750
-            td
-              span 675
-            td
-              span 35
-          tr
-            td
-              span MAH
-            td
-              span 1100
-            td
-              span 990
-            td
-              span 35
-          tr
-            td
-              span MAH Bielastich
-            td
-              span 1300
-            td
-              span 1170
-            td
-              span 35
-          tr
-            td
-              span Монза (Германия)
-            td
-              span 1300
-            td
-              span 1170
-            td
-              span 40
-          tr
-            td
-              span Монза (Польша)
-            td
-              span 1100
-            td
-              span 990
-            td
-              span 40
-          tr
-            td
-              span Флекси
-            td
-              span 700
-            td
-              span 580
-            td
-              span 40
-          tr
-            td
-              span Родстар
-            td
-              span 650
-            td
-              span 585
-            td
-              span 20
-
+            td Ситипоинт
+            td 10/800, 20/1500, 40/3000
+            td 500₽/шт
+            td 10 бобин
 
 
     .small-offset
       i.sprite.sprite--info
       span Все перечисленные товары имеются в наличие и готовы к продаже.
-    .price-info
+    a(href="./price.xlsx" download).price-info
       i.sprite.sprite--excel
-      span Прайс-лист (EXLS; 0.7 мб)
-    .price-info
+      span Прайс-лист (XLSX; 0.1 мб)
+    a(href="./price.pdf" download).price-info
       i.sprite.sprite--pdf
-      span Прайс-лист (PDF; 1.2 мб)
+      span Прайс-лист (PDF; 0.5 мб)
 
 
   include components/footer.pug
-
-    #callback.modal
-      .modal__title Обратный звонок
-      .modal__subtitle Здравствуйте! Хотите, мы перезвоним Вам бесплатно и все обсудим&hellip;
-      form.form
-        .form-control
-          input(type="tel").phone-mask
-        .btn.btn--primary
-          i.icon.icon-user
-          span Хорошо, жду звонка

@@ -18,7 +18,7 @@
     background-color $primary - 10%
   &--middle
     font-size 1.6rem
-    padding 1.5rem 3rem
+    padding 1.4rem 3rem
     .icon
       font-size 1.4rem
   &--solid
@@ -29,6 +29,10 @@
     &:hover
       border-color #727688
       background-color #727688
+  &--empty
+    border 1px solid $primary
+    background-color transparent
+    color $main
   .icon
     margin-right 1rem
     vertical-align middle
@@ -42,6 +46,7 @@
   input[type="email"],
   input[type="password"],
   input[type="number"],
+  input[type="search"],
   input[type="tel"],
   select,
   textarea
@@ -82,9 +87,9 @@
     vertical-align middle
     &:after
       color $primary
-      content "\f00c"
+      content "\ea10"
       display none
-      font-family 'FontAwesome'
+      font-family 'IcoMoon-Free'
       font-size 1.4rem
       left 2px
       position absolute
@@ -95,3 +100,5 @@
     display block
   span
     color $main
+    line-height 1
+    vertical-align middle

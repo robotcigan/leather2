@@ -2,8 +2,11 @@ doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
-    title Автокожа
+    //- title Автокожа
+    block meta
+      title
     meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="format-detection" content="telephone=no")
     link(rel="stylesheet", href="styles/css/vendor.css")
@@ -15,14 +18,45 @@ html(lang="ru")
 
     //- include components/footer.pug
 
+    #callback.modal
+      .modal__title Обратный звонок
+      .modal__subtitle Здравствуйте! Хотите, мы перезвоним Вам бесплатно и все обсудим&hellip;
+      form.form(action="/mail.php" method="post")
+        .form-control
+          input(type="tel" name="phone").phone-mask
+        .btn.btn--primary
+          i.icon.icon-user
+          span Хорошо, жду звонка
+
+    #enter.modal
+      .modal__title Войти
+      form.form(action="/mail.php" method="post")
+        .form-control
+          input(type="email" name="email" placeholder="Эл. почта")
+        .form-control
+          input(type="password" name="password" placeholder="Пароль")
+        label.checkbox
+          input(type="checkbox" id="remember-password")
+          label(for="remember-password")
+          span Запомнить пароль
+        a(href="").link Забыли пароль?
+        .modal__btn-group
+          .btn.btn--primary
+            i.icon.icon-user
+            span Войти
+          .btn.btn--primary.btn--empty
+            i.icon.icon-key
+            span Зарегистрироваться
 
     script(src="js/jquery.min.js")
     script(src="js/scrolloverflow.js")
     script(src="js/jquery.fullpage.min.js")
     script(src="js/jquery.magnific-popup.min.js")
     script(src="js/jquery.inputmask.bundle.min.js")
+    script(src="js/sweetalert.min.js")
     script(src="js/cropper.js")
     script(src="js/redux.js")
     
     script(src="js/main.js")
     script(src="js/configurator.js")
+    script(src="js/custom.js")

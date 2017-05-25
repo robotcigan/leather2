@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .grid.grid--container
+    h1.h1 Поиск
+    form.form
+      .row
+        .col.col--sm-4
+          .form-control
+            input(type="search")
+        .col.col--sm-4
+          button.btn.btn--primary.btn--middle Искать
+    hr.hr
+    -for(x = 0; x < 3; x++)
+      .search-result
+        a(href="").search-result__title Алькантара
+        .search-result__text ... справляться с объектами любой сложности. ООО «Строймаркетинг» занимаемся строительством зданий любого назначения: коттеджей, многоквартирных домов, жилищных комплексов, малоэтажных 
+          strong алькантара
+          | ; бизнес-центров, офисов; общественно-административных сооружений; спортивных объектов; торговых ..
+        .search-result__date
+          span Изменен: 
+          span.search-result__day 15.04.2017
+        .search-result__path
+          span Путь: 
+          a(href="") Статьи
+
+    include components/pagination.pug
+
+
+  include components/footer.pug

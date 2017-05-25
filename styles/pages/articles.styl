@@ -1,0 +1,70 @@
+.articles
+  &__item
+    display flex
+    margin-bottom 6rem
+    transition all .4s
+    .item
+      &__img
+        flex 1 1 100%
+        margin-right ((100 / 1620) * 100)%
+        max-width 52rem
+        img
+          display block
+          max-width 100%
+      &__container
+        height 100%
+      &__title
+        font-size 2.2rem
+        font-weight 600
+        margin-bottom 2rem
+        margin-top 3%
+      &__anons
+        font-size 1.8rem
+        margin-bottom 4rem
+    // &:hover
+    //   background-color $blue
+    //   // padding ((60 / 1620) * 100)% ((85 / 1620) * 100)%
+
+@media(max-width 1600px)
+  .articles
+    &__item
+      .item
+        &__anons
+          font-size 1.6rem
+
+@media(max-width 1200px)
+  .articles
+    &__item
+      .item
+        &__img
+          flex initial
+          width 50%
+        &__container
+          width 50%
+
+@media(max-width 768px)
+  .articles
+    &__item
+      .item
+        &__img
+          margin-right 3rem
+          width 30%
+        &__container
+          width 70%
+          &__title
+            margin-top 2rem
+
+@media(max-width 767px)
+  .link-group
+    &__link
+      margin-bottom 1rem
+  .articles
+    &__item
+      display block
+      .item
+        &__img
+          display block
+          margin-bottom 2rem
+          width 100%
+        &__container
+          width 100%

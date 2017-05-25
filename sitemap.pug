@@ -1,0 +1,28 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .grid.grid--container
+    h1.h1 Карта сайта
+    hr.hr
+    ul.sitemap
+      a(href="").sitemap__link Интернет-магазин
+      ul
+        a(href="").sitemap__link Автомобильная кожа
+        a(href="").sitemap__link Искусственная кожа
+        a(href="").sitemap__link Алькантара
+        a(href="").sitemap__link Полиуретановая кожа
+        a(href="").sitemap__link Экзотика
+        a(href="").sitemap__link Нитки
+        a(href="").sitemap__link Клей
+      a(href="").sitemap__link Прайс-лист
+      a(href="").sitemap__link Доставка и оплата
+      a(href="").sitemap__link Статьи
+      a(href="").sitemap__link Отзывы
+      a(href="").sitemap__link Контакты
+
+
+
+  include components/footer.pug

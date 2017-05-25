@@ -14,7 +14,7 @@ $(document).ready(function () {
       controlArrows: false,
       onLeave: function(index, nextIndex, direction) {
         if(index == 2 && !sliding) {
-            if(direction == 'down' && slideIndex < 3) {
+            if(direction == 'down' && slideIndex < $('.horizontal-slides .slide').length) {
                 sliding = true;
                 $.fn.fullpage.moveSlideRight();
                 slideIndex++;
@@ -35,13 +35,13 @@ $(document).ready(function () {
     });
   }
 
-  if( windowWidth > 768 ) {
+  if( windowWidth > 1024 ) {
     fullPageInit();
   }
 
   $(window).resize(function () {
     windowWidth = $(window).width();
-    if(windowWidth > 768) {
+    if(windowWidth > 1024) {
       $.fn.fullpage.reBuild();
       // fullPageInit();
     } else {
@@ -67,21 +67,25 @@ $(document).ready(function () {
     $(this).toggleClass('mobile-menu-toggle--active');
   });
 
-  // Модалка
-  $('.open-modal').magnificPopup({
-    type: 'inline',
-    callbacks: {
-      open: function () {
-        console.log('open');
-        $.fn.fullpage.setMouseWheelScrolling(false);
-        $.fn.fullpage.setAllowScrolling(false);
-      },
-      close: function () {
-        $.fn.fullpage.setMouseWheelScrolling(true);
-        $.fn.fullpage.setAllowScrolling(true);
+    // Модалка
+    $('.open-modal-page').magnificPopup({
+      type: 'inline',
+      callbacks: {
+        open: function open() {
+          console.log('open');
+          $.fn.fullpage.setMouseWheelScrolling(false);
+          $.fn.fullpage.setAllowScrolling(false);
+        },
+        close: function close() {
+          $.fn.fullpage.setMouseWheelScrolling(true);
+          $.fn.fullpage.setAllowScrolling(true);
+        }
       }
-    }
-  });
+    });
+
+    $('.open-modal').magnificPopup({
+      type: 'inline'
+    });
 
   // Галлерея
   $('.gallery').magnificPopup({

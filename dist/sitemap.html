@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="styles/css/vendor.css">
+    <link rel="stylesheet" href="styles/css/main.css">
+  </head>
+  <body>
+    <main>
+      <header class="main-header">
+        <div class="main-header__top top">
+          <div class="grid grid--container main-header__container"><a class="logo" href="./pages.html"></a>
+            <div class="top__adress"><i class="icon icon-map"></i><span>г. Краснодар,</span><span>ул. Дзержинского 121/5</span></div>
+            <div class="top__phone"><i class="icon icon-phone-hang-up"></i><span>8 (800) 30-11-920</span></div><a class="top__callback open-modal" href="#callback"><i class="icon icon-phone"></i><span>Перезвонить мне</span></a>
+          </div>
+        </div>
+      </header>
+      <div class="grid grid--container second-header">
+        <nav class="navbar">
+          <div class="navbar__section navbar__section--links"><a class="navbar__link navbar__link--home" href="./index.html"><i class="icon icon-home3"></i></a><i class="sprite sprite--separator"></i>
+            <div class="mobile-menu-toggle"><span></span><span></span><span></span></div><a class="navbar__link" href="">Интернет-магазин</a><a class="navbar__link" href="./price.html">Прайс-лист</a><a class="navbar__link" href="">Доставка и оплата</a><a class="navbar__link" href="">Статьи</a><a class="navbar__link" href="">Отзывы</a><a class="navbar__link" href="./contacts.html">Контакты</a>
+          </div>
+          <div class="navbar__section navbar__section--icons"><i class="icon icon-search"></i><i class="sprite sprite--separator"></i><a class="open-modal" href="#enter"><i class="icon icon-user"></i></a><i class="sprite sprite--separator"></i><i class="icon icon-cart"></i></div>
+        </nav>
+        <div class="mobile-menu"><a class="mobile-menu__link" href="">Интернет-магазин</a><a class="mobile-menu__link" href="./price.html">Прайс-лист</a><a class="mobile-menu__link" href="">Доставка и оплата</a><a class="mobile-menu__link" href="">Статьи</a><a class="mobile-menu__link" href="">Отзывы</a><a class="mobile-menu__link" href="./contacts.html">Контакты</a></div>
+      </div>
+      <div class="grid grid--container">
+        <h1 class="h1">Карта сайта</h1>
+        <hr class="hr">
+        <ul class="sitemap"><a class="sitemap__link" href="">Интернет-магазин</a>
+          <ul><a class="sitemap__link" href="">Автомобильная кожа</a><a class="sitemap__link" href="">Искусственная кожа</a><a class="sitemap__link" href="">Алькантара</a><a class="sitemap__link" href="">Полиуретановая кожа</a><a class="sitemap__link" href="">Экзотика</a><a class="sitemap__link" href="">Нитки</a><a class="sitemap__link" href="">Клей</a></ul><a class="sitemap__link" href="">Прайс-лист</a><a class="sitemap__link" href="">Доставка и оплата</a><a class="sitemap__link" href="">Статьи</a><a class="sitemap__link" href="">Отзывы</a><a class="sitemap__link" href="">Контакты</a>
+        </ul>
+      </div>
+      <footer class="main-footer">
+        <div class="main-footer__top">
+          <div class="grid grid--container">
+            <div class="main-footer__nav nav"><a class="nav__link" href="">Интернет-магазин</a><a class="nav__link" href="./price.html">Прайс-лист</a><a class="nav__link" href="">Доставка и оплата</a><a class="nav__link" href="">Статьи</a><a class="nav__link" href="">Отзывы</a><a class="nav__link" href="./contacts.html">Контакты</a></div>
+          </div>
+        </div>
+        <div class="main-footer__middle">
+          <div class="grid grid--container">
+            <div class="row row--sm-center">
+              <div class="col col--xl-4 col--lg-5 col--md-3 col--sm-3 col--xs-6 main-footer__icons">
+                <p>Мы в социальных сетях</p><a href=""><i class="icon icon-facebook"></i></a><a href=""><i class="icon icon-vk"></i></a><a href=""><i class="icon icon-instagram"></i></a>
+              </div>
+              <div class="col col--xl-4 col--lg-3 col--md-3 col--sm-2 col--xs-6 main-footer__icons">
+                <p>Напишите нам</p><a href=""><i class="icon icon-skype"></i></a><a href=""><i class="icon icon-bubble"></i></a>
+              </div>
+              <div class="col col--xl-4 col--lg-4 col--md-6 col--sm-7 col--xs-12 text-right">
+                <div class="webformula"><i class="icon icon-hammer"></i><span>Создание сайта — </span><a href="">Webformula</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-footer__bottom">
+          <div class="grid grid--container">
+            <div class="row">
+              <div class="col col--sm-3 copyright">&copy; Автокожа 2017</div>
+              <div class="col col--sm-5 conditions"><a href="">Условия использования сайта</a></div>
+              <div class="col col--sm-4 sitemap-link"><a href="">Карта сайта</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <div class="modal" id="callback">
+      <div class="modal__title">Обратный звонок</div>
+      <div class="modal__subtitle">Здравствуйте! Хотите, мы перезвоним Вам бесплатно и все обсудим&hellip;</div>
+      <form class="form" action="/mail.php" method="post">
+        <div class="form-control">
+          <input class="phone-mask" type="tel" name="phone">
+        </div>
+        <div class="btn btn--primary"><i class="icon icon-user"></i><span>Хорошо, жду звонка</span></div>
+      </form>
+    </div>
+    <div class="modal" id="enter">
+      <div class="modal__title">Войти</div>
+      <form class="form" action="/mail.php" method="post">
+        <div class="form-control">
+          <input type="email" name="email" placeholder="Эл. почта">
+        </div>
+        <div class="form-control">
+          <input type="password" name="password" placeholder="Пароль">
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" id="remember-password">
+          <label for="remember-password"></label><span>Запомнить пароль</span>
+        </label><a class="link" href="">Забыли пароль?</a>
+        <div class="modal__btn-group">
+          <div class="btn btn--primary"><i class="icon icon-user"></i><span>Войти</span></div>
+          <div class="btn btn--primary btn--empty"><i class="icon icon-key"></i><span>Зарегистрироваться</span></div>
+        </div>
+      </form>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scrolloverflow.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/cropper.js"></script>
+    <script src="js/redux.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/configurator.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>

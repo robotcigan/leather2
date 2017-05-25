@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .error-page
+    img(src="img/404.jpg", alt="")
+    .error-page__title Страница, которую Вы ищете, не существует.
+    .errow-page__text Упс! Мы не можем найти страницу, которую вы ищете.
+      br
+      | Попробуйте начать с &laquo;
+      a(href="").link Главной
+      | &raquo;
+
+  include components/footer.pug

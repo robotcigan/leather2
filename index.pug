@@ -1,20 +1,22 @@
 extends layout.pug
 
+block meta
+  title Автомобильная кожа по низкой цене - Купить чехлы из натуральной кожи и кожзама для авто – АВТОКОЖА
+  meta(name="Description" content="В нашем магазине кожаных изделий для вашего автомобиля вы сможете купить чехлы из искусственной и натуральной кожи для машины. Мы предлагаем высокое качество и адекватные цены. Автокожа – Краснодар.")
 
 block content
   - var indexPage = true
   header.main-header
     .main-header__top.top
       .grid.grid--container.main-header__container
-        a(href="/leather/pages.html").logo
+        a(href="./pages.html").logo
         .top__adress
           i.icon.icon-map
           span г. Краснодар,
           span ул. Дзержинского 121/5
         .top__phone
           i.icon.icon-phone-hang-up
-          span 8 (800) 30-11-920 
-          span 8 (918) 455-58-61
+          span 8 (800) 30-11-920
         a(href="#callback").top__callback.open-modal
           i.icon.icon-phone
           span Перезвонить мне
@@ -23,32 +25,33 @@ block content
       .grid.grid--container.second-header.second-header--index
         nav.navbar
           .navbar__section.navbar__section--links
-            a(href="/leather/index.html").navbar__link.navbar__link--home
+            a(href="./index.html").navbar__link.navbar__link--home
               i.icon.icon-home3
             i.sprite.sprite--separator
             .mobile-menu-toggle
               span
               span
               span
-            a(href="").navbar__link Конфигуратор
-            a(href="/leather/price.html").navbar__link Прайс-лист
+            a(href="").navbar__link Интернет-магазин
+            a(href="./price.html").navbar__link Прайс-лист
             a(href="").navbar__link Доставка и оплата
             a(href="").navbar__link Статьи
             a(href="").navbar__link Отзывы
-            a(href="/leather/contacts.html").navbar__link Контакты
+            a(href="./contacts.html").navbar__link Контакты
           .navbar__section.navbar__section--icons
             i.icon.icon-search
             i.sprite.sprite--separator
-            i.icon.icon-user
+            a(href="#enter").open-modal
+              i.icon.icon-user
             i.sprite.sprite--separator
             i.icon.icon-cart
         .mobile-menu
-          a(href="").mobile-menu__link Конфигуратор
-          a(href="/leather/price.html").mobile-menu__link Прайс-лист
+          a(href="").mobile-menu__link Интернет-магазин
+          a(href="./price.html").mobile-menu__link Прайс-лист
           a(href="").mobile-menu__link Доставка и оплата
           a(href="").mobile-menu__link Статьи
           a(href="").mobile-menu__link Отзывы
-          a(href="/leather/contacts.html").mobile-menu__link Контакты
+          a(href="./contacts.html").mobile-menu__link Контакты
 
 
 
@@ -56,57 +59,83 @@ block content
         .hero__bg(style='background-image: url("img/bg-1.jpg")')
         .grid.grid--container
           .hero__container.container
-            .container__title Лучшие материалы для
+            h1.container__title Импортные материалы для
               br
               | салона автомобиля
-            .container__subtitle Импорт Alcantara и Швайцер
+            .container__subtitle Официальный импортер Alcantara &copy; и Schweitzer &copy;
             .btn.container__btn
               i.icon.icon-equalizer
-              span Открыть конфигуратор
+              span Перейти в интернет-магазин
 
 
     .section.horizontal-slides
-      -for(var x = 0; x < 5; x++)
-        .slide
-          .hero
-            .hero__bg(style='background-image: url("img/main-slider/1.jpg")')
-            .grid.grid--container
-              .hero__container.container
-                .container__title ALCANTARA
-                .container__subtitle Люксовые внешние качества материала
-                .btn-group
-                  .btn.btn--solid
-                    i.icon.icon-spinner4
-                    span Колор-карта
-                  a(href="#info").btn.btn--solid.open-modal
-                    i.icon.icon-book
-                    span Об Alcantara
-                  .btn.btn--solid
-                    i.icon.icon-books
-                    span Статьи
-                  .btn.btn--solid
-                    i.icon.icon-folder
-                    span Документация
-                .btn.container__btn
-                  i.icon.icon-cart
-                  span Купить
+      .slide
+        .hero
+          .hero__bg(style='background-image: url("img/main-slider/1.jpg")')
+          .grid.grid--container
+            .hero__container.container
+              .container__title Алькантара
+              .container__subtitle Алькантара &copy; Оригинальный автомобильный материал
+              .btn-group
+                .btn.btn--solid
+                  i.icon.icon-spinner4
+                  span Колор-карта
+                a(href="#first-modal-page").btn.btn--solid.open-modal
+                  i.icon.icon-book
+                  span Об Алькантаре
+                .btn.btn--solid
+                  i.icon.icon-books
+                  span Статьи
+                .btn.btn--solid
+                  i.icon.icon-folder
+                  span Документация
+              .btn.container__btn
+                i.icon.icon-cart
+                span Купить
+
+      .slide
+        .hero
+          .hero__bg(style='background-image: url("img/main-slider/2.jpg")')
+          .grid.grid--container
+            .hero__container.container
+              .container__title Швайцер
+              .container__subtitle Швайцер &copy; Полиуретановая кожа. Копия, превзошедшая оригинал.
+              .btn-group
+                .btn.btn--solid
+                  i.icon.icon-spinner4
+                  span Колор-карта
+                a(href="#second-modal-page").btn.btn--solid.open-modal
+                  i.icon.icon-book
+                  span О Швайцере
+                .btn.btn--solid
+                  i.icon.icon-books
+                  span Статьи
+                .btn.btn--solid
+                  i.icon.icon-folder
+                  span Документация
+              .btn.container__btn
+                i.icon.icon-cart
+                span Купить
 
     
 
-      #info.modal-page
-        .modal-page__title Alcantara
+      #first-modal-page.modal-page
+        .modal-page__title Алькантара
         hr.hr
-        p Мягкая, бархатистая и приятная на ощупь. Долговечная. Износостойкая (не лоснится, не протирается через год эксплуатации). Устойчива к внешним воздействиям (после пожара мебель, обитая алькантарой, конечно же, потеряет свой товарный вид, но в случае попадания на поверхность искры, она не загорится). Алькантару можно подвергать ремонту без видимых последствий. Отсутствие отходов при раскрое (что значительно влияет на цену готового изделия).
-        p Богатая цветовая гамма. Так, в коллекции узоров фабрики, созданной Джулио Каппелини (Gulio Cappellini), есть изображения сухих трав, потрескавшейся от зноя почвы, и даже складки-имитация рыбьей чешуи[3].
-        p Алькантара более эластична, чем натуральная кожа, что позволяет использовать этот материал для обивки мебели самых замысловатых форм и миниатюрных изделий. Для очистки мебели, обитой этим материалом, подойдут простые чистящие средства для кожаной мебели. Её можно даже стирать в машине.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus rem delectus enim dolorem, error nulla earum maxime aliquid ipsam, recusandae molestiae ducimus iusto, dolore omnis. Saepe temporibus autem, provident dolor!
+        p Алькантара представляет собой уникальный искусственный материал, которой по своим характеристиками и свойствам не вписывается ни в один из видов существующих тканей. Несмотря на то, что Алькантара внешне и наощупь сильно напоминает искусственную замшу, ею она не является. Также она не имеет никакого отношения к натуральной коже и кожзаменителю. Известную сегодня во всем мире синтетическую ткань под брендом Alcantara разработали в Японии сотрудники исследовательской компании «Toray», но выпускают ее в Италии. Именно итальянские инженеры фирмы «ENI» запустили в серийное производство этот инновационный материал.
+        p Хотя Алькантара и похожа на высококачественную замшу, она, благодаря тканой структуре, отличается от натурального аналога более высокими физическими характеристиками и лучшими рабочими качествами. Несомненное достоинство Alcantara – ее не надо обрабатывать как замшу различными средствами (пропитками, кондиционерами и т.п.).
+      #second-modal-page.modal-page
+        .modal-page__title Швайцер
+        hr.hr
+        p Швайцер – это полиуретановая автомобильная кожа, производство которой было начато в Германии в 2016 году. Своему названию он обязан знаменитой серии натуральной автомобильной кожи Schweitzer.
+        p Благодаря своей уникальной структуре и составу, Швайцер имеет втрое более высокую износостойкость, чем самая дорогая натуральная автомобильная кожа. Из-за своей пористой структуры, Швайцер пропускает воздух и влагу, как и натуральная кожа, что обеспечит его комфортную эксплуатацию в жаркое время года. Швайцер имеет замшевую подложку, неотличимую от натуральной. Она обеспечивает вентиляцию материала и амортизацию при давлении на него. В готовом изделии Швайцер невозможно отличить от натуральной кожи даже профессионалу, при этом Швайцер гораздо более долговечен и неприхотлив, его практически невозможно случайно порезать или поцарапать. Он не стареет и не грубеет со временем как натуральная кожа и не лопается даже при очень низких температурах.
 
 
 
     .section.mobile-offset
       .grid.grid--container
         .text-center
-          h1.header А также
+          h2.header А также
         .photo-samples.gallery
           -for(var i = 1; i < 5; i++)
             a(href="img/samples-" + i + ".jpg")
@@ -138,30 +167,24 @@ block content
     .section.mobile-offset
       .grid.grid--container
         .text-center
-          h1.header Отзывы
-        .reviews
+          h2.header Отзывы
+        .reviews.reviews--index
           -for(var y = 0; y < 3; y++)
             .slide
               .row
                 -for(var i = 0; i < 4; i++)
                   .col.col--sm-6
                     a(href="").review
-                      .review__img(style="background-image: url(img/review.jpg)")
-                      .review__title KADZIM CUSTOMS, Краснодар
-                      .review__text Спасибо компании &laquo;
-                        strong Автокожа
-                        | &raquo;. Коллектив работает слаженно, четко, профессионально. Пользовалась услугами не единожды.
+                      .review__img(style="background-image: url(img/unknow.jpg)")
+                      .review__title —
+                      .review__text comming soon
 
     .section
       .grid.grid--container
         .text-center
-          h1.header.header--with-subheader Как нас найти?
+          h2.header.header--with-subheader Как нас найти?
           p.subheader Наш магазин находится по адресу: Россия,  г. Краснодар ул. Ставропольская, 67
         .map
           iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.7601649323938!2d38.96815711522059!3d45.070376079098295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f045edad9a7e49%3A0xf4a7bfc6a30f9619!2z0YPQuy4g0JTQt9C10YDQttC40L3RgdC60L7Qs9C-LCAxMjHQujUsINCa0YDQsNGB0L3QvtC00LDRgCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksIDM1MDA1MQ!5e0!3m2!1sru!2sru!4v1495464301885" frameborder="0" style="border:0" allowfullscreen)
       
       include components/footer.pug
-
-
-
-  include components/callback.pug

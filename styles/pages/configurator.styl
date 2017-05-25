@@ -1,18 +1,80 @@
 .configurator
+  background-position center top
+  backgroun-size cover
+  background-repeat no-repeat
+  height ((600 / 966) * 100)vh
   position relative
+  width 100%
   &__img
     img
       width 100%
   &__container
-    bottom 2rem
-    left 2rem
+    left 0
+    justify-content space-between
+    padding-left ((50 / 1620) * 100)%
     position absolute
+    top ((80 / 600) * 100)%
+    width 100%
+    &--bottom
+      bottom 2rem
   .form-control
     display inline-block
     margin-right 1rem
+  &__links
+    margin-bottom ((150 / 415) * 100)%
+  &__subtitle
+    color #fff
+    font-size 2rem
+    font-weight 700
+    margin-bottom ((45 / 415) * 100)%
+  &__link
+    color #fff
+    cursor pointer
+    display block
+    font-size 1.8rem
+    line-height 1
+    margin-bottom ((30 / 415) * 100)%
+    padding-left 6rem
+    text-decoration none
+    &:hover
+      color $primary
 
 .configurator-price
   color #fff
   span
     display inline-block
     margin-right 1rem
+
+.weird-subtitle
+  color #ccc
+  display inline-block
+  font-size 1.8rem
+  line-height 1
+  margin-bottom 4rem
+  padding-left 3rem
+  position relative
+  vertical-align middle
+  &:before
+    background-color #ccc
+    content ''
+    display inline-block
+    left 0
+    position absolute
+    size(100%, 2px)
+    vertical-align middle
+
+@media(max-width 1600px)
+  .configurator
+    &__subtitle
+      font-size 1.6rem
+    &__link
+      font-size 1.4rem
+      padding-left 4rem
+
+@media(max-width 1300px)
+  .configurator
+    &__link
+      padding-left 0
+    .sprite
+      display block
+      margin-bottom 1rem
