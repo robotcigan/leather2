@@ -1,0 +1,60 @@
+.weird-grid
+  background-color $blue
+  &__row
+    margin-left -.4rem
+    margin-right -.4rem
+  &__col
+    display inline-block
+    margin-bottom 1rem
+    margin-left .4rem
+    margin-right .4rem
+    text-decoration none
+    height ((225 / 520) * 100)%
+    width 'calc( %s - 8px )' % ((100/7)%)
+    .item
+      text-align center
+      &__img
+        height 22.5rem
+        margin-bottom .8rem
+      &__title
+        color $main
+        text-decoration none
+      &:hover
+        .item
+          &__img
+            outline 3px solid $primary
+  &--with-borders
+    .item
+      &__img
+        border 1px solid $light-gray
+
+@media(max-width 1600px)
+  .weird-grid
+    &__col
+      width 'calc( %s - 8px )' % ((100/6)%)
+
+@media(max-width 1400px)
+  .weird-grid
+    &__col
+      width 'calc( %s - 8px )' % ((100/5)%)
+
+@media(max-width 1200px)
+  .weird-grid
+    &__col
+      width 'calc( %s - 8px )' % ((100/4)%)
+
+@media(max-width 960px)
+  .weird-grid
+    &__col
+      width 'calc( %s - 8px )' % ((100/3)%)
+
+@media(max-width 600px)
+  .weird-grid
+    &__col
+      width 'calc( %s - 8px )' % ((100/2)%)
+
+@media(max-width 350px)
+  .weird-grid
+    &__col
+      margin-right 0
+      width 100%

@@ -214,7 +214,9 @@ body * {
   border-radius: 50%;
   height: 3.7rem;
   width: 3.7rem;
+  color: #111;
   display: table-cell;
+  line-height: 1;
 }
 @media (max-width: 1400px) {
   .sprite--configurator {
@@ -527,6 +529,70 @@ body * {
   line-height: 1;
   vertical-align: middle;
 }
+.weird-grid {
+  background-color: #f3f7fa;
+}
+.weird-grid__row {
+  margin-left: -0.4rem;
+  margin-right: -0.4rem;
+}
+.weird-grid__col {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  text-decoration: none;
+  height: 43.269230769230774%;
+  width: calc( 14.285714285714286% - 8px );
+}
+.weird-grid__col .item {
+  text-align: center;
+}
+.weird-grid__col .item__img {
+  height: 22.5rem;
+  margin-bottom: 0.8rem;
+}
+.weird-grid__col .item__title {
+  color: #111;
+  text-decoration: none;
+}
+.weird-grid__col .item:hover .item__img {
+  outline: 3px solid #ffa800;
+}
+.weird-grid--with-borders .item__img {
+  border: 1px solid #d1d1d1;
+}
+@media (max-width: 1600px) {
+  .weird-grid__col {
+    width: calc( 16.666666666666668% - 8px );
+  }
+}
+@media (max-width: 1400px) {
+  .weird-grid__col {
+    width: calc( 20% - 8px );
+  }
+}
+@media (max-width: 1200px) {
+  .weird-grid__col {
+    width: calc( 25% - 8px );
+  }
+}
+@media (max-width: 960px) {
+  .weird-grid__col {
+    width: calc( 33.333333333333336% - 8px );
+  }
+}
+@media (max-width: 600px) {
+  .weird-grid__col {
+    width: calc( 50% - 8px );
+  }
+}
+@media (max-width: 350px) {
+  .weird-grid__col {
+    margin-right: 0;
+    width: 100%;
+  }
+}
 #fp-nav ul li,
 .fp-slidesNav ul li {
   margin-bottom: 1.5rem;
@@ -634,14 +700,14 @@ body * {
 }
 .configurator {
   background-position: center top;
-  backgroun-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 62.11180124223602vh;
   position: relative;
   width: 100%;
 }
 .configurator__img img {
   width: 100%;
+  height: 100%;
 }
 .configurator__container {
   left: 0;
@@ -650,9 +716,11 @@ body * {
   position: absolute;
   top: 13.333333333333334%;
   width: 100%;
+  z-index: 5;
 }
 .configurator__container--bottom {
-  bottom: 2rem;
+  bottom: 3rem;
+  top: initial;
 }
 .configurator .form-control {
   display: inline-block;
@@ -670,34 +738,80 @@ body * {
 .configurator__link {
   color: #fff;
   cursor: pointer;
-  display: block;
+  display: table;
   font-size: 1.8rem;
   line-height: 1;
   margin-bottom: 7.228915662650602%;
   padding-left: 6rem;
   text-decoration: none;
+  position: relative;
+}
+.configurator__link:after {
+  background: url("../../img/icons/small-arrow.png") no-repeat;
+  background-size: contain;
+  content: '';
+  display: block;
+  left: 110%;
+  opacity: 0;
+  position: absolute;
+  height: 15px;
+  width: 8px;
+  top: 0;
+  transform: translateX(-5px);
+  transition: all 0.2s;
 }
 .configurator__link:hover {
   color: #ffa800;
 }
+.configurator__link:hover:after {
+  opacity: 1;
+  transform: none;
+}
+.configurator--first {
+  height: 62.11180124223602vh;
+}
+.configurator--third {
+  position: relative;
+}
+.configurator--third:before {
+  background: url("../../img/grid.png");
+  background-size: 100%;
+  content: '';
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
 .configurator-price {
   color: #fff;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
 }
 .configurator-price span {
   display: inline-block;
+  line-height: 1;
   margin-right: 1rem;
 }
-.weird-subtitle {
-  color: #ccc;
+.configurator-header.items {
+  margin-bottom: 4rem;
+}
+.configurator-header.items .item {
   display: inline-block;
+  color: #ccc;
   font-size: 1.8rem;
   line-height: 1;
-  margin-bottom: 4rem;
+  margin-right: 4rem;
+}
+.configurator-header.items .item--first {
   padding-left: 3rem;
   position: relative;
   vertical-align: middle;
 }
-.weird-subtitle:before {
+.configurator-header.items .item--first:before {
   background-color: #ccc;
   content: '';
   display: inline-block;
@@ -706,6 +820,10 @@ body * {
   height: 100%;
   width: 2px;
   vertical-align: middle;
+}
+.configurator-header.items .item--active {
+  color: #111;
+  font-weight: 600;
 }
 @media (max-width: 1600px) {
   .configurator__subtitle {

@@ -1,35 +1,26 @@
 $(document).ready(function () {
 
+  let configuratorPrice = document.getElementById('configurator-price');
+  
   let prices = {
-    boksmark: 2
+    alcantara: 4000
+  }
+  let renderPrice = 0;
+
+  function totalPrice(width, height) {
+    return (width * height) * prices.alcantara;
   }
 
-  function totalPrice (state = 0, action) {
-    switch (action.type) {
-      case 'TOTAL_PRICE':
-        return state.price * prices.boksmark
-      default:
-        return state
-    }
-  }
-
-  let store = Redux.createStore(totalPrice, {
-    price: 2
-  });
-
-  let price = document.getElementById('configurator-price');
-
-  function render() {
-    price.innerHTML = store.getState();
-    console.log('store', store.getState())
+  function render(height, width) {
+    renderPrice = (height * width)
+    configuratorPrice.innerHTML = renderPrice;
   }
 
   render();
-  store.subscribe(render);
-
-  store.dispatch({type: 'TOTAL_PRICE'});
 
   let configuratorImg = $('.configurator .configurator__img img');
+
+
 
 
 
@@ -42,6 +33,8 @@ $(document).ready(function () {
     guides: true,
     center: false,
     modal: false,
+    minCropBoxHeight: 50,
+    minCropBoxWidth: 50,
     data: {
       x: 0,
       y: 0,
@@ -57,6 +50,8 @@ $(document).ready(function () {
       confHeight.val(cropWidth);
       confWidth.val(cropHeight);
 
+      render(cropHeight, cropWidth);
+
       // console.log(e.x);
       // console.log(e.y);
       // console.log(e.width);
@@ -65,6 +60,14 @@ $(document).ready(function () {
       // console.log(e.scaleX);
       // console.log(e.scaleY);
     }
+  });
+
+
+  $('.form-control #configurator-height').on('keyup', function() {
+    console.log($(this).val());
+    configuratorImg.cropper("setCropBoxData", {
+      height: $(this).val()
+    })
   });
 
 });

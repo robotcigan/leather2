@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .grid.grid--container
+    h1.h1 Конфигуратор заказа материала
+    header.configurator-header.items
+      .item.item--active.item--first Выберите материал
+      .item.item--second
+        .icon-in-circle
+          i.icon.icon-spinner4
+        span Выберите цвет материала
+
+    .weird-grid.weird-grid--with-borders
+      .weird-grid__row
+        -for(var x = 0; x < 9; x++)
+          a(href="").weird-grid__col
+            .item
+              .item__img(style="background-image: url(img/thread.jpg);", alt="")
+              .item__title # 0500
+          a(href="").weird-grid__col
+            .item
+              .item__img(style="background-image: url(img/thread-2.jpg);", alt="")
+              .item__title # 0500 P
+
+
+
+
+
+
+  include components/footer.pug

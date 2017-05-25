@@ -7,17 +7,20 @@ block content
   .grid.grid--container
     h1.h1 Конфигуратор заказа материала
     hr.hr
-    .configurator
+    .configurator.configurator--third
       .configurator__img
         img(src="img/leather.jpg", alt="")
-      .configurator__container
+      .configurator__container.configurator__container--bottom
         .form-control
           input(id="configurator-height" type="text" placeholder="Ширина")
         .form-control
           input(id="configurator-width" type="text" placeholder="Высота")
-        .configurator-price
-          span Цена: 
-          span#configurator-price
+        div
+          .configurator-price
+            span Цена: 
+            span#configurator-price
+            span ₽
+          .btn.btn--primary Отрезать
 
 
   include components/footer.pug

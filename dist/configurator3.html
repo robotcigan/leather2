@@ -31,16 +31,19 @@
       <div class="grid grid--container">
         <h1 class="h1">Конфигуратор заказа материала</h1>
         <hr class="hr">
-        <div class="configurator">
+        <div class="configurator configurator--third">
           <div class="configurator__img"><img src="img/leather.jpg" alt=""></div>
-          <div class="configurator__container">
+          <div class="configurator__container configurator__container--bottom">
             <div class="form-control">
               <input id="configurator-height" type="text" placeholder="Ширина">
             </div>
             <div class="form-control">
               <input id="configurator-width" type="text" placeholder="Высота">
             </div>
-            <div class="configurator-price"><span>Цена: </span><span id="configurator-price"></span></div>
+            <div>
+              <div class="configurator-price"><span>Цена: </span><span id="configurator-price"></span><span>₽</span></div>
+              <div class="btn btn--primary">Отрезать</div>
+            </div>
           </div>
         </div>
       </div>
@@ -112,7 +115,6 @@
     <script src="js/jquery.inputmask.bundle.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="js/cropper.js"></script>
-    <script src="js/redux.js"></script>
     <script src="js/main.js"></script>
     <script src="js/configurator.js"></script>
     <script src="js/custom.js"></script>
