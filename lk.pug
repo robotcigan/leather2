@@ -1,0 +1,97 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .grid.grid--container
+    h1.h1 Личный кабинет
+    hr.hr
+    .row
+      .col.col--lg-4
+        h2.h2 Личные данные
+        .well.well--info.info
+          .info__name Сидоров Петр Иванович
+          .info__offset
+            strong эл.почта:
+            span Sidorov@mail.ru
+          .info__offset
+            strong тел.;
+            span + 7 918 123 45 67
+          hr.hr
+          .info__offset
+            span «Краснодар авто»
+          .info__offset
+            strong ИНН:
+            span 3275934603868
+        .btn.btn--empty
+          i.icon.icon-user-plus
+          span Изменить
+
+        .small-offset
+
+        .accordion.accordion--active.accordion--sale
+          .accordion__header.accordion--weird
+            .icon-in-circle
+              i.icon.icon-price-tag
+              span Вам доступны скидки
+          .accordion__arrow
+          .accordion__body
+            table.table-sale
+              thead
+                th Наименование
+                th.text-primary Скидка
+              tbody
+                tr
+                  td Боксмарк
+                  td 5 %
+                tr
+                  td Хиллманн Наппа
+                  td 5 %
+
+      .col.col--lg-8
+        h2.h2 Здравствуйте, Петр!
+        .lk-infoblock
+          .some-info
+            i.sprite.sprite--info
+            span Приветствуем Вас! Это — Ваша персональная инфопанель, где Вы можете обновить Ваши персональные данные и платежные реквизиты, а также просмотреть информацию о Ваших заказах
+          .btn.btn--primary
+            i.icon.icon-user-tie
+            span Пригласить покупателя
+        .responsive-table
+          table.table
+            thead
+              th Дата
+              th № заказа
+              th Стоимость
+              th Статус
+            tbody
+              tr
+                td 2016/08/23
+                td 51239690
+                td 1 700 р. 
+                td Заказ отправлен
+              tr.done
+                td 2016/08/23
+                td 51239690
+                td 8 800 р. 
+                td
+                  span Доставлено
+                  a(href="").send-review
+                    .icon-in-circle
+                      i.icon.icon-bubble2
+                    span Оставить отызв
+        
+        .accordion.accordion--active
+          .accordion__header.weird-header Оставить отзыв
+          .accordion__arrow
+          .accordion__body
+            form.form
+              .form-control
+                textarea(placeholder="Ваш отзыв")
+              .btn.btn--empty
+                i.icon.icon-bubbles4
+                span Отправить
+
+
+  include components/footer.pug

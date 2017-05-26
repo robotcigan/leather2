@@ -21,9 +21,29 @@
       &__anons
         font-size 1.8rem
         margin-bottom 4rem
+    &--active
+      background-color $blue
+      padding ((60 / 1620) * 100)% ((85 / 1620) * 100)%
     // &:hover
     //   background-color $blue
     //   // padding ((60 / 1620) * 100)% ((85 / 1620) * 100)%
+  .article
+    &__next-article
+      border 1px solid $light-gray
+      border-left none
+      border-right none
+      color $main
+      display block
+      font-size 1.8rem
+      margin-top 8rem
+      padding 5rem 0
+      text-align center
+      text-decoration none
+      width 100%
+      span
+        display inline-block
+        line-height 1
+        vertical-align middle
 
 @media(max-width 1600px)
   .articles

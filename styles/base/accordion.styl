@@ -1,0 +1,55 @@
+.accordion
+  margin-bottom 2rem
+  position relative
+  &__header
+    cursor pointer
+  &__arrow
+    background url('../../img/icons/accordion-arrow.png') no-repeat 100%
+    background-size contain
+    circle(3.7rem)
+    cursor pointer
+    position absolute
+    right 5rem
+    top 2rem
+    touch-action none
+  &__body
+    display none
+  &--weird.accordion--active
+    background-color $secondary
+    color #fff
+    padding ((50 / 1900) * 100)%
+    .accordion
+      &__arrow
+        background url('../../img/icons/accordion-arrow-active.png') no-repeat 100%
+        right 5rem
+        top 5rem
+    .weird-header
+      border-bottom none
+      margin-bottom 5rem
+      margin-top 0
+      padding-bottom 0
+      &:before
+        display none
+  &--active
+    .accordion
+      &__arrow
+        transform rotate(180deg)
+      &__body
+        display block
+  &--sale
+    margin-top 8rem
+    .accordion
+      &__arrow
+        top -.3rem
+      &__header
+        color $primary
+        font-weight 600
+        .icon
+          float left
+          margin-right 1rem
+          padding-top 9px
+          vertical-align middle
+        span
+          display inline-block
+          padding-top 9px
+          vertical-align middle

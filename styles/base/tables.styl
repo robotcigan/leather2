@@ -13,7 +13,7 @@
   td
     min-height 30px
     vertical-align top
-    padding 1rem 2rem
+    padding 1.5rem 2rem
     // &:nth-child(2)
     //   width 20%
     // &:nth-child(5)
@@ -21,57 +21,121 @@
   .sale
     color $red
     margin-left .3rem
-
-@media (max-width: 600px)
-  .table
-    // caption
-    //   font-size 1.3em
-    thead
-      border none
-      clip rect(0 0 0 0)
-      height 1px
-      margin -1px
-      overflow hidden
-      padding 0
-      position absolute
-      width 1px
+  &--cart
     tr
-      border 1px solid $gray
-      display block
-      margin-bottom 2.5rem
-      &:not(:last-child)
-        border-bottom 1px solid $gray
-    td
-      display block
-      padding 0
+      align-items center
       border-bottom 1px solid $light-gray
-      clearfix()
-      &:before
-        // border-right 1px solid $light-gray
-        background-color $blue
-        // border-bottom 1px solid $light-gray
-        content attr(data-label)
-        display block
-        float left
-        font-weight bold
-        margin-right 1rem
-        min-height 29px
-        min-width 40%
-        // padding-left .5rem
-        padding .5rem
-        width 40%
-      &:last-child
-        border-bottom 0
+      display flex
+      justify-content space-between
+      vertical-align middle
+    img
+      display block
+    .form-control
+      margin-bottom 0
     th,
     td
+      width 100%
       &:first-child
-        width initial
-      &:nth-child(2)
-        width initial
-      &:nth-child(5)
-        width initial
-    span
-      // border-left 1px solid $light-gray
-      // display inline-block
-      padding-left 1rem
-      // width 65%
+        max-width 12rem
+      &:nth-child(3)
+        max-width 20rem
+    th,
+    td
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6)
+        text-align right
+    tfoot
+      tr
+        border-bottom none
+  
+  .btn
+    padding 1rem 2rem
+  
+  .icon-in-circle
+    &:last-child
+      margin-right 0
+    .icon
+      display inline-block
+      line-height 3.7rem
+  .send-review
+    color $gray
+    margin-left 3rem
+    text-decoration none
+
+
+.table-sale
+  border-collapse collapse
+  margin-top 4rem
+  text-align left
+  width 100%
+  thead
+    background-color $blue
+  th,
+  td
+    border-bottom 1px solid $light-gray
+    font-size 1.8rem
+    padding 1.5rem
+    &:nth-child(2)
+      text-align center
+  td
+    &:first-child
+      font-weight 600
+
+
+
+@media (max-width: 600px)
+  .responsive-table
+    .table
+      // caption
+      //   font-size 1.3em
+      thead
+        border none
+        clip rect(0 0 0 0)
+        height 1px
+        margin -1px
+        overflow hidden
+        padding 0
+        position absolute
+        width 1px
+      tr
+        border 1px solid $gray
+        display block
+        margin-bottom 2.5rem
+        &:not(:last-child)
+          border-bottom 1px solid $gray
+      td
+        display block
+        padding 0
+        border-bottom 1px solid $light-gray
+        clearfix()
+        &:before
+          // border-right 1px solid $light-gray
+          background-color $blue
+          // border-bottom 1px solid $light-gray
+          content attr(data-label)
+          display block
+          float left
+          font-weight bold
+          margin-right 1rem
+          min-height 29px
+          min-width 40%
+          // padding-left .5rem
+          padding .5rem
+          width 40%
+        &:last-child
+          border-bottom 0
+      th,
+      td
+        &:first-child
+          width initial
+        &:nth-child(2)
+          width initial
+        &:nth-child(5)
+          width initial
+      span
+        // border-left 1px solid $light-gray
+        // display inline-block
+        padding-left 1rem
+        // width 65%

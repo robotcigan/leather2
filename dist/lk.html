@@ -2,8 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Контакты – Интернет-магазин кожаных изделий для автомобилей – АВТОКОЖА</title>
-    <meta name="Description" content="Контакты магазина «Автокожа» Краснодар. План проезда и номера телефонов. Заказать товар можно по номеру: 8 (800) 30-11-920.">
+    <title></title>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
@@ -30,54 +29,89 @@
         <div class="mobile-menu"><a class="mobile-menu__link" href="">Интернет-магазин</a><a class="mobile-menu__link" href="./price.html">Прайс-лист</a><a class="mobile-menu__link" href="">Доставка и оплата</a><a class="mobile-menu__link" href="">Статьи</a><a class="mobile-menu__link" href="">Отзывы</a><a class="mobile-menu__link" href="./contacts.html">Контакты</a></div>
       </div>
       <div class="grid grid--container">
-        <h1 class="h1">Контактная информация</h1>
+        <h1 class="h1">Личный кабинет</h1>
         <hr class="hr">
-        <div class="map map--inner">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.7601649323938!2d38.96815711522059!3d45.070376079098295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f045edad9a7e49%3A0xf4a7bfc6a30f9619!2z0YPQuy4g0JTQt9C10YDQttC40L3RgdC60L7Qs9C-LCAxMjHQujUsINCa0YDQsNGB0L3QvtC00LDRgCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksIDM1MDA1MQ!5e0!3m2!1sru!2sru!4v1495464301885" frameborder="0" style="border:0;" allowfullscreen></iframe>
-        </div>
         <div class="row">
-          <div class="col col--md-6 mobile-offset">
-            <h2 class="inner-header">Контактные данные</h2>
-            <div class="inner-table">
-              <div class="inner-table__row">
-                <div class="icon-in-circle"><i class="icon icon-map"></i></div><span>Россия, г. Краснодар ул. Дзержинского 121/5</span>
+          <div class="col col--lg-4">
+            <h2 class="h2">Личные данные</h2>
+            <div class="well well--info info">
+              <div class="info__name">Сидоров Петр Иванович</div>
+              <div class="info__offset"><strong>эл.почта:</strong><span>Sidorov@mail.ru</span></div>
+              <div class="info__offset"><strong>тел.;</strong><span>+ 7 918 123 45 67</span></div>
+              <hr class="hr">
+              <div class="info__offset"><span>«Краснодар авто»</span></div>
+              <div class="info__offset"><strong>ИНН:</strong><span>3275934603868</span></div>
+            </div>
+            <div class="btn btn--empty"><i class="icon icon-user-plus"></i><span>Изменить</span></div>
+            <div class="small-offset"></div>
+            <div class="accordion accordion--active accordion--sale">
+              <div class="accordion__header accordion--weird">
+                <div class="icon-in-circle"><i class="icon icon-price-tag"></i><span>Вам доступны скидки</span></div>
               </div>
-              <div class="inner-table__row">
-                <div class="icon-in-circle"><i class="icon icon-phone"></i></div><span>8 (800) 30-11-920</span>
-              </div>
-              <div class="inner-table__row">
-                <div class="icon-in-circle"><i class="icon icon-envelop"></i></div><span>info@avtokozha.com</span>
+              <div class="accordion__arrow"></div>
+              <div class="accordion__body">
+                <table class="table-sale">
+                  <thead>
+                    <th>Наименование</th>
+                    <th class="text-primary">Скидка</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Боксмарк</td>
+                      <td>5 %</td>
+                    </tr>
+                    <tr>
+                      <td>Хиллманн Наппа</td>
+                      <td>5 %</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
-          <div class="col col--md-6 mobile-offset">
-            <h2 class="inner-header">Контактные данные</h2>
-            <form class="form form--inner" action="mail.php" method="post">
-              <div class="row">
-                <div class="col col--sm-6">
+          <div class="col col--lg-8">
+            <h2 class="h2">Здравствуйте, Петр!</h2>
+            <div class="lk-infoblock">
+              <div class="some-info"><i class="sprite sprite--info"></i><span>Приветствуем Вас! Это — Ваша персональная инфопанель, где Вы можете обновить Ваши персональные данные и платежные реквизиты, а также просмотреть информацию о Ваших заказах</span></div>
+              <div class="btn btn--primary"><i class="icon icon-user-tie"></i><span>Пригласить покупателя</span></div>
+            </div>
+            <div class="responsive-table">
+              <table class="table">
+                <thead>
+                  <th>Дата</th>
+                  <th>№ заказа</th>
+                  <th>Стоимость</th>
+                  <th>Статус</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2016/08/23</td>
+                    <td>51239690</td>
+                    <td>1 700 р. </td>
+                    <td>Заказ отправлен</td>
+                  </tr>
+                  <tr class="done">
+                    <td>2016/08/23</td>
+                    <td>51239690</td>
+                    <td>8 800 р. </td>
+                    <td><span>Доставлено</span><a class="send-review" href="">
+                        <div class="icon-in-circle"><i class="icon icon-bubble2"></i></div><span>Оставить отызв</span></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="accordion accordion--active">
+              <div class="accordion__header weird-header">Оставить отзыв</div>
+              <div class="accordion__arrow"></div>
+              <div class="accordion__body">
+                <form class="form">
                   <div class="form-control">
-                    <input type="text" placeholder="Ваше имя" name="name">
+                    <textarea placeholder="Ваш отзыв"></textarea>
                   </div>
-                </div>
-                <div class="col col--sm-6"></div>
-                <div class="col col--sm-6">
-                  <div class="form-control">
-                    <input type="email" placeholder="Эл. почта" name="email">
-                  </div>
-                </div>
-                <div class="col col--sm-6">
-                  <div class="form-control">
-                    <input type="tel" placeholder="Телефон" name="phone">
-                  </div>
-                </div>
-                <div class="col col--sm-12">
-                  <div class="form-control">
-                    <textarea name="mess"></textarea>
-                  </div>
-                  <button class="btn btn--middle"><i class="icon icon-envelop"></i><span>Отправить</span></button>
-                </div>
+                  <div class="btn btn--empty"><i class="icon icon-bubbles4"></i><span>Отправить</span></div>
+                </form>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>

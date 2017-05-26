@@ -47,6 +47,8 @@
           </div>
         </div>
       </div>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/configurator.js"></script>
       <footer class="main-footer">
         <div class="main-footer__top">
           <div class="grid grid--container">
@@ -103,6 +105,45 @@
           <label for="remember-password"></label><span>Запомнить пароль</span>
         </label><a class="link" href="">Забыли пароль?</a>
         <div class="modal__btn-group">
+          <div class="btn btn--primary"><i class="icon icon-user"></i><span>Войти</span></div><a class="btn btn--primary btn--empty" href="#registration"><i class="icon icon-key"></i><span>Зарегистрироваться</span></a>
+        </div>
+      </form>
+    </div>
+    <div class="modal" id="registration">
+      <div class="modal__title">Регистрация</div>
+      <form class="form">
+        <div class="form-control">
+          <input type="text" name="first-name" placeholder="Фамилия">
+        </div>
+        <div class="form-control">
+          <input type="text" name="second-name" placeholder="Имя">
+        </div>
+        <div class="form-control">
+          <input type="text" name="father-name" placeholder="Отчество">
+        </div>
+        <div class="form-control">
+          <input type="tel" name="tel" placeholder="Телефон">
+        </div>
+        <div class="form-control">
+          <input type="email" name="email" placeholder="Эл. почта">
+        </div>
+        <div class="form-control">
+          <input type="text" name="region" placeholder="Регион">
+        </div>
+        <div class="form-control">
+          <input type="text" name="city" placeholder="Город">
+        </div>
+        <div class="form-control">
+          <input type="password" name="first-password" placeholder="Пароль">
+        </div>
+        <div class="form-control">
+          <input type="password" name="second-password" placeholder="Повторите пароль">
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" id="remember-password">
+          <label for="remember-password"></label><span>Запомнить пароль</span>
+        </label><a class="link" href="">Забыли пароль?</a>
+        <div class="modal__btn-group">
           <div class="btn btn--primary"><i class="icon icon-user"></i><span>Войти</span></div>
           <div class="btn btn--primary btn--empty"><i class="icon icon-key"></i><span>Зарегистрироваться</span></div>
         </div>
@@ -116,7 +157,6 @@
     <script src="js/sweetalert.min.js"></script>
     <script src="js/cropper.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/configurator.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>

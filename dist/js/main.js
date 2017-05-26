@@ -37,6 +37,7 @@ $(document).ready(function () {
     });
   }
 
+  // fullpage
   if (windowWidth > 1024) {
     fullPageInit();
   }
@@ -98,4 +99,11 @@ $(document).ready(function () {
 
   // Телефон маска
   $('.phone-mask').inputmask("+7 (999) 999 99 99");
+
+  // Аккордион
+  $('.accordion .accordion__header').on('click', function () {
+    var parent = $(this).closest('.accordion');
+    parent.find('.accordion__body').slideToggle();
+    parent.toggleClass('accordion--active');
+  });
 });

@@ -1,0 +1,109 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .grid.grid--container
+    h1.h1 В корзине
+    hr.hr
+    .responsive-table
+      table.table.table--cart
+        thead
+          th Вид
+          th Наименование
+          th Кол-во
+          th Цена
+          th Стоимость
+          th Редактировать
+        tbody
+          -for(var x = 0; x < 3; x++)
+            tr
+              td
+                img(src="img/cart-table.jpg", alt="")
+              td Боксмарк 6833
+              td
+                .form-control.form-control--table
+                  input(type="text" value="3")
+                span пог. м
+              td 8 600 р. за пог. м
+              td 25 800 р.
+              td
+                a(href="").icon-in-circle
+                  i.icon.icon-pencil
+                a(href="").icon-in-circle
+                  i.icon.icon-cross
+        tfoot
+          tr
+            td
+            td
+            td
+            td
+            td
+              span Итого:
+              span  31 300 р.
+            td
+              a(href="").btn.btn--primary
+                i.sprite.sprite--ruble
+                span Купить в один клик
+
+    .weird-header Параметры доставки
+    .tabs
+      .tabs__header Самовывоз (бесплатно)
+      .tabs__header Автобус (для ближайших регионов)
+      .tabs__header.tabs__header--active Грузовая компания (на выбор)
+      .tabs__header Постаматы Boxberry
+      .tabs__content
+        .well
+          label.radio
+            .radio__img
+              img(src="img/radio-1.png", alt="")
+            input.radio__input(type="radio" id="delivery-1" name="payment-type")
+            label.radio__label(for="delivery-1")
+            | Переводом на карту сбербанка
+          label.radio
+            .radio__img
+              img(src="img/radio-2.jpg", alt="")
+            input.radio__input(type="radio" id="delivery-2" name="payment-type")
+            label.radio__label(for="delivery-3")
+            | Банковской картой
+          label.radio
+            .radio__img
+              img(src="img/radio-3.png", alt="")
+            input.radio__input(type="radio" id="delivery-3" name="payment-type")
+            label.radio__label(for="delivery-3")
+            | Безналичный расчет
+
+    .weird-header Параметры оплаты
+    .radios
+      .radios__left
+        label.radio
+          input.radio__input(type="radio" id="pay-1" name="payment-type")
+          label.radio__label(for="pay-1")
+          | Переводом на карту сбербанка
+        label.radio
+          input.radio__input(type="radio" id="pay-2" name="payment-type")
+          label.radio__label(for="pay-2")
+          | Банковской картой
+        label.radio
+          input.radio__input(type="radio" id="pay-3" name="payment-type")
+          label.radio__label(for="pay-3")
+          | Безналичный расчет
+        label.radio
+          input.radio__input(type="radio" id="pay-4" name="payment-type")
+          label.radio__label(for="pay-4")
+          | Наличными (только при самовывозе)
+      .radios__right
+        i.sprite.sprite--info
+
+    
+    div
+      .btn.btn--primary
+        i.sprite.sprite--ruble
+        span Купить в один клик
+      .btn.btn--empty
+        i.icon.icon-user
+        span Войти и заказать
+
+
+  include components/footer.pug

@@ -44,6 +44,40 @@ html(lang="ru")
           .btn.btn--primary
             i.icon.icon-user
             span Войти
+          a(href="#registration").btn.btn--primary.btn--empty
+            i.icon.icon-key
+            span Зарегистрироваться
+
+    #registration.modal
+      .modal__title Регистрация
+      form.form
+        .form-control
+          input(type="text" name="first-name" placeholder="Фамилия")
+        .form-control
+          input(type="text" name="second-name" placeholder="Имя")
+        .form-control
+          input(type="text" name="father-name" placeholder="Отчество")
+        .form-control
+          input(type="tel" name="tel" placeholder="Телефон")
+        .form-control
+          input(type="email" name="email" placeholder="Эл. почта")
+        .form-control
+          input(type="text" name="region" placeholder="Регион")
+        .form-control
+          input(type="text" name="city" placeholder="Город")
+        .form-control
+          input(type="password" name="first-password" placeholder="Пароль")
+        .form-control
+          input(type="password" name="second-password" placeholder="Повторите пароль")
+        label.checkbox
+          input(type="checkbox" id="remember-password")
+          label(for="remember-password")
+          span Запомнить пароль
+        a(href="").link Забыли пароль?
+        .modal__btn-group
+          .btn.btn--primary
+            i.icon.icon-user
+            span Войти
           .btn.btn--primary.btn--empty
             i.icon.icon-key
             span Зарегистрироваться
@@ -57,5 +91,4 @@ html(lang="ru")
     script(src="js/cropper.js")
     
     script(src="js/main.js")
-    script(src="js/configurator.js")
     script(src="js/custom.js")

@@ -2,8 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Контакты – Интернет-магазин кожаных изделий для автомобилей – АВТОКОЖА</title>
-    <meta name="Description" content="Контакты магазина «Автокожа» Краснодар. План проезда и номера телефонов. Заказать товар можно по номеру: 8 (800) 30-11-920.">
+    <title></title>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
@@ -30,55 +29,119 @@
         <div class="mobile-menu"><a class="mobile-menu__link" href="">Интернет-магазин</a><a class="mobile-menu__link" href="./price.html">Прайс-лист</a><a class="mobile-menu__link" href="">Доставка и оплата</a><a class="mobile-menu__link" href="">Статьи</a><a class="mobile-menu__link" href="">Отзывы</a><a class="mobile-menu__link" href="./contacts.html">Контакты</a></div>
       </div>
       <div class="grid grid--container">
-        <h1 class="h1">Контактная информация</h1>
+        <h1 class="h1">В корзине</h1>
         <hr class="hr">
-        <div class="map map--inner">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.7601649323938!2d38.96815711522059!3d45.070376079098295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f045edad9a7e49%3A0xf4a7bfc6a30f9619!2z0YPQuy4g0JTQt9C10YDQttC40L3RgdC60L7Qs9C-LCAxMjHQujUsINCa0YDQsNGB0L3QvtC00LDRgCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksIDM1MDA1MQ!5e0!3m2!1sru!2sru!4v1495464301885" frameborder="0" style="border:0;" allowfullscreen></iframe>
+        <div class="responsive-table">
+          <table class="table table--cart">
+            <thead>
+              <th>Вид</th>
+              <th>Наименование</th>
+              <th>Кол-во</th>
+              <th>Цена</th>
+              <th>Стоимость</th>
+              <th>Редактировать</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="img/cart-table.jpg" alt=""></td>
+                <td>Боксмарк 6833</td>
+                <td>
+                  <div class="form-control form-control--table">
+                    <input type="text" value="3">
+                  </div><span>пог. м</span>
+                </td>
+                <td>8 600 р. за пог. м</td>
+                <td>25 800 р.</td>
+                <td><a class="icon-in-circle" href=""><i class="icon icon-pencil"></i></a><a class="icon-in-circle" href=""><i class="icon icon-cross"></i></a></td>
+              </tr>
+              <tr>
+                <td><img src="img/cart-table.jpg" alt=""></td>
+                <td>Боксмарк 6833</td>
+                <td>
+                  <div class="form-control form-control--table">
+                    <input type="text" value="3">
+                  </div><span>пог. м</span>
+                </td>
+                <td>8 600 р. за пог. м</td>
+                <td>25 800 р.</td>
+                <td><a class="icon-in-circle" href=""><i class="icon icon-pencil"></i></a><a class="icon-in-circle" href=""><i class="icon icon-cross"></i></a></td>
+              </tr>
+              <tr>
+                <td><img src="img/cart-table.jpg" alt=""></td>
+                <td>Боксмарк 6833</td>
+                <td>
+                  <div class="form-control form-control--table">
+                    <input type="text" value="3">
+                  </div><span>пог. м</span>
+                </td>
+                <td>8 600 р. за пог. м</td>
+                <td>25 800 р.</td>
+                <td><a class="icon-in-circle" href=""><i class="icon icon-pencil"></i></a><a class="icon-in-circle" href=""><i class="icon icon-cross"></i></a></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span>Итого:</span><span> 31 300 р.</span></td>
+                <td><a class="btn btn--primary" href=""><i class="sprite sprite--ruble"></i><span>Купить в один клик</span></a></td>
+              </tr>
+            </tfoot>
+          </table>
         </div>
-        <div class="row">
-          <div class="col col--md-6 mobile-offset">
-            <h2 class="inner-header">Контактные данные</h2>
-            <div class="inner-table">
-              <div class="inner-table__row">
-                <div class="icon-in-circle"><i class="icon icon-map"></i></div><span>Россия, г. Краснодар ул. Дзержинского 121/5</span>
-              </div>
-              <div class="inner-table__row">
-                <div class="icon-in-circle"><i class="icon icon-phone"></i></div><span>8 (800) 30-11-920</span>
-              </div>
-              <div class="inner-table__row">
-                <div class="icon-in-circle"><i class="icon icon-envelop"></i></div><span>info@avtokozha.com</span>
-              </div>
+        <div class="weird-header">Параметры доставки</div>
+        <div class="tabs">
+          <div class="tabs__header">Самовывоз (бесплатно)</div>
+          <div class="tabs__header">Автобус (для ближайших регионов)</div>
+          <div class="tabs__header tabs__header--active">Грузовая компания (на выбор)</div>
+          <div class="tabs__header">Постаматы Boxberry</div>
+          <div class="tabs__content">
+            <div class="well">
+              <label class="radio">
+                <div class="radio__img"><img src="img/radio-1.png" alt=""></div>
+                <input class="radio__input" type="radio" id="delivery-1" name="payment-type">
+                <label class="radio__label" for="delivery-1"></label>Переводом на карту сбербанка
+              </label>
+              <label class="radio">
+                <div class="radio__img"><img src="img/radio-2.jpg" alt=""></div>
+                <input class="radio__input" type="radio" id="delivery-2" name="payment-type">
+                <label class="radio__label" for="delivery-3"></label>Банковской картой
+              </label>
+              <label class="radio">
+                <div class="radio__img"><img src="img/radio-3.png" alt=""></div>
+                <input class="radio__input" type="radio" id="delivery-3" name="payment-type">
+                <label class="radio__label" for="delivery-3"></label>Безналичный расчет
+              </label>
             </div>
           </div>
-          <div class="col col--md-6 mobile-offset">
-            <h2 class="inner-header">Контактные данные</h2>
-            <form class="form form--inner" action="mail.php" method="post">
-              <div class="row">
-                <div class="col col--sm-6">
-                  <div class="form-control">
-                    <input type="text" placeholder="Ваше имя" name="name">
-                  </div>
-                </div>
-                <div class="col col--sm-6"></div>
-                <div class="col col--sm-6">
-                  <div class="form-control">
-                    <input type="email" placeholder="Эл. почта" name="email">
-                  </div>
-                </div>
-                <div class="col col--sm-6">
-                  <div class="form-control">
-                    <input type="tel" placeholder="Телефон" name="phone">
-                  </div>
-                </div>
-                <div class="col col--sm-12">
-                  <div class="form-control">
-                    <textarea name="mess"></textarea>
-                  </div>
-                  <button class="btn btn--middle"><i class="icon icon-envelop"></i><span>Отправить</span></button>
-                </div>
-              </div>
-            </form>
+        </div>
+        <div class="weird-header">Параметры оплаты</div>
+        <div class="radios">
+          <div class="radios__left">
+            <label class="radio">
+              <input class="radio__input" type="radio" id="pay-1" name="payment-type">
+              <label class="radio__label" for="pay-1"></label>Переводом на карту сбербанка
+            </label>
+            <label class="radio">
+              <input class="radio__input" type="radio" id="pay-2" name="payment-type">
+              <label class="radio__label" for="pay-2"></label>Банковской картой
+            </label>
+            <label class="radio">
+              <input class="radio__input" type="radio" id="pay-3" name="payment-type">
+              <label class="radio__label" for="pay-3"></label>Безналичный расчет
+            </label>
+            <label class="radio">
+              <input class="radio__input" type="radio" id="pay-4" name="payment-type">
+              <label class="radio__label" for="pay-4"></label>Наличными (только при самовывозе)
+            </label>
           </div>
+          <div class="radios__right"><i class="sprite sprite--info"></i></div>
+        </div>
+        <div>
+          <div class="btn btn--primary"><i class="sprite sprite--ruble"></i><span>Купить в один клик</span></div>
+          <div class="btn btn--empty"><i class="icon icon-user"></i><span>Войти и заказать</span></div>
         </div>
       </div>
       <footer class="main-footer">
