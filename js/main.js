@@ -37,17 +37,21 @@ $(document).ready(function () {
 
 
   // fullpage
-  if( windowWidth > 1024 ) {
+  if( windowWidth > 1230 ) {
     fullPageInit();
   }
 
   $(window).resize(function () {
     windowWidth = $(window).width();
-    if(windowWidth > 1024) {
-      $.fn.fullpage.reBuild();
+    if(windowWidth > 1230) {
+      if($('#fullpage').length) {
+        $.fn.fullpage.reBuild();
+      }
       // fullPageInit();
     } else {
-      $.fn.fullpage.destroy();
+      if($('#fullpage').length) {
+        $.fn.fullpage.destroy();
+      }
     }
   });
 
@@ -69,25 +73,30 @@ $(document).ready(function () {
     $(this).toggleClass('mobile-menu-toggle--active');
   });
 
+
     // Модалка
-    $('.open-modal-page').magnificPopup({
+    // $('.open-modal-page').magnificPopup({
+    $('.open-modal').magnificPopup({
       type: 'inline',
       callbacks: {
         open: function open() {
-          console.log('open');
-          $.fn.fullpage.setMouseWheelScrolling(false);
-          $.fn.fullpage.setAllowScrolling(false);
+          if ($('#fullpage').length) {
+            $.fn.fullpage.setMouseWheelScrolling(false);
+            $.fn.fullpage.setAllowScrolling(false);
+          }
         },
         close: function close() {
-          $.fn.fullpage.setMouseWheelScrolling(true);
-          $.fn.fullpage.setAllowScrolling(true);
+          if ($('#fullpage').length) {
+            $.fn.fullpage.setMouseWheelScrolling(true);
+            $.fn.fullpage.setAllowScrolling(true);
+          }
         }
       }
     });
 
-    $('.open-modal').magnificPopup({
-      type: 'inline'
-    });
+    // $('.open-modal').magnificPopup({
+    //   type: 'inline'
+    // });
 
   // Галлерея
   $('.gallery').magnificPopup({

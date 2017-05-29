@@ -10,12 +10,12 @@ $(document).ready(function(){
         }
     })
     
-    $('form .btn.btn--primary').click(function(e){
+    $('form.hadoken .btn.btn--primary').click(function(e){
         e.preventDefault();
         $(this).closest('form').submit();
     });
     
-    $('form').submit(function(e){
+    $('form.hadoken').submit(function(e){
         e.preventDefault();
          $.ajax({
           type: 'POST',

@@ -3,7 +3,8 @@
   background #fff
   box-shadow 0 1rem 2rem rgba($main, .1)
   display none
-  margin 0 auto
+  overflow-X hidden
+  margin 10rem auto
   padding ((50 / 920) * 100)%
   position relative
   width 92rem
@@ -19,6 +20,12 @@
     margin-top 2rem
     .btn
       margin-right 2rem
+  &__info
+    background-color $blue
+    margin 4rem (-(90 / 920) * 100)%
+    padding 2rem ((90 / 920) * 100)%
+  .link-group
+    margin 2rem 0
 
 .mfp-ready
   .modal,
@@ -29,8 +36,10 @@
 .mfp-close:active
   font-size 4rem
   opacity 1
-  top ((50 / 920) * 100)%
-  right ((50 / 920) * 100)%
+  // top ((50 / 920) * 100)%
+  // right ((50 / 920) * 100)%
+  top 2rem
+  right 2rem
 
 .mfp-gallery
   .mfp-close,
@@ -52,3 +61,10 @@
     font-size 3rem
     font-weight 700
     text-transform uppercase
+
+@media(max-width 767px)
+  .mfp-container
+    padding 0
+  .modal-page
+    right 0
+    width 100%

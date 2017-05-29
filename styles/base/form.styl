@@ -33,6 +33,16 @@
     border 1px solid $primary
     background-color transparent
     color $main
+  &--black-solid
+    border 1px solid $main
+    background-color transparent
+    color $main
+    &:hover
+      background-color $main
+      color #fff
+  &--full-width
+    text-align center
+    width 100%
   .icon
     margin-right 1rem
     vertical-align middle
@@ -40,11 +50,12 @@
     text-decoration none
     vertical-align middle
   
-  & + .btn
-    margin-left 2rem
+  // & + .btn
+  //   margin-left 2rem
 
 .form-control
   margin-bottom 3rem
+  width 100%
   input[type="text"],
   input[type="email"],
   input[type="password"],
@@ -176,3 +187,33 @@
     vertical-align middle
   & + .radio
     margin-left 4rem 
+
+.icon-btn
+  cursor pointer
+  display inline-block
+  &__sprite
+    background-color #fff
+    border-radius 50%
+    circle(37px)
+    display inline-block
+    margin-right 1rem
+    .sprite
+      margin 0
+      margin-left 1rem
+      padding-top 35px
+      vertical-align middle
+  &--active,
+  &:hover
+    .icon-btn
+      &__sprite
+        background-color $primary
+  span
+    color #fff
+
+.file-upload
+  .btn
+    text-align center
+    width 100%
+  input[type="file"]
+    display none
+    width 100%

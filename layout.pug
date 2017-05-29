@@ -21,7 +21,7 @@ html(lang="ru")
     #callback.modal
       .modal__title Обратный звонок
       .modal__subtitle Здравствуйте! Хотите, мы перезвоним Вам бесплатно и все обсудим&hellip;
-      form.form(action="/mail.php" method="post")
+      form.form.hadoken(action="/mail.php" method="post")
         .form-control
           input(type="tel" name="phone").phone-mask
         .btn.btn--primary
@@ -44,12 +44,15 @@ html(lang="ru")
           .btn.btn--primary
             i.icon.icon-user
             span Войти
-          a(href="#registration").btn.btn--primary.btn--empty
+          a(href="#registration-individual").btn.btn--primary.btn--empty.open-modal
             i.icon.icon-key
             span Зарегистрироваться
 
-    #registration.modal
+    #registration-individual.modal
       .modal__title Регистрация
+      .link-group
+        a(href="#registration-individual").link-group__link.link-group__link--active.open-modal Частное лицо
+        a(href="#registration-company").link-group__link.open-modal Компания
       form.form
         .form-control
           input(type="text" name="first-name" placeholder="Фамилия")
@@ -69,15 +72,97 @@ html(lang="ru")
           input(type="password" name="first-password" placeholder="Пароль")
         .form-control
           input(type="password" name="second-password" placeholder="Повторите пароль")
+        .row
+          .col.col--sm-9
+            .form-control
+              input(type="text" placeholder="Изображение")
+          .col.col--sm-3
+            label.file-upload
+              .btn.btn--empty
+                i.icon.icon-upload
+                span Выбрать
+              input(type="file")
+        p Я хочу получать уведомления о статусах заказа по
         label.checkbox
-          input(type="checkbox" id="remember-password")
-          label(for="remember-password")
-          span Запомнить пароль
-        a(href="").link Забыли пароль?
+          input(type="checkbox" id="i-want-email")
+          label(for="i-want-email")
+          span Эл. почта
+        label.checkbox
+          input(type="checkbox" id="i-want-sms")
+          label(for="i-want-sms")
+          span Эл. почта
+        .modal__info
+          label.checkbox
+            input(type="checkbox" id="i-want-sms")
+            label(for="i-want-sms")
+            span Нажимая кнопку «Зарегистрироваться», я принимаю условия 
+              a(href="").link Пользовательского соглашения
+              |  и даю своё согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой конфиденциальности.
         .modal__btn-group
-          .btn.btn--primary
-            i.icon.icon-user
-            span Войти
+          .btn.btn--primary.btn--empty
+            i.icon.icon-key
+            span Зарегистрироваться
+
+    #registration-company.modal
+      .modal__title Регистрация
+      .link-group
+        a(href="#registration-individual").link-group__link.open-modal Частное лицо
+        a(href="#registration-company").link-group__link.link-group__link--active.open-modal Компания
+      form.form
+        .form-control
+          input(type="text" name="first-name" placeholder="Фамилия")
+        .form-control
+          input(type="text" name="second-name" placeholder="Имя")
+        .form-control
+          input(type="text" name="father-name" placeholder="Отчество")
+        .form-control
+          input(type="tel" name="tel" placeholder="Телефон")
+        .form-control
+          input(type="email" name="email" placeholder="Эл. почта")
+        .form-control
+          input(type="text" name="region" placeholder="Регион")
+        .form-control
+          input(type="text" name="city" placeholder="Город")
+        .form-control
+          input(type="password" name="first-password" placeholder="Пароль")
+        .form-control
+          input(type="password" name="second-password" placeholder="Повторите пароль")
+        .row
+          .col.col--sm-9
+            .form-control
+              input(type="text" placeholder="Логотип вашей компании")
+          .col.col--sm-3
+            label.file-upload
+              .btn.btn--empty
+                i.icon.icon-upload
+                span Выбрать
+              input(type="file")
+        hr.hr
+        .form-control
+          input(type="text" placeholder="Название организации")
+        .form-control
+          input(type="text" placeholder="ИНН")
+        .form-control
+          input(type="password" placeholder="Пароль")
+        .form-control
+          input(type="password" placeholder="Повторите пароль")
+        p Я хочу получать уведомления о статусах заказа по
+        label.checkbox
+          input(type="checkbox" id="i-want-email")
+          label(for="i-want-email")
+          span Эл. почта
+        label.checkbox
+          input(type="checkbox" id="i-want-sms")
+          label(for="i-want-sms")
+          span Эл. почта
+        .modal__info
+          label.checkbox
+            input(type="checkbox" id="i-want-sms")
+            label(for="i-want-sms")
+            span Нажимая кнопку «Зарегистрироваться», я принимаю условия 
+              a(href="").link Пользовательского соглашения
+              |  и даю своё согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой конфиденциальности.
+        .modal__btn-group
           .btn.btn--primary.btn--empty
             i.icon.icon-key
             span Зарегистрироваться

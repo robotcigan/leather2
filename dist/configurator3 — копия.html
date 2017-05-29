@@ -31,45 +31,109 @@
       <div class="grid grid--container">
         <h1 class="h1">Конфигуратор заказа материала</h1>
         <header class="configurator-header items">
-          <div class="item item--first">Выберите материал</div>
+          <div class="item item--active item--first">Эсторил</div>
+          <div class="item item--active item--second">
+            <div class="icon-in-circle"><i class="icon icon-spinner4"></i></div><span>Цвет</span>
+          </div>
+          <div class="item item--active item--third"><img src="img/color.jpg" alt=""><span># 9903</span><a class="btn btn--middle btn--black-solid" href=""><i class="icon icon-pencil"></i><span>Изменить</span></a></div>
         </header>
-        <div class="configurator configurator--first" style="background-image: url(img/configurator-1.jpg);">
-          <div class="configurator__img"></div>
-          <div class="configurator__container row">
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-1"></i><span>Автомобильная кожа</span></div><a class="configurator__link" href="">Боксмарк</a><a class="configurator__link" href="">Хиллманн Наппа</a><a class="configurator__link" href="">Эсторил</a><a class="configurator__link" href="">Эсторил Наппа</a><a class="configurator__link" href="">Виста</a><a class="configurator__link" href="">Родстар</a><a class="configurator__link" href="">Экстрим</a><a class="configurator__link" href="">Монза</a><a class="configurator__link" href="">Аполо</a>
+        <hr class="hr">
+        <div class="configurator configurator--third">
+          <div class="configurator__img"><img src="img/leather.jpg" alt=""></div>
+          <div class="configurator__container configurator__container--bottom">
+            <div class="configurator__fields">
+              <div class="configurator__width configurator__field configurator__field--active configurator__width--super">
+                <div class="form-control">
+                  <input id="configurator-super" type="text" placeholder="Укажите количество погонных метров">
+                </div>
+                <p>Средний размер шкуры (см) - 100 х 200</p>
               </div>
+              <div class="configurator__width configurator__field">
+                <div class="form-control">
+                  <input id="configurator-height" type="text" placeholder="Ширина">
+                </div>
+              </div>
+              <div class="configurator__width configurator__field">
+                <div class="form-control">
+                  <input id="configurator-width" type="text" placeholder="Высота">
+                </div>
+              </div>
+              <div class="icon-btn" id="cropping"></div>
+              <div class="icon-btn__sprite"><i class="sprite sprite--scissors"></i></div><span>Инструмент отреза</span>
             </div>
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-2"></i><span>Искусственная кожа</span></div><a class="configurator__link" href="">MAX</a><a class="configurator__link" href="">MAX Биэластик</a><a class="configurator__link" href="">Флекси</a><a class="configurator__link" href="">АТН</a><a class="configurator__link" href="">Монза</a><a class="configurator__link" href="">Родстар</a>
+            <div>
+              <div class="configurator__width">
+                <div class="configurator-price"><span>Цена: </span><span id="configurator-price"></span><span>₽</span></div>
               </div>
-            </div>
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-3"></i><span>Алькантара</span></div><a class="configurator__link" href="">Алькантара</a>
-              </div>
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-4"></i><span>Полиуретановая кожа</span></div><a class="configurator__link" href="">Швайцер</a><a class="configurator__link" href="">Швайцер лайт</a>
-              </div>
-            </div>
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-5"></i><span>Экзотика</span></div><a class="configurator__link" href="">Скаты</a><a class="configurator__link" href="">Крокодилы</a><a class="configurator__link" href="">Питоны</a>
-              </div>
-            </div>
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-6"></i><span>Нитки</span></div><a class="configurator__link" href="">Полиарт</a><a class="configurator__link" href="">Ситипоинт</a>
-              </div>
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-7"></i><span>Клей</span></div><a class="configurator__link" href="">MAX</a>
+              <div class="configurator__width">
+                <div class="btn btn--primary"><i class="sprite sprite--scissors"></i><span>Отрезать</span></div>
               </div>
             </div>
           </div>
         </div>
+        <div class="adaptive-table">
+          <table class="table table--cart">
+            <thead>
+              <th>Вид</th>
+              <th>Наименование</th>
+              <th>Кол-во</th>
+              <th>Цена</th>
+              <th>Стоимость</th>
+              <th>Редактировать</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="img/cart-table.jpg" alt=""></td>
+                <td>Боксмарк 6833</td>
+                <td>
+                  <div class="form-control form-control--table">
+                    <input type="text" value="3">
+                  </div><span>пог. м</span>
+                </td>
+                <td>8 600 р. за пог. м</td>
+                <td>25 800 р.</td>
+                <td><a class="icon-in-circle" href=""><i class="icon icon-pencil"></i></a><a class="icon-in-circle" href=""><i class="icon icon-cross"></i></a></td>
+              </tr>
+              <tr>
+                <td><img src="img/cart-table.jpg" alt=""></td>
+                <td>Боксмарк 6833</td>
+                <td>
+                  <div class="form-control form-control--table">
+                    <input type="text" value="3">
+                  </div><span>пог. м</span>
+                </td>
+                <td>8 600 р. за пог. м</td>
+                <td>25 800 р.</td>
+                <td><a class="icon-in-circle" href=""><i class="icon icon-pencil"></i></a><a class="icon-in-circle" href=""><i class="icon icon-cross"></i></a></td>
+              </tr>
+              <tr>
+                <td><img src="img/cart-table.jpg" alt=""></td>
+                <td>Боксмарк 6833</td>
+                <td>
+                  <div class="form-control form-control--table">
+                    <input type="text" value="3">
+                  </div><span>пог. м</span>
+                </td>
+                <td>8 600 р. за пог. м</td>
+                <td>25 800 р.</td>
+                <td><a class="icon-in-circle" href=""><i class="icon icon-pencil"></i></a><a class="icon-in-circle" href=""><i class="icon icon-cross"></i></a></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span>Итого:</span><span> 31 300 р.</span></td>
+                <td><a class="btn btn--primary" href=""><i class="sprite sprite--ruble"></i><span>Купить в один клик</span></a></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       </div>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/configurator.js"></script>
       <footer class="main-footer">
         <div class="main-footer__top">
           <div class="grid grid--container">

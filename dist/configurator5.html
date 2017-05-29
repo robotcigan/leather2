@@ -31,45 +31,57 @@
       <div class="grid grid--container">
         <h1 class="h1">Конфигуратор заказа материала</h1>
         <header class="configurator-header items">
-          <div class="item item--first">Выберите материал</div>
+          <div class="item item--active item--first">Нитки Полиарт</div>
+          <div class="item item--active item--second">
+            <div class="icon-in-circle"><i class="icon icon-spinner4"></i></div><span>Цвет</span>
+          </div>
+          <div class="item item--active item--third"><img src="img/color.jpg" alt=""><span># 9903</span><a class="btn btn--middle btn--black-solid" href=""><i class="icon icon-pencil"></i><span>Изменить</span></a></div>
         </header>
-        <div class="configurator configurator--first" style="background-image: url(img/configurator-1.jpg);">
-          <div class="configurator__img"></div>
-          <div class="configurator__container row">
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-1"></i><span>Автомобильная кожа</span></div><a class="configurator__link" href="">Боксмарк</a><a class="configurator__link" href="">Хиллманн Наппа</a><a class="configurator__link" href="">Эсторил</a><a class="configurator__link" href="">Эсторил Наппа</a><a class="configurator__link" href="">Виста</a><a class="configurator__link" href="">Родстар</a><a class="configurator__link" href="">Экстрим</a><a class="configurator__link" href="">Монза</a><a class="configurator__link" href="">Аполо</a>
+        <hr class="hr">
+        <div class="configurator">
+          <div class="configurator__img"><img src="img/configurator-5.jpg" alt=""></div>
+          <div class="configurator__container configurator__container--bottom">
+            <div class="row row--sm-center">
+              <div class="col col--lg-3 col--sm-6">
+                <p class="configurator__text">Выберите толщину материала</p>
+              </div>
+              <div class="col col--lg-1 col--sm-6">
+                <div class="form-control">
+                  <select>
+                    <option>3мм</option>
+                    <option>4мм</option>
+                    <option>5мм</option>
+                  </select>
+                </div>
               </div>
             </div>
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-2"></i><span>Искусственная кожа</span></div><a class="configurator__link" href="">MAX</a><a class="configurator__link" href="">MAX Биэластик</a><a class="configurator__link" href="">Флекси</a><a class="configurator__link" href="">АТН</a><a class="configurator__link" href="">Монза</a><a class="configurator__link" href="">Родстар</a>
+            <div class="row">
+              <div class="col col--lg-4 col--sm-6">
+                <div class="form-control">
+                  <input type="text" placeholder="Укажите количество бобин">
+                </div>
+                <p class="configurator__text">В 1 бобине 300 м</p>
+              </div>
+              <div class="col col--lg-4 col--sm-6">
+                <div class="form-control">
+                  <input type="text" placeholder="Укажите количество коробок">
+                </div>
+                <p class="configurator__text">В одной коробке 18 бобин</p>
               </div>
             </div>
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-3"></i><span>Алькантара</span></div><a class="configurator__link" href="">Алькантара</a>
+            <div class="row row--sm-center">
+              <div class="col col--lg-2 col--sm-6">
+                <div class="configurator-price"><span>Цена: </span><span id="configurator-price"></span><span>₽</span></div>
               </div>
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-4"></i><span>Полиуретановая кожа</span></div><a class="configurator__link" href="">Швайцер</a><a class="configurator__link" href="">Швайцер лайт</a>
-              </div>
-            </div>
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-5"></i><span>Экзотика</span></div><a class="configurator__link" href="">Скаты</a><a class="configurator__link" href="">Крокодилы</a><a class="configurator__link" href="">Питоны</a>
-              </div>
-            </div>
-            <div class="col col--sm-4 col--lg">
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-6"></i><span>Нитки</span></div><a class="configurator__link" href="">Полиарт</a><a class="configurator__link" href="">Ситипоинт</a>
-              </div>
-              <div class="configurator__links">
-                <div class="configurator__subtitle"><i class="sprite sprite--configurator sprite--configurator-7"></i><span>Клей</span></div><a class="configurator__link" href="">MAX</a>
+              <div class="col col--lg-2 col--sm-6">
+                <div class="btn btn--primary btn--full-width"><i class="icon icon-cart"></i><span>В корзину</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/configurator.js"></script>
       <footer class="main-footer">
         <div class="main-footer__top">
           <div class="grid grid--container">

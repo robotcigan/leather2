@@ -11,17 +11,18 @@
   &__container
     left 0
     justify-content space-between
-    padding-left ((50 / 1620) * 100)%
+    padding 0 ((50 / 1620) * 100)%
     position absolute
     top ((80 / 600) * 100)%
     width 100%
     z-index 5
     &--bottom
-      bottom 3rem
+      bottom ((50 / 600) * 100)%
       top initial
   .form-control
     display inline-block
     margin-right 1rem
+    margin-bottom 1.5rem
   &__links
     margin-bottom ((150 / 415) * 100)%
   &__subtitle
@@ -29,10 +30,16 @@
     font-size 2rem
     font-weight 700
     margin-bottom ((45 / 415) * 100)%
+  &__text
+    color #fff
+    margin 0
+    margin-bottom 1rem
+  .checkbox
+    span
+      color #fff
   &__link
     color #fff
     cursor pointer
-    // display inline-block
     display table
     font-size 1.8rem
     line-height 1
@@ -60,6 +67,7 @@
   &--first
     height ((600 / 966) * 100)vh
   &--third
+    margin-bottom 10rem
     position relative
     &:before
       // background repeating-linear-gradient(
@@ -79,21 +87,49 @@
       circle(100%)
       z-index 1
 
+.configurator__width
+  display inline-block
+  margin-right 4rem
+  width ((200 / 1620) * 100)%
+  &--super
+    width ((450 / 1620) * 100)%
+  .btn
+    text-align center
+    width 100%
+  .form-control,
+  input
+    width 100% !important
+
+.configurator__fields
+  align-items flex-start
+  display flex
+
+.configurator__field
+  display none
+  &--active
+    display inline-block
+
 .configurator-price
   color #fff
   display inline-block
   line-height 1
+  margin-right 5rem
   vertical-align middle
   span
     display inline-block
     line-height 1
     margin-right 1rem
 
+
 .configurator-header.items
+  align-items center
+  display flex
+  clearfix()
   margin-bottom 4rem
   .item
-    display inline-block
     color #ccc
+    align-items center
+    display flex
     font-size 1.8rem
     line-height 1
     margin-right 4rem
@@ -109,9 +145,27 @@
         position absolute
         size(100%, 2px)
         vertical-align middle
+    &--third
+      img
+        max-width 4.2rem
+        margin-right 2rem
+      span
+        margin-right 2rem
     &--active
       color $main
       font-weight 600
+
+
+.cropper-point.point-se
+  &:before
+    background-image url('../../img/icons/configurator-cropper.png') !important
+    background-color teal
+    circle(37px)
+    left -15px
+    position absolute
+    top -15px
+    z-index 99999
+
 
 @media(max-width 1600px)
   .configurator
@@ -120,6 +174,10 @@
     &__link
       font-size 1.4rem
       padding-left 4rem
+    &__width
+      width 20rem
+    &__width--super
+      width 44rem
 
 @media(max-width 1300px)
   .configurator
@@ -128,3 +186,29 @@
     .sprite
       display block
       margin-bottom 1rem
+
+@media(max-width 1000px)
+  .configurator
+    &--first
+      height initial
+      .configurator
+        &__container
+          padding-top 5rem
+          justify-content initial
+          position initial
+        &__links
+          margin-bottom 4rem
+        &__link
+          margin-bottom 1.5rem
+        &__subtitle
+          margin-bottom 2rem
+        .sprite
+          display initial
+          margin-bottom initial
+
+@media(max-width 768px)
+  .configurator
+    &__container
+      position initial
+      top 2rem
+

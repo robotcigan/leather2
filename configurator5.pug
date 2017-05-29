@@ -1,0 +1,64 @@
+extends layout.pug
+
+block content
+
+  include components/header.pug
+
+  .grid.grid--container
+    h1.h1 Конфигуратор заказа материала
+    header.configurator-header.items
+      .item.item--active.item--first Нитки Полиарт
+      .item.item--active.item--second
+        .icon-in-circle
+          i.icon.icon-spinner4
+        span Цвет
+      .item.item--active.item--third
+        img(src="img/color.jpg", alt="")
+        span # 9903
+        a(href="").btn.btn--middle.btn--black-solid
+          i.icon.icon-pencil
+          span Изменить
+    hr.hr
+    .configurator
+      .configurator__img
+        img(src="img/configurator-5.jpg", alt="")
+      .configurator__container.configurator__container--bottom
+        .row.row--sm-center
+          .col.col--lg-3.col--sm-6
+            p.configurator__text Выберите толщину материала
+          .col.col--lg-1.col--sm-6
+            .form-control
+              select
+                option 3мм
+                option 4мм
+                option 5мм
+
+
+        .row
+          .col.col--lg-4.col--sm-6
+            .form-control
+              input(type="text" placeholder="Укажите количество бобин")
+            p.configurator__text В 1 бобине 300 м
+          .col.col--lg-4.col--sm-6
+            .form-control
+              input(type="text" placeholder="Укажите количество коробок")
+            p.configurator__text В одной коробке 18 бобин
+        .row.row--sm-center
+          .col.col--lg-2.col--sm-6
+            .configurator-price
+              span Цена: 
+              span#configurator-price
+              span ₽
+          .col.col--lg-2.col--sm-6
+            .btn.btn--primary.btn--full-width
+              i.icon.icon-cart
+              span В корзину
+
+
+
+
+  script(src="js/jquery.min.js")
+  script(src="js/configurator.js")
+
+
+  include components/footer.pug

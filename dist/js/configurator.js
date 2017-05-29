@@ -2,6 +2,11 @@
 
 $(document).ready(function () {
 
+  $('#cropping').on('click', function () {
+    $('.configurator__field').toggleClass('configurator__field--active');
+    $(this).toggleClass('icon-btn--active');
+  });
+
   var configuratorPrice = document.getElementById('configurator-price');
 
   var prices = {
@@ -20,7 +25,7 @@ $(document).ready(function () {
 
   render();
 
-  var configuratorImg = $('.configurator .configurator__img img');
+  var configuratorImg = $('.configurator--third .configurator__img img');
 
   configuratorImg.cropper({
     toggleDragModeOnDblclick: false,

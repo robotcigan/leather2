@@ -22,11 +22,11 @@
       <div class="grid grid--container second-header">
         <nav class="navbar">
           <div class="navbar__section navbar__section--links"><a class="navbar__link navbar__link--home" href="./index.html"><i class="icon icon-home3"></i></a><i class="sprite sprite--separator"></i>
-            <div class="mobile-menu-toggle"><span></span><span></span><span></span></div><a class="navbar__link" href="">Интернет-магазин</a><a class="navbar__link" href="./price.html">Прайс-лист</a><a class="navbar__link" href="">Доставка и оплата</a><a class="navbar__link" href="">Статьи</a><a class="navbar__link" href="">Отзывы</a><a class="navbar__link" href="./contacts.html">Контакты</a>
+            <div class="mobile-menu-toggle"><span></span><span></span><span></span></div><a class="navbar__link" href="./configurator1.html">Интернет-магазин</a><a class="navbar__link" href="./price.html">Прайс-лист</a><a class="navbar__link" href="./delivery.html">Доставка и оплата</a><a class="navbar__link" href="./articles.html">Статьи</a><a class="navbar__link" href="./reviews.html">Отзывы</a><a class="navbar__link" href="./contacts.html">Контакты</a>
           </div>
           <div class="navbar__section navbar__section--icons"><i class="icon icon-search"></i><i class="sprite sprite--separator"></i><a class="open-modal" href="#enter"><i class="icon icon-user"></i></a><i class="sprite sprite--separator"></i><i class="icon icon-cart"></i></div>
         </nav>
-        <div class="mobile-menu"><a class="mobile-menu__link" href="">Интернет-магазин</a><a class="mobile-menu__link" href="./price.html">Прайс-лист</a><a class="mobile-menu__link" href="">Доставка и оплата</a><a class="mobile-menu__link" href="">Статьи</a><a class="mobile-menu__link" href="">Отзывы</a><a class="mobile-menu__link" href="./contacts.html">Контакты</a></div>
+        <div class="mobile-menu"><a class="mobile-menu__link" href="./configurator1.html">Интернет-магазин</a><a class="mobile-menu__link" href="./price.html">Прайс-лист</a><a class="mobile-menu__link" href="./delivery.html">Доставка и оплата</a><a class="mobile-menu__link" href="./articles.html">Статьи</a><a class="mobile-menu__link" href="./reviews.html">Отзывы</a><a class="mobile-menu__link" href="./contacts.html">Контакты</a></div>
       </div>
       <div class="grid grid--container">
         <h1 class="h1">Условия использования сайта</h1>
@@ -69,7 +69,7 @@
     <div class="modal" id="callback">
       <div class="modal__title">Обратный звонок</div>
       <div class="modal__subtitle">Здравствуйте! Хотите, мы перезвоним Вам бесплатно и все обсудим&hellip;</div>
-      <form class="form" action="/mail.php" method="post">
+      <form class="form hadoken" action="/mail.php" method="post">
         <div class="form-control">
           <input class="phone-mask" type="tel" name="phone">
         </div>
@@ -90,12 +90,13 @@
           <label for="remember-password"></label><span>Запомнить пароль</span>
         </label><a class="link" href="">Забыли пароль?</a>
         <div class="modal__btn-group">
-          <div class="btn btn--primary"><i class="icon icon-user"></i><span>Войти</span></div><a class="btn btn--primary btn--empty" href="#registration"><i class="icon icon-key"></i><span>Зарегистрироваться</span></a>
+          <div class="btn btn--primary"><i class="icon icon-user"></i><span>Войти</span></div><a class="btn btn--primary btn--empty open-modal" href="#registration-individual"><i class="icon icon-key"></i><span>Зарегистрироваться</span></a>
         </div>
       </form>
     </div>
-    <div class="modal" id="registration">
+    <div class="modal" id="registration-individual">
       <div class="modal__title">Регистрация</div>
+      <div class="link-group"><a class="link-group__link link-group__link--active open-modal" href="#registration-individual">Частное лицо</a><a class="link-group__link open-modal" href="#registration-company">Компания</a></div>
       <form class="form">
         <div class="form-control">
           <input type="text" name="first-name" placeholder="Фамилия">
@@ -124,12 +125,112 @@
         <div class="form-control">
           <input type="password" name="second-password" placeholder="Повторите пароль">
         </div>
+        <div class="row">
+          <div class="col col--sm-9">
+            <div class="form-control">
+              <input type="text" placeholder="Изображение">
+            </div>
+          </div>
+          <div class="col col--sm-3">
+            <label class="file-upload">
+              <div class="btn btn--empty"><i class="icon icon-upload"></i><span>Выбрать</span></div>
+              <input type="file">
+            </label>
+          </div>
+        </div>
+        <p>Я хочу получать уведомления о статусах заказа по</p>
         <label class="checkbox">
-          <input type="checkbox" id="remember-password">
-          <label for="remember-password"></label><span>Запомнить пароль</span>
-        </label><a class="link" href="">Забыли пароль?</a>
+          <input type="checkbox" id="i-want-email">
+          <label for="i-want-email"></label><span>Эл. почта</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="i-want-sms">
+          <label for="i-want-sms"></label><span>Эл. почта</span>
+        </label>
+        <div class="modal__info">
+          <label class="checkbox">
+            <input type="checkbox" id="i-want-sms">
+            <label for="i-want-sms"></label><span>Нажимая кнопку «Зарегистрироваться», я принимаю условия <a class="link" href="">Пользовательского соглашения</a> и даю своё согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой конфиденциальности.</span>
+          </label>
+        </div>
         <div class="modal__btn-group">
-          <div class="btn btn--primary"><i class="icon icon-user"></i><span>Войти</span></div>
+          <div class="btn btn--primary btn--empty"><i class="icon icon-key"></i><span>Зарегистрироваться</span></div>
+        </div>
+      </form>
+    </div>
+    <div class="modal" id="registration-company">
+      <div class="modal__title">Регистрация</div>
+      <div class="link-group"><a class="link-group__link open-modal" href="#registration-individual">Частное лицо</a><a class="link-group__link link-group__link--active open-modal" href="#registration-company">Компания</a></div>
+      <form class="form">
+        <div class="form-control">
+          <input type="text" name="first-name" placeholder="Фамилия">
+        </div>
+        <div class="form-control">
+          <input type="text" name="second-name" placeholder="Имя">
+        </div>
+        <div class="form-control">
+          <input type="text" name="father-name" placeholder="Отчество">
+        </div>
+        <div class="form-control">
+          <input type="tel" name="tel" placeholder="Телефон">
+        </div>
+        <div class="form-control">
+          <input type="email" name="email" placeholder="Эл. почта">
+        </div>
+        <div class="form-control">
+          <input type="text" name="region" placeholder="Регион">
+        </div>
+        <div class="form-control">
+          <input type="text" name="city" placeholder="Город">
+        </div>
+        <div class="form-control">
+          <input type="password" name="first-password" placeholder="Пароль">
+        </div>
+        <div class="form-control">
+          <input type="password" name="second-password" placeholder="Повторите пароль">
+        </div>
+        <div class="row">
+          <div class="col col--sm-9">
+            <div class="form-control">
+              <input type="text" placeholder="Логотип вашей компании">
+            </div>
+          </div>
+          <div class="col col--sm-3">
+            <label class="file-upload">
+              <div class="btn btn--empty"><i class="icon icon-upload"></i><span>Выбрать</span></div>
+              <input type="file">
+            </label>
+          </div>
+        </div>
+        <hr class="hr">
+        <div class="form-control">
+          <input type="text" placeholder="Название организации">
+        </div>
+        <div class="form-control">
+          <input type="text" placeholder="ИНН">
+        </div>
+        <div class="form-control">
+          <input type="password" placeholder="Пароль">
+        </div>
+        <div class="form-control">
+          <input type="password" placeholder="Повторите пароль">
+        </div>
+        <p>Я хочу получать уведомления о статусах заказа по</p>
+        <label class="checkbox">
+          <input type="checkbox" id="i-want-email">
+          <label for="i-want-email"></label><span>Эл. почта</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="i-want-sms">
+          <label for="i-want-sms"></label><span>Эл. почта</span>
+        </label>
+        <div class="modal__info">
+          <label class="checkbox">
+            <input type="checkbox" id="i-want-sms">
+            <label for="i-want-sms"></label><span>Нажимая кнопку «Зарегистрироваться», я принимаю условия <a class="link" href="">Пользовательского соглашения</a> и даю своё согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой конфиденциальности.</span>
+          </label>
+        </div>
+        <div class="modal__btn-group">
           <div class="btn btn--primary btn--empty"><i class="icon icon-key"></i><span>Зарегистрироваться</span></div>
         </div>
       </form>

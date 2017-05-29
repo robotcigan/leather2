@@ -6,21 +6,96 @@ block content
 
   .grid.grid--container
     h1.h1 Конфигуратор заказа материала
+    header.configurator-header.items
+      .item.item--active.item--first Эсторил
+      .item.item--active.item--second
+        .icon-in-circle
+          i.icon.icon-spinner4
+        span Цвет
+      .item.item--active.item--third
+        img(src="img/color.jpg", alt="")
+        span # 9903
+        a(href="").btn.btn--middle.btn--black-solid
+          i.icon.icon-pencil
+          span Изменить
     hr.hr
     .configurator.configurator--third
       .configurator__img
         img(src="img/leather.jpg", alt="")
       .configurator__container.configurator__container--bottom
-        .form-control
-          input(id="configurator-height" type="text" placeholder="Ширина")
-        .form-control
-          input(id="configurator-width" type="text" placeholder="Высота")
+        .row.configurator__fields
+          .col.col--sm-5.configurator__field.configurator__field--active
+            .form-control
+              input(id="configurator-super" type="text" placeholder="Укажите количество погонных метров")
+            p.configurator__text Средний размер шкуры (см) - 100 х 200
+            label.checkbox
+              input(type="checkbox" id="remember-password")
+              label(for="remember-password")
+              span Купить пол шкуры
+          .col.col--sm-5.configurator__field
+            .row
+              .col.col--sm-6
+                .form-control
+                  input(id="configurator-height" type="text" placeholder="Ширина")
+              .col.col--sm-6
+                .form-control
+                  input(id="configurator-width" type="text" placeholder="Высота")
+          .col.col--sm-4
+            #cropping.icon-btn
+              .icon-btn__sprite
+                i.sprite.sprite--scissors
+              span Инструмент отреза
         div
-          .configurator-price
-            span Цена: 
-            span#configurator-price
-            span ₽
-          .btn.btn--primary Отрезать
+          .configurator__width
+            .configurator-price
+              span Цена: 
+              span#configurator-price
+              span ₽
+          .configurator__width
+            .btn.btn--primary
+              i.sprite.sprite--scissors
+              span Отрезать
+
+
+    .adaptive-table
+      table.table.table--cart
+        thead
+          th Вид
+          th Наименование
+          th Кол-во
+          th Цена
+          th Стоимость
+          th Редактировать
+        tbody
+          -for(var x = 0; x < 3; x++)
+            tr
+              td
+                img(src="img/cart-table.jpg", alt="")
+              td Боксмарк 6833
+              td
+                .form-control.form-control--table
+                  input(type="text" value="3")
+                span пог. м
+              td 8 600 р. за пог. м
+              td 25 800 р.
+              td
+                a(href="").icon-in-circle
+                  i.icon.icon-pencil
+                a(href="").icon-in-circle
+                  i.icon.icon-cross
+        tfoot
+          tr
+            td
+            td
+            td
+            td
+            td
+              span Итого:
+              span  31 300 р.
+            td
+              a(href="").btn.btn--primary
+                i.sprite.sprite--ruble
+                span Купить в один клик
 
 
   script(src="js/jquery.min.js")

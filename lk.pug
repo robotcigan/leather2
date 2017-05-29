@@ -24,7 +24,7 @@ block content
           .info__offset
             strong ИНН:
             span 3275934603868
-        .btn.btn--empty
+        a(href="#edit").btn.btn--empty.open-modal
           i.icon.icon-user-plus
           span Изменить
 
@@ -55,7 +55,7 @@ block content
           .some-info
             i.sprite.sprite--info
             span Приветствуем Вас! Это — Ваша персональная инфопанель, где Вы можете обновить Ваши персональные данные и платежные реквизиты, а также просмотреть информацию о Ваших заказах
-          .btn.btn--primary
+          a(href="#invite").btn.btn--primary.open-modal
             i.icon.icon-user-tie
             span Пригласить покупателя
         .responsive-table
@@ -92,6 +92,70 @@ block content
               .btn.btn--empty
                 i.icon.icon-bubbles4
                 span Отправить
+
+  #invite.modal
+    .modal__title Пригласить покупателя
+    p Пригласите своего друга совершить покупку в нашем интернет-магазине!
+    form.form
+      .form-control
+        input(type="mail" value="http://127.0.0.1:32769/start.html#p=личный_каб43инет&g=1t")
+      .btn.btn--primary
+        i.icon.icon-user-tie
+        span Пригласить покупателя
+
+  #edit.modal
+    .modal__title Личные данные
+    form.form
+      .form-control
+        input(type="text" name="first-name" placeholder="Фамилия")
+      .form-control
+        input(type="text" name="second-name" placeholder="Имя")
+      .form-control
+        input(type="text" name="father-name" placeholder="Отчество")
+      .form-control
+        input(type="tel" name="tel" placeholder="Телефон")
+      .form-control
+        input(type="email" name="email" placeholder="Эл. почта")
+      .form-control
+        input(type="text" name="region" placeholder="Регион")
+      .form-control
+        input(type="text" name="city" placeholder="Город")
+      .form-control
+        input(type="password" name="first-password" placeholder="Пароль")
+      .form-control
+        input(type="password" name="second-password" placeholder="Повторите пароль")
+      .row
+        .col.col--sm-9
+          .form-control
+            input(type="text" placeholder="Логотип вашей компании")
+        .col.col--sm-3
+          label.file-upload
+            .btn.btn--empty
+              i.icon.icon-upload
+              span Выбрать
+            input(type="file")
+      hr.hr
+      .form-control
+        input(type="text" placeholder="Название организации")
+      .form-control
+        input(type="text" placeholder="ИНН")
+      .form-control
+        input(type="password" placeholder="Пароль")
+      .form-control
+        input(type="password" placeholder="Повторите пароль")
+      p Я хочу получать уведомления о статусах заказа по
+      label.checkbox
+        input(type="checkbox" id="i-want-email")
+        label(for="i-want-email")
+        span Эл. почта
+      label.checkbox
+        input(type="checkbox" id="i-want-sms")
+        label(for="i-want-sms")
+        span Эл. почта
+      .modal__btn-group
+        .btn.btn--primary.btn--empty
+          i.icon.icon-user-check
+          span Сохранить
 
 
   include components/footer.pug
