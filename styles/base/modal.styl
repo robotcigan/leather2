@@ -62,9 +62,61 @@
     font-weight 700
     text-transform uppercase
 
+.articles-list
+  &__item.item
+    margin-bottom 6rem
+    padding-left 2rem
+    .item
+      &__header
+        color $main
+        font-size 1.8rem
+        font-weight 600
+        line-height 1
+        margin-bottom 1rem
+        position relative
+        text-decoration none
+        &:before
+          content ''
+          background url('../../img/icons/small-arrow.png') no-repeat
+          left -2rem
+          position absolute
+          top 0
+          size(15px, 9px)
+
+
+.documentation-list
+  &__item.item
+    align-items center
+    color $main
+    display flex
+    justify-content space-between
+    padding 3rem
+    padding-right 0
+    text-decoration none
+    &:not(:last-child)
+      border-bottom $border
+    .item
+      &__header
+        align-items center
+        color $main
+        display flex
+        font-size 1.8rem
+        line-height 1
+        text-decoration none
+        .sprite
+          flex-shrink 0
+    .icon-in-circle
+      float right
+      flex-shrink 0
+
+
 @media(max-width 767px)
   .mfp-container
     padding 0
   .modal-page
     right 0
     width 100%
+
+
+
+

@@ -46,12 +46,14 @@ $(document).ready(function () {
     windowWidth = $(window).width();
     if (windowWidth > 1230) {
       if ($('#fullpage').length) {
-        $.fn.fullpage.reBuild();
+        // $.fn.fullpage.reBuild();
+        $.fn.fullpage.setResponsive(false);
       }
       // fullPageInit();
     } else {
       if ($('#fullpage').length) {
-        $.fn.fullpage.destroy();
+        // $.fn.fullpage.destroy();
+        $.fn.fullpage.setResponsive(true);
       }
     }
   });
@@ -91,6 +93,8 @@ $(document).ready(function () {
       }
     }
   });
+
+  console.log($.fn.fullpage.length);
 
   // $('.open-modal').magnificPopup({
   //   type: 'inline'

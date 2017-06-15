@@ -28,9 +28,13 @@ block content
             .form-control
               input(id="configurator-super" type="text" placeholder="Укажите количество погонных метров")
             p.configurator__text Средний размер шкуры (см) - 100 х 200
-            label.checkbox
-              input(type="checkbox" id="remember-password")
-              label(for="remember-password")
+            label.radio
+              input.radio__input(type="radio" name="leather" id="leather-1")
+              label.radio__label(for="leather-1")
+              span Купить шкуру
+            label.radio
+              input.radio__input(type="radio" name="leather" id="leather-2")
+              label.radio__label(for="leather-2")
               span Купить пол шкуры
           .col.col--sm-5.configurator__field
             .row

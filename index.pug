@@ -16,7 +16,7 @@ block content
           span ул. Дзержинского 121/5
         .top__phone
           i.icon.icon-phone-hang-up
-          span 8 (800) 30-11-920
+          span 8 (800) 3011-920
         a(href="#callback").top__callback.open-modal
           i.icon.icon-phone
           span Перезвонить мне
@@ -69,7 +69,7 @@ block content
               span Перейти в интернет-магазин
 
 
-    .section.horizontal-slides
+    .section.active.horizontal-slides
       .slide
         .hero
           .hero__bg(style='background-image: url("img/main-slider/1.jpg")')
@@ -78,16 +78,16 @@ block content
               .container__title Алькантара
               .container__subtitle Алькантара &copy; Оригинальный автомобильный материал
               .btn-group
-                .btn.btn--solid
+                a(href="#first-color-page").btn.btn--solid.open-modal
                   i.icon.icon-spinner4
                   span Колор-карта
-                a(href="#first-modal-page").btn.btn--solid.open-modal
+                a(href="#first-about-page").btn.btn--solid.open-modal
                   i.icon.icon-book
                   span Об Алькантаре
-                .btn.btn--solid
+                a(href="#first-article-page").btn.btn--solid.open-modal
                   i.icon.icon-books
                   span Статьи
-                .btn.btn--solid
+                a(href="#first-documentation-page").btn.btn--solid.open-modal
                   i.icon.icon-folder
                   span Документация
               .btn.container__btn
@@ -102,16 +102,16 @@ block content
               .container__title Швайцер
               .container__subtitle Швайцер &copy; Полиуретановая кожа. Копия, превзошедшая оригинал.
               .btn-group
-                .btn.btn--solid
+                a(href="#second-color-page").btn.btn--solid.open-modal
                   i.icon.icon-spinner4
                   span Колор-карта
-                a(href="#second-modal-page").btn.btn--solid.open-modal
+                a(href="#second-about-page").btn.btn--solid.open-modal
                   i.icon.icon-book
                   span О Швайцере
-                .btn.btn--solid
+                a(href="#second-article-page").btn.btn--solid.open-modal
                   i.icon.icon-books
                   span Статьи
-                .btn.btn--solid
+                a(href="#second-documentation-page").btn.btn--solid.open-modal
                   i.icon.icon-folder
                   span Документация
               .btn.container__btn
@@ -119,17 +119,83 @@ block content
                 span Купить
 
     
-
-      #first-modal-page.modal-page
+      #first-color-page.modal-page
+        .modal-page__title Колор-карта
+        hr.hr
+        .weird-grid.weird-grid--with-borders
+          .weird-grid__row
+            -for(var x = 0; x < 9; x++)
+              a(href="").weird-grid__col
+                .item
+                  .item__img(style="background-image: url(img/thread.jpg);", alt="")
+                  .item__title # 0500
+              a(href="").weird-grid__col
+                .item
+                  .item__img(style="background-image: url(img/thread-2.jpg);", alt="")
+                  .item__title # 0500 P
+      #second-color-page.modal-page
+        .modal-page__title Колор-карта
+        hr.hr
+        .weird-grid.weird-grid--with-borders
+          .weird-grid__row
+            -for(var x = 0; x < 9; x++)
+              a(href="").weird-grid__col
+                .item
+                  .item__img(style="background-image: url(img/thread.jpg);", alt="")
+                  .item__title # 0500
+              a(href="").weird-grid__col
+                .item
+                  .item__img(style="background-image: url(img/thread-2.jpg);", alt="")
+                  .item__title # 0500 P
+      #first-about-page.modal-page
         .modal-page__title Алькантара
         hr.hr
         p Алькантара представляет собой уникальный искусственный материал, которой по своим характеристиками и свойствам не вписывается ни в один из видов существующих тканей. Несмотря на то, что Алькантара внешне и наощупь сильно напоминает искусственную замшу, ею она не является. Также она не имеет никакого отношения к натуральной коже и кожзаменителю. Известную сегодня во всем мире синтетическую ткань под брендом Alcantara разработали в Японии сотрудники исследовательской компании «Toray», но выпускают ее в Италии. Именно итальянские инженеры фирмы «ENI» запустили в серийное производство этот инновационный материал.
         p Хотя Алькантара и похожа на высококачественную замшу, она, благодаря тканой структуре, отличается от натурального аналога более высокими физическими характеристиками и лучшими рабочими качествами. Несомненное достоинство Alcantara – ее не надо обрабатывать как замшу различными средствами (пропитками, кондиционерами и т.п.).
-      #second-modal-page.modal-page
+      #second-about-page.modal-page
         .modal-page__title Швайцер
         hr.hr
         p Швайцер – это полиуретановая автомобильная кожа, производство которой было начато в Германии в 2016 году. Своему названию он обязан знаменитой серии натуральной автомобильной кожи Schweitzer.
         p Благодаря своей уникальной структуре и составу, Швайцер имеет втрое более высокую износостойкость, чем самая дорогая натуральная автомобильная кожа. Из-за своей пористой структуры, Швайцер пропускает воздух и влагу, как и натуральная кожа, что обеспечит его комфортную эксплуатацию в жаркое время года. Швайцер имеет замшевую подложку, неотличимую от натуральной. Она обеспечивает вентиляцию материала и амортизацию при давлении на него. В готовом изделии Швайцер невозможно отличить от натуральной кожи даже профессионалу, при этом Швайцер гораздо более долговечен и неприхотлив, его практически невозможно случайно порезать или поцарапать. Он не стареет и не грубеет со временем как натуральная кожа и не лопается даже при очень низких температурах.
+
+      #first-article-page.modal-page
+        .modal-page__title Статьи
+        hr.hr
+        .articles-list
+          - for (var i = 0; i < 3; i++)
+            .articles-list__item.item
+              a(href="").item__header Автомобильная кожа: цена качества
+              .item__anons Автомобильная кожа принципиально отличается от мебельной и обувной.
+      #second-article-page.modal-page
+        .modal-page__title Статьи
+        hr.hr
+        .articles-list
+          - for (var i = 0; i < 3; i++)
+            .articles-list__item.item
+              a(href="").item__header Автомобильная кожа: цена качества
+              .item__anons Автомобильная кожа принципиально отличается от мебельной и обувной.
+
+      #first-documentation-page.modal-page
+        .modal-page__title Документация
+        hr.hr
+        .documentation-list
+          - for (var i = 0; i < 3; i++)
+            .documentation-list__item.item
+              .item__icon
+              a(href="" download).item__header.price-info
+                i.sprite.sprite--pdf
+                span Инструкция по применению обезжиривателя (PDF; 1.2 мб)
+              a(href="" download).icon-in-circle
+                i.icon.icon-download2
+      #second-documentation-page.modal-page
+        .modal-page__title Документация
+        hr.hr
+        .documentation-list
+          - for (var i = 0; i < 3; i++)
+            .documentation-list__item.item
+              a(href="").item__header.price-info
+                i.sprite.sprite--pdf
+                span Инструкция по применению обезжиривателя (PDF; 1.2 мб)
 
 
 

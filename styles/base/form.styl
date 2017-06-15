@@ -10,8 +10,10 @@
   color $main
   cursor pointer
   display inline-block
+  font-size 1.6rem
   font-weight 700
-  padding 1rem 2.5rem
+  line-height 1
+  padding 1.6rem 2.5rem
   text-decoration none
   transition background-color .4s
   &:hover
@@ -99,6 +101,48 @@
       height 26px
       line-height 26px
       width 5.5rem
+
+.radio
+  cursor pointer
+  display inline-block
+  margin-right 2rem
+  margin-top .2rem
+  user-select none
+  &__input
+    display none
+    &:checked + .radio__label
+      border 2px solid $primary
+      &:after
+        opacity 1
+        height 8px
+        width 8px
+  &__label
+    border-radius 50%
+    border 1px solid $light-gray
+    cursor pointer
+    display inline-block
+    height 2.4rem
+    margin-right .8rem
+    position relative
+    vertical-align middle
+    transition border .2s
+    width 2.4rem
+    &:after
+      background $primary
+      border-radius 50%
+      content ''
+      opacity 0
+      left 0
+      right 0
+      top 0
+      bottom 0
+      margin auto
+      position absolute
+      transition opacity .2s, width .2s, height .2s
+      width 2px
+      height 2px
+  span
+    vertical-align middle
 
 
 .checkbox
