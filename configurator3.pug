@@ -19,14 +19,17 @@ block content
           i.icon.icon-pencil
           span Изменить
     hr.hr
+    .turn-phone Чтобы воспользоваться инструментом отреза 
+      br
+      strong переверните телефон
     .configurator.configurator--third
       .configurator__img
         img(src="img/leather.jpg", alt="")
       .configurator__container.configurator__container--bottom
         .row.configurator__fields
-          .col.col--sm-5.configurator__field.configurator__field--active
+          .col.col--xl-5.col--sm-10.configurator__field.configurator__field--active
             .form-control
-              input(id="configurator-super" type="text" placeholder="Укажите количество погонных метров")
+              input(id="configurator-super" type="text" placeholder="Укажите количество квадратных метров")
             p.configurator__text Средний размер шкуры (см) - 100 х 200
             label.radio
               input.radio__input(type="radio" name="leather" id="leather-1")
@@ -36,7 +39,19 @@ block content
               input.radio__input(type="radio" name="leather" id="leather-2")
               label.radio__label(for="leather-2")
               span Купить пол шкуры
-          .col.col--sm-5.configurator__field
+            .row.row--sm-center
+              .col.col--lg-7.col--sm-6
+                .configurator-price
+                  span Цена: 
+                  span.configurator-price__number
+                  span ₽
+              .col.col--lg-5.col--sm-6
+                .btn.btn--primary.btn--full-width
+                  i.icon.icon-cart
+                  span В корзину
+
+
+          .col.col--xl-4.col--sm-10.configurator__field.configurator__field--sm
             .row
               .col.col--sm-6
                 .form-control
@@ -44,21 +59,23 @@ block content
               .col.col--sm-6
                 .form-control
                   input(id="configurator-width" type="text" placeholder="Высота")
-          .col.col--sm-4
+            .row.row--sm-center
+              .col.col--lg-6.col--sm-6
+                .configurator-price
+                  span Цена: 
+                  span.configurator-price__number
+                  span ₽
+              .col.col--lg-6.col--sm-6
+                .btn.btn--primary.btn--full-width
+                  i.sprite.sprite--scissors
+                  span Отрезать
+
+          .col.col--xl-7.col--sm-2
             #cropping.icon-btn
               .icon-btn__sprite
                 i.sprite.sprite--scissors
               span Инструмент отреза
-        div
-          .configurator__width
-            .configurator-price
-              span Цена: 
-              span#configurator-price
-              span ₽
-          .configurator__width
-            .btn.btn--primary
-              i.sprite.sprite--scissors
-              span Отрезать
+
 
 
     .adaptive-table
@@ -98,8 +115,8 @@ block content
               span  31 300 р.
             td
               a(href="").btn.btn--primary
-                i.sprite.sprite--ruble
-                span Купить в один клик
+                i.icon.icon-cart
+                span Перейти в корзину
 
 
   script(src="js/jquery.min.js")

@@ -1,3 +1,13 @@
+.turn-phone
+  background-color $main
+  color #fff
+  display none
+  margin-bottom 2rem
+  padding 2rem
+  text-align center
+  strong
+    color $primary
+
 .configurator
   background-position center top
   background-size cover
@@ -17,7 +27,8 @@
     width 100%
     z-index 5
     &--bottom
-      bottom ((50 / 600) * 100)%
+      // bottom ((50 / 600) * 100)%
+      bottom 5rem
       top initial
   .form-control
     display inline-block
@@ -67,18 +78,11 @@
   &--first
     height ((600 / 966) * 100)vh
   &--third
+    min-height 60rem
     margin-bottom 10rem
     position relative
     &:before
-      // background repeating-linear-gradient(
-      //   to right,
-      //   transparent 0,
-      //   transparent 35px,
-      //   rgba(#eee, .2) 35px,
-      //   rgba(#eee, .2) 36px
-      // )
       background url('../../img/grid.png')
-      background-size 100%
       content ''
       left 0
       position absolute
@@ -86,8 +90,29 @@
       top 0
       circle(100%)
       z-index 1
+    .configurator
+      &__img
+        height 60rem
+        img
+          opacity 0
   .radio
     color #fff
+    margin-bottom 2rem
+
+.cropper-bg
+  background none
+
+.configurator__field
+  &--sm
+    .form-control
+      display block
+      position relative
+      &:after
+        content 'см'
+        font-family $font
+        position absolute
+        right 1rem
+        top 1.2rem
 
 .configurator__width
   display inline-block
@@ -158,15 +183,21 @@
       font-weight 600
 
 
-.cropper-point.point-se
-  &:before
-    background-image url('../../img/icons/configurator-cropper.png') !important
-    background-color teal
-    circle(37px)
-    left -15px
-    position absolute
-    top -15px
-    z-index 99999
+.cropper-point
+  circle(0)
+  &.point-se
+    &:before
+      background-color transparent
+      background-image url('../../img/icons/configurator-cropper.png') !important
+      circle(37px)
+      cursor pointer
+      cursor hand
+      cursor hand
+      left -15px
+      opacity 1
+      position absolute
+      top -15px
+      z-index 99999
 
 
 @media(max-width 1600px)
@@ -185,9 +216,10 @@
   .configurator
     &__link
       padding-left 0
-    .sprite
-      display block
-      margin-bottom 1rem
+  #cropping
+    span
+      display none
+
 
 @media(max-width 1000px)
   .configurator
@@ -208,9 +240,24 @@
           display initial
           margin-bottom initial
 
-@media(max-width 768px)
+// @media(max-width 768px)
+//   .configurator
+//     &__container
+//       position initial
+//       top 2rem
+
+@media(max-width 600px)
+  .configurator-header.items
+    flex-wrap wrap
+    .item
+      margin-bottom 1rem
+
+@media(max-width 565px)
+  .turn-phone
+    display block
   .configurator
-    &__container
-      position initial
-      top 2rem
+    &--third
+      min-height 0
+      height 0
+      visibility hidden
 

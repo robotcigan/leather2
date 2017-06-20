@@ -41,11 +41,17 @@
   &-line
     background-color transparent
   &-view-box
-    outline 1px solid $primary
-    outline-color rgba($primary, .75)
+    border-right 1px solid $primary
+    border-bottom 1px solid $primary
+    outline none
   &-point
     background-color $primary
+    opacity 1 !important
+  &-line
+    pointer-events none
 
+.cropper-crop-box
+  transform translateY(0) !important
 
 @media(max-width 1600px)
   .fp-slidesNav.bottom

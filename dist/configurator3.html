@@ -38,13 +38,14 @@
           <div class="item item--active item--third"><img src="img/color.jpg" alt=""><span># 9903</span><a class="btn btn--middle btn--black-solid" href=""><i class="icon icon-pencil"></i><span>Изменить</span></a></div>
         </header>
         <hr class="hr">
+        <div class="turn-phone">Чтобы воспользоваться инструментом отреза <br><strong>переверните телефон</strong></div>
         <div class="configurator configurator--third">
           <div class="configurator__img"><img src="img/leather.jpg" alt=""></div>
           <div class="configurator__container configurator__container--bottom">
             <div class="row configurator__fields">
-              <div class="col col--sm-5 configurator__field configurator__field--active">
+              <div class="col col--xl-5 col--sm-10 configurator__field configurator__field--active">
                 <div class="form-control">
-                  <input id="configurator-super" type="text" placeholder="Укажите количество погонных метров">
+                  <input id="configurator-super" type="text" placeholder="Укажите количество квадратных метров">
                 </div>
                 <p class="configurator__text">Средний размер шкуры (см) - 100 х 200</p>
                 <label class="radio">
@@ -55,8 +56,16 @@
                   <input class="radio__input" type="radio" name="leather" id="leather-2">
                   <label class="radio__label" for="leather-2"></label><span>Купить пол шкуры</span>
                 </label>
+                <div class="row row--sm-center">
+                  <div class="col col--lg-7 col--sm-6">
+                    <div class="configurator-price"><span>Цена: </span><span class="configurator-price__number"></span><span>₽</span></div>
+                  </div>
+                  <div class="col col--lg-5 col--sm-6">
+                    <div class="btn btn--primary btn--full-width"><i class="icon icon-cart"></i><span>В корзину</span></div>
+                  </div>
+                </div>
               </div>
-              <div class="col col--sm-5 configurator__field">
+              <div class="col col--xl-4 col--sm-10 configurator__field configurator__field--sm">
                 <div class="row">
                   <div class="col col--sm-6">
                     <div class="form-control">
@@ -69,19 +78,19 @@
                     </div>
                   </div>
                 </div>
+                <div class="row row--sm-center">
+                  <div class="col col--lg-6 col--sm-6">
+                    <div class="configurator-price"><span>Цена: </span><span class="configurator-price__number"></span><span>₽</span></div>
+                  </div>
+                  <div class="col col--lg-6 col--sm-6">
+                    <div class="btn btn--primary btn--full-width"><i class="sprite sprite--scissors"></i><span>Отрезать</span></div>
+                  </div>
+                </div>
               </div>
-              <div class="col col--sm-4">
+              <div class="col col--xl-7 col--sm-2">
                 <div class="icon-btn" id="cropping">
                   <div class="icon-btn__sprite"><i class="sprite sprite--scissors"></i></div><span>Инструмент отреза</span>
                 </div>
-              </div>
-            </div>
-            <div>
-              <div class="configurator__width">
-                <div class="configurator-price"><span>Цена: </span><span id="configurator-price"></span><span>₽</span></div>
-              </div>
-              <div class="configurator__width">
-                <div class="btn btn--primary"><i class="sprite sprite--scissors"></i><span>Отрезать</span></div>
               </div>
             </div>
           </div>
@@ -141,7 +150,7 @@
                 <td></td>
                 <td></td>
                 <td><span>Итого:</span><span> 31 300 р.</span></td>
-                <td><a class="btn btn--primary" href=""><i class="sprite sprite--ruble"></i><span>Купить в один клик</span></a></td>
+                <td><a class="btn btn--primary" href=""><i class="icon icon-cart"></i><span>Перейти в корзину</span></a></td>
               </tr>
             </tfoot>
           </table>
